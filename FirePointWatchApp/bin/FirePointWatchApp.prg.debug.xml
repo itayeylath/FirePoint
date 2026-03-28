@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="1" lineNum="5" parent="globals/FeatureDetailView" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="2" lineNum="5" parent="globals/HomeView" pc="268435472" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="3" lineNum="4" parent="globals/HomeInputDelegate" pc="268435484" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/bin/gen/006-B4570-00/source/Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435496" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" id="5" lineNum="4" parent="globals/FirePointWatchApp" pc="268435516" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="6" lineNum="4" parent="globals/FeatureDetailInputDelegate" pc="268435528" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PillUi.mc" id="7" lineNum="40" parent="globals/PillUi" pc="268435540" symbol="drawPill"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PillUi.mc" id="7" lineNum="50" parent="globals/PillUi" pc="268435550" symbol="drawPill"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PillUi.mc" id="8" lineNum="6" parent="globals/PillUi" pc="268435590" symbol="drawPillColored"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PillUi.mc" id="8" lineNum="19" parent="globals/PillUi" pc="268435601" symbol="drawPillColored"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PillUi.mc" id="8" lineNum="20" parent="globals/PillUi" pc="268435611" symbol="drawPillColored"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PillUi.mc" id="8" lineNum="22" parent="globals/PillUi" pc="268435621" symbol="drawPillColored"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PillUi.mc" id="8" lineNum="23" parent="globals/PillUi" pc="268435635" symbol="drawPillColored"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PillUi.mc" id="8" lineNum="25" parent="globals/PillUi" pc="268435655" symbol="drawPillColored"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PillUi.mc" id="8" lineNum="26" parent="globals/PillUi" pc="268435669" symbol="drawPillColored"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PillUi.mc" id="8" lineNum="28" parent="globals/PillUi" pc="268435689" symbol="drawPillColored"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PillUi.mc" id="8" lineNum="29" parent="globals/PillUi" pc="268435707" symbol="drawPillColored"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PillUi.mc" id="8" lineNum="30" parent="globals/PillUi" pc="268435721" symbol="drawPillColored"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PillUi.mc" id="8" lineNum="37" parent="globals/PillUi" pc="268435741" symbol="drawPillColored"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="41" parent="globals/FeatureDetailView" pc="268435750" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="42" parent="globals/FeatureDetailView" pc="268435753" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="43" parent="globals/FeatureDetailView" pc="268435762" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="44" parent="globals/FeatureDetailView" pc="268435771" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="45" parent="globals/FeatureDetailView" pc="268435775" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="46" parent="globals/FeatureDetailView" pc="268435779" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="47" parent="globals/FeatureDetailView" pc="268435783" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="48" parent="globals/FeatureDetailView" pc="268435787" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="49" parent="globals/FeatureDetailView" pc="268435791" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="51" parent="globals/FeatureDetailView" pc="268435795" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="52" parent="globals/FeatureDetailView" pc="268435805" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="53" parent="globals/FeatureDetailView" pc="268435809" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="54" parent="globals/FeatureDetailView" pc="268435827" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="55" parent="globals/FeatureDetailView" pc="268435847" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="56" parent="globals/FeatureDetailView" pc="268435855" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="59" parent="globals/FeatureDetailView" pc="268435859" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="60" parent="globals/FeatureDetailView" pc="268435865" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="61" parent="globals/FeatureDetailView" pc="268435883" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="62" parent="globals/FeatureDetailView" pc="268435900" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="63" parent="globals/FeatureDetailView" pc="268435907" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="64" parent="globals/FeatureDetailView" pc="268435914" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="65" parent="globals/FeatureDetailView" pc="268435927" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="66" parent="globals/FeatureDetailView" pc="268435935" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="68" parent="globals/FeatureDetailView" pc="268435942" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="69" parent="globals/FeatureDetailView" pc="268435952" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="70" parent="globals/FeatureDetailView" pc="268435960" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="71" parent="globals/FeatureDetailView" pc="268435964" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="72" parent="globals/FeatureDetailView" pc="268435982" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="73" parent="globals/FeatureDetailView" pc="268436002" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="74" parent="globals/FeatureDetailView" pc="268436010" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="76" parent="globals/FeatureDetailView" pc="268436014" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="77" parent="globals/FeatureDetailView" pc="268436020" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="78" parent="globals/FeatureDetailView" pc="268436038" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="79" parent="globals/FeatureDetailView" pc="268436055" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="80" parent="globals/FeatureDetailView" pc="268436062" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="81" parent="globals/FeatureDetailView" pc="268436069" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="82" parent="globals/FeatureDetailView" pc="268436082" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="83" parent="globals/FeatureDetailView" pc="268436090" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="85" parent="globals/FeatureDetailView" pc="268436097" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="88" parent="globals/FeatureDetailView" pc="268436110" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="89" parent="globals/FeatureDetailView" pc="268436118" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="90" parent="globals/FeatureDetailView" pc="268436121" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="91" parent="globals/FeatureDetailView" pc="268436139" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="92" parent="globals/FeatureDetailView" pc="268436159" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="93" parent="globals/FeatureDetailView" pc="268436167" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="95" parent="globals/FeatureDetailView" pc="268436171" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="96" parent="globals/FeatureDetailView" pc="268436177" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="97" parent="globals/FeatureDetailView" pc="268436195" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="98" parent="globals/FeatureDetailView" pc="268436212" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="99" parent="globals/FeatureDetailView" pc="268436219" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="100" parent="globals/FeatureDetailView" pc="268436226" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="101" parent="globals/FeatureDetailView" pc="268436239" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="102" parent="globals/FeatureDetailView" pc="268436247" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="104" parent="globals/FeatureDetailView" pc="268436254" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="107" parent="globals/FeatureDetailView" pc="268436267" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="108" parent="globals/FeatureDetailView" pc="268436276" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="109" parent="globals/FeatureDetailView" pc="268436285" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="110" parent="globals/FeatureDetailView" pc="268436300" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="111" parent="globals/FeatureDetailView" pc="268436311" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="114" parent="globals/FeatureDetailView" pc="268436323" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="115" parent="globals/FeatureDetailView" pc="268436341" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="117" parent="globals/FeatureDetailView" pc="268436359" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="118" parent="globals/FeatureDetailView" pc="268436369" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="119" parent="globals/FeatureDetailView" pc="268436383" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="121" parent="globals/FeatureDetailView" pc="268436396" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="123" parent="globals/FeatureDetailView" pc="268436405" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="124" parent="globals/FeatureDetailView" pc="268436409" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="125" parent="globals/FeatureDetailView" pc="268436419" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="126" parent="globals/FeatureDetailView" pc="268436435" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="127" parent="globals/FeatureDetailView" pc="268436451" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="128" parent="globals/FeatureDetailView" pc="268436461" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="129" parent="globals/FeatureDetailView" pc="268436474" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="130" parent="globals/FeatureDetailView" pc="268436482" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="133" parent="globals/FeatureDetailView" pc="268436489" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="9" lineNum="134" parent="globals/FeatureDetailView" pc="268436516" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="10" lineNum="137" parent="globals/FeatureDetailView" pc="268436550" symbol="hitBackButton"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="10" lineNum="138" parent="globals/FeatureDetailView" pc="268436552" symbol="hitBackButton"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="10" lineNum="139" parent="globals/FeatureDetailView" pc="268436562" symbol="hitBackButton"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="10" lineNum="141" parent="globals/FeatureDetailView" pc="268436567" symbol="hitBackButton"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="24" parent="globals/FeatureDetailView" pc="268436630" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="25" parent="globals/FeatureDetailView" pc="268436632" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="26" parent="globals/FeatureDetailView" pc="268436644" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="27" parent="globals/FeatureDetailView" pc="268436653" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="28" parent="globals/FeatureDetailView" pc="268436691" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="29" parent="globals/FeatureDetailView" pc="268436729" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="30" parent="globals/FeatureDetailView" pc="268436738" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="31" parent="globals/FeatureDetailView" pc="268436747" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="32" parent="globals/FeatureDetailView" pc="268436756" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="33" parent="globals/FeatureDetailView" pc="268436764" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="34" parent="globals/FeatureDetailView" pc="268436772" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="35" parent="globals/FeatureDetailView" pc="268436780" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="36" parent="globals/FeatureDetailView" pc="268436788" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="37" parent="globals/FeatureDetailView" pc="268436796" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="11" lineNum="38" parent="globals/FeatureDetailView" pc="268436804" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="12" lineNum="144" parent="globals/FeatureDetailView" pc="268436813" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="12" lineNum="145" parent="globals/FeatureDetailView" pc="268436816" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="12" lineNum="147" parent="globals/FeatureDetailView" pc="268436825" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="12" lineNum="148" parent="globals/FeatureDetailView" pc="268436841" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="12" lineNum="150" parent="globals/FeatureDetailView" pc="268436849" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="12" lineNum="151" parent="globals/FeatureDetailView" pc="268436865" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="12" lineNum="159" parent="globals/FeatureDetailView" pc="268436897" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="12" lineNum="167" parent="globals/FeatureDetailView" pc="268436929" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" id="12" lineNum="168" parent="globals/FeatureDetailView" pc="268436939" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="13" lineNum="212" parent="globals/HomeView" pc="268437007" symbol="hitButtonIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="13" lineNum="213" parent="globals/HomeView" pc="268437009" symbol="hitButtonIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="13" lineNum="214" parent="globals/HomeView" pc="268437019" symbol="hitButtonIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="13" lineNum="216" parent="globals/HomeView" pc="268437025" symbol="hitButtonIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="13" lineNum="217" parent="globals/HomeView" pc="268437053" symbol="hitButtonIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="13" lineNum="219" parent="globals/HomeView" pc="268437059" symbol="hitButtonIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="13" lineNum="220" parent="globals/HomeView" pc="268437087" symbol="hitButtonIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="13" lineNum="222" parent="globals/HomeView" pc="268437092" symbol="hitButtonIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="13" lineNum="223" parent="globals/HomeView" pc="268437120" symbol="hitButtonIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="13" lineNum="225" parent="globals/HomeView" pc="268437126" symbol="hitButtonIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="13" lineNum="226" parent="globals/HomeView" pc="268437154" symbol="hitButtonIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="13" lineNum="228" parent="globals/HomeView" pc="268437160" symbol="hitButtonIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="45" parent="globals/HomeView" pc="268437163" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="46" parent="globals/HomeView" pc="268437166" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="47" parent="globals/HomeView" pc="268437175" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="48" parent="globals/HomeView" pc="268437184" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="49" parent="globals/HomeView" pc="268437188" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="50" parent="globals/HomeView" pc="268437192" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="51" parent="globals/HomeView" pc="268437196" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="52" parent="globals/HomeView" pc="268437200" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="53" parent="globals/HomeView" pc="268437204" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="54" parent="globals/HomeView" pc="268437208" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="56" parent="globals/HomeView" pc="268437212" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="57" parent="globals/HomeView" pc="268437222" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="59" parent="globals/HomeView" pc="268437226" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="60" parent="globals/HomeView" pc="268437244" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="61" parent="globals/HomeView" pc="268437262" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="62" parent="globals/HomeView" pc="268437280" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="63" parent="globals/HomeView" pc="268437298" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="64" parent="globals/HomeView" pc="268437306" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="66" parent="globals/HomeView" pc="268437310" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="67" parent="globals/HomeView" pc="268437349" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="68" parent="globals/HomeView" pc="268437357" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="71" parent="globals/HomeView" pc="268437361" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="72" parent="globals/HomeView" pc="268437367" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="73" parent="globals/HomeView" pc="268437373" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="74" parent="globals/HomeView" pc="268437379" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="75" parent="globals/HomeView" pc="268437397" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="76" parent="globals/HomeView" pc="268437415" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="77" parent="globals/HomeView" pc="268437433" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="78" parent="globals/HomeView" pc="268437450" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="79" parent="globals/HomeView" pc="268437467" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="80" parent="globals/HomeView" pc="268437484" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="81" parent="globals/HomeView" pc="268437488" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="82" parent="globals/HomeView" pc="268437496" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="84" parent="globals/HomeView" pc="268437503" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="85" parent="globals/HomeView" pc="268437511" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="87" parent="globals/HomeView" pc="268437518" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="89" parent="globals/HomeView" pc="268437525" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="90" parent="globals/HomeView" pc="268437532" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="91" parent="globals/HomeView" pc="268437539" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="92" parent="globals/HomeView" pc="268437546" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="93" parent="globals/HomeView" pc="268437554" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="95" parent="globals/HomeView" pc="268437561" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="96" parent="globals/HomeView" pc="268437569" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="99" parent="globals/HomeView" pc="268437576" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="100" parent="globals/HomeView" pc="268437589" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="101" parent="globals/HomeView" pc="268437597" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="104" parent="globals/HomeView" pc="268437604" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="105" parent="globals/HomeView" pc="268437614" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="106" parent="globals/HomeView" pc="268437622" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="107" parent="globals/HomeView" pc="268437626" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="108" parent="globals/HomeView" pc="268437644" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="109" parent="globals/HomeView" pc="268437662" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="110" parent="globals/HomeView" pc="268437680" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="111" parent="globals/HomeView" pc="268437740" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="112" parent="globals/HomeView" pc="268437748" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="114" parent="globals/HomeView" pc="268437752" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="115" parent="globals/HomeView" pc="268437758" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="116" parent="globals/HomeView" pc="268437764" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="117" parent="globals/HomeView" pc="268437770" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="118" parent="globals/HomeView" pc="268437788" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="119" parent="globals/HomeView" pc="268437806" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="120" parent="globals/HomeView" pc="268437824" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="121" parent="globals/HomeView" pc="268437841" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="122" parent="globals/HomeView" pc="268437858" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="123" parent="globals/HomeView" pc="268437875" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="124" parent="globals/HomeView" pc="268437879" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="125" parent="globals/HomeView" pc="268437887" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="127" parent="globals/HomeView" pc="268437894" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="128" parent="globals/HomeView" pc="268437902" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="130" parent="globals/HomeView" pc="268437909" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="131" parent="globals/HomeView" pc="268437916" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="132" parent="globals/HomeView" pc="268437923" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="133" parent="globals/HomeView" pc="268437930" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="134" parent="globals/HomeView" pc="268437937" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="135" parent="globals/HomeView" pc="268437945" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="137" parent="globals/HomeView" pc="268437952" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="138" parent="globals/HomeView" pc="268437960" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="140" parent="globals/HomeView" pc="268437967" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="141" parent="globals/HomeView" pc="268437980" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="142" parent="globals/HomeView" pc="268437988" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="144" parent="globals/HomeView" pc="268437995" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="147" parent="globals/HomeView" pc="268438008" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="148" parent="globals/HomeView" pc="268438016" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="149" parent="globals/HomeView" pc="268438019" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="150" parent="globals/HomeView" pc="268438037" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="151" parent="globals/HomeView" pc="268438055" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="152" parent="globals/HomeView" pc="268438073" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="153" parent="globals/HomeView" pc="268438133" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="154" parent="globals/HomeView" pc="268438141" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="156" parent="globals/HomeView" pc="268438145" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="157" parent="globals/HomeView" pc="268438151" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="158" parent="globals/HomeView" pc="268438157" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="159" parent="globals/HomeView" pc="268438163" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="160" parent="globals/HomeView" pc="268438181" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="161" parent="globals/HomeView" pc="268438199" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="162" parent="globals/HomeView" pc="268438217" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="163" parent="globals/HomeView" pc="268438234" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="164" parent="globals/HomeView" pc="268438251" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="165" parent="globals/HomeView" pc="268438268" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="166" parent="globals/HomeView" pc="268438272" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="167" parent="globals/HomeView" pc="268438280" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="169" parent="globals/HomeView" pc="268438287" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="170" parent="globals/HomeView" pc="268438295" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="172" parent="globals/HomeView" pc="268438302" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="173" parent="globals/HomeView" pc="268438309" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="174" parent="globals/HomeView" pc="268438316" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="175" parent="globals/HomeView" pc="268438323" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="176" parent="globals/HomeView" pc="268438330" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="177" parent="globals/HomeView" pc="268438338" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="179" parent="globals/HomeView" pc="268438345" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="180" parent="globals/HomeView" pc="268438353" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="182" parent="globals/HomeView" pc="268438360" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="183" parent="globals/HomeView" pc="268438373" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="184" parent="globals/HomeView" pc="268438381" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="186" parent="globals/HomeView" pc="268438388" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="189" parent="globals/HomeView" pc="268438401" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="190" parent="globals/HomeView" pc="268438410" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="192" parent="globals/HomeView" pc="268438419" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="193" parent="globals/HomeView" pc="268438434" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="194" parent="globals/HomeView" pc="268438445" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="197" parent="globals/HomeView" pc="268438457" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="199" parent="globals/HomeView" pc="268438475" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="200" parent="globals/HomeView" pc="268438491" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="201" parent="globals/HomeView" pc="268438504" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="202" parent="globals/HomeView" pc="268438513" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="203" parent="globals/HomeView" pc="268438531" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="205" parent="globals/HomeView" pc="268438552" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="206" parent="globals/HomeView" pc="268438562" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="207" parent="globals/HomeView" pc="268438576" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="14" lineNum="209" parent="globals/HomeView" pc="268438589" symbol="onLayout"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="15" lineNum="20" parent="globals/HomeView" pc="268438599" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="15" lineNum="21" parent="globals/HomeView" pc="268438601" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="15" lineNum="22" parent="globals/HomeView" pc="268438613" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="15" lineNum="23" parent="globals/HomeView" pc="268438651" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="15" lineNum="24" parent="globals/HomeView" pc="268438689" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="15" lineNum="25" parent="globals/HomeView" pc="268438727" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="15" lineNum="26" parent="globals/HomeView" pc="268438735" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="15" lineNum="27" parent="globals/HomeView" pc="268438743" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="15" lineNum="28" parent="globals/HomeView" pc="268438751" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="15" lineNum="29" parent="globals/HomeView" pc="268438759" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="15" lineNum="30" parent="globals/HomeView" pc="268438767" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="15" lineNum="31" parent="globals/HomeView" pc="268438775" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="15" lineNum="32" parent="globals/HomeView" pc="268438783" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="16" lineNum="35" parent="globals/HomeView" pc="268438793" symbol="getSubtitleForIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="16" lineNum="36" parent="globals/HomeView" pc="268438795" symbol="getSubtitleForIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="16" lineNum="37" parent="globals/HomeView" pc="268438802" symbol="getSubtitleForIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="16" lineNum="39" parent="globals/HomeView" pc="268438811" symbol="getSubtitleForIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="16" lineNum="40" parent="globals/HomeView" pc="268438819" symbol="getSubtitleForIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="16" lineNum="42" parent="globals/HomeView" pc="268438828" symbol="getSubtitleForIndex"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="17" lineNum="231" parent="globals/HomeView" pc="268438834" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="17" lineNum="232" parent="globals/HomeView" pc="268438836" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="17" lineNum="233" parent="globals/HomeView" pc="268438852" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="17" lineNum="235" parent="globals/HomeView" pc="268438860" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="17" lineNum="236" parent="globals/HomeView" pc="268438870" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="17" lineNum="237" parent="globals/HomeView" pc="268438920" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeView.mc" id="17" lineNum="238" parent="globals/HomeView" pc="268438970" symbol="onUpdate"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="18" lineNum="8" parent="globals/HomeInputDelegate" pc="268439024" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="18" lineNum="9" parent="globals/HomeInputDelegate" pc="268439026" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="18" lineNum="10" parent="globals/HomeInputDelegate" pc="268439038" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="19" lineNum="17" parent="globals/HomeInputDelegate" pc="268439048" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="19" lineNum="18" parent="globals/HomeInputDelegate" pc="268439051" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="19" lineNum="19" parent="globals/HomeInputDelegate" pc="268439060" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="19" lineNum="20" parent="globals/HomeInputDelegate" pc="268439080" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="19" lineNum="22" parent="globals/HomeInputDelegate" pc="268439085" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="19" lineNum="23" parent="globals/HomeInputDelegate" pc="268439091" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="19" lineNum="24" parent="globals/HomeInputDelegate" pc="268439098" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="19" lineNum="25" parent="globals/HomeInputDelegate" pc="268439117" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="19" lineNum="26" parent="globals/HomeInputDelegate" pc="268439124" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="19" lineNum="28" parent="globals/HomeInputDelegate" pc="268439129" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="19" lineNum="29" parent="globals/HomeInputDelegate" pc="268439146" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="19" lineNum="30" parent="globals/HomeInputDelegate" pc="268439168" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="19" lineNum="31" parent="globals/HomeInputDelegate" pc="268439205" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="20" lineNum="13" parent="globals/HomeInputDelegate" pc="268439207" symbol="onSelect"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/HomeInputDelegate.mc" id="20" lineNum="14" parent="globals/HomeInputDelegate" pc="268439209" symbol="onSelect"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" id="21" lineNum="10" parent="globals/FirePointWatchApp" pc="268439211" symbol="getInitialView"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" id="21" lineNum="11" parent="globals/FirePointWatchApp" pc="268439214" symbol="getInitialView"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" id="21" lineNum="12" parent="globals/FirePointWatchApp" pc="268439234" symbol="getInitialView"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" id="22" lineNum="6" parent="globals/FirePointWatchApp" pc="268439267" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" id="22" lineNum="7" parent="globals/FirePointWatchApp" pc="268439269" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="23" lineNum="18" parent="globals/FeatureDetailInputDelegate" pc="268439282" symbol="onBack"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="23" lineNum="19" parent="globals/FeatureDetailInputDelegate" pc="268439284" symbol="onBack"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="23" lineNum="20" parent="globals/FeatureDetailInputDelegate" pc="268439299" symbol="onBack"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="24" lineNum="8" parent="globals/FeatureDetailInputDelegate" pc="268439301" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="24" lineNum="9" parent="globals/FeatureDetailInputDelegate" pc="268439303" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="24" lineNum="10" parent="globals/FeatureDetailInputDelegate" pc="268439315" symbol="initialize"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="25" lineNum="23" parent="globals/FeatureDetailInputDelegate" pc="268439325" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="25" lineNum="24" parent="globals/FeatureDetailInputDelegate" pc="268439328" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="25" lineNum="25" parent="globals/FeatureDetailInputDelegate" pc="268439337" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="25" lineNum="26" parent="globals/FeatureDetailInputDelegate" pc="268439357" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="25" lineNum="28" parent="globals/FeatureDetailInputDelegate" pc="268439362" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="25" lineNum="29" parent="globals/FeatureDetailInputDelegate" pc="268439368" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="25" lineNum="30" parent="globals/FeatureDetailInputDelegate" pc="268439375" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="25" lineNum="31" parent="globals/FeatureDetailInputDelegate" pc="268439395" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="25" lineNum="32" parent="globals/FeatureDetailInputDelegate" pc="268439410" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="25" lineNum="34" parent="globals/FeatureDetailInputDelegate" pc="268439415" symbol="onTap"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="26" lineNum="13" parent="globals/FeatureDetailInputDelegate" pc="268439417" symbol="onSelect"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="26" lineNum="14" parent="globals/FeatureDetailInputDelegate" pc="268439419" symbol="onSelect"/>
+        <entry filename="/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" id="26" lineNum="15" parent="globals/FeatureDetailInputDelegate" pc="268439434" symbol="onSelect"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="2" module="true" symbol="globals/PillUi"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="47" symbol="HelloLabel"/>
+        <entry field="true" id="25" symbol="_subFont"/>
+        <entry id="13" method="true" symbol="drawPillColored"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="44" symbol="AppName"/>
+        <entry id="5" module="true" symbol="globals/Rez/Strings"/>
+        <entry field="true" id="33" symbol="_homeFont"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="3" module="true" symbol="globals/Rez"/>
+        <entry id="39" method="true" symbol="getSubtitleForIndex"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="6" object="true" symbol="FeatureDetailInputDelegate"/>
+        <entry field="true" id="42" symbol="_detail"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry field="true" id="48" symbol="PositionLabel"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8389098" method="true" symbol="onTap"/>
+        <entry id="7" object="true" symbol="FeatureDetailView"/>
+        <entry field="true" id="14" symbol="_backFont"/>
+        <entry field="true" id="29" symbol="_btnRadius"/>
+        <entry id="4" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="24" symbol="_subBaselineY"/>
+        <entry field="true" id="37" symbol="_rowY2"/>
+        <entry field="true" id="36" symbol="_rowY1"/>
+        <entry field="true" id="35" symbol="_rowY0"/>
+        <entry field="true" id="23" symbol="_helloLine"/>
+        <entry id="10" object="true" symbol="HomeView"/>
+        <entry id="9" object="true" symbol="HomeInputDelegate"/>
+        <entry field="true" id="46" symbol="CompassLabel"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="11" module="true" symbol="PillUi"/>
+        <entry id="12" method="true" symbol="drawPill"/>
+        <entry id="27" method="true" symbol="hitBackButton"/>
+        <entry field="true" id="41" symbol="_home"/>
+        <entry id="40" method="true" symbol="hitButtonIndex"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="43" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry field="true" id="38" symbol="_savedLabel"/>
+        <entry field="true" id="26" symbol="_subtitle"/>
+        <entry field="true" id="22" symbol="_helloFont"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry field="true" id="21" symbol="_helloBaselineY"/>
+        <entry field="true" id="16" symbol="_backLabel"/>
+        <entry field="true" id="49" symbol="SavedLabel"/>
+        <entry field="true" id="45" symbol="BackLabel"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry field="true" id="17" symbol="_backRadius"/>
+        <entry id="8" object="true" symbol="FirePointWatchApp"/>
+        <entry field="true" id="20" symbol="_backY"/>
+        <entry field="true" id="19" symbol="_backX"/>
+        <entry field="true" id="18" symbol="_backW"/>
+        <entry field="true" id="15" symbol="_backH"/>
+        <entry field="true" id="32" symbol="_compassLabel"/>
+        <entry field="true" id="34" symbol="_positionLabel"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="31" symbol="_btnX"/>
+        <entry field="true" id="30" symbol="_btnW"/>
+        <entry field="true" id="28" symbol="_btnH"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435589" name="dc" stackId="1" startPc="268435540"/>
+        <entry arg="true" endPc="268435589" name="x" stackId="2" startPc="268435540"/>
+        <entry arg="true" endPc="268435589" name="y" stackId="3" startPc="268435540"/>
+        <entry arg="true" endPc="268435589" name="w" stackId="4" startPc="268435540"/>
+        <entry arg="true" endPc="268435589" name="h" stackId="5" startPc="268435540"/>
+        <entry arg="true" endPc="268435589" name="r" stackId="6" startPc="268435540"/>
+        <entry arg="true" endPc="268435589" name="label" stackId="7" startPc="268435540"/>
+        <entry arg="true" endPc="268435589" name="font" stackId="8" startPc="268435540"/>
+        <entry arg="true" endPc="268435749" name="dc" stackId="1" startPc="268435590"/>
+        <entry arg="true" endPc="268435749" name="x" stackId="2" startPc="268435590"/>
+        <entry arg="true" endPc="268435749" name="y" stackId="3" startPc="268435590"/>
+        <entry arg="true" endPc="268435749" name="w" stackId="4" startPc="268435590"/>
+        <entry arg="true" endPc="268435749" name="h" stackId="5" startPc="268435590"/>
+        <entry arg="true" endPc="268435749" name="r" stackId="6" startPc="268435590"/>
+        <entry arg="true" endPc="268435749" name="label" stackId="7" startPc="268435590"/>
+        <entry arg="true" endPc="268435749" name="font" stackId="8" startPc="268435590"/>
+        <entry arg="true" endPc="268435749" name="fillColor" stackId="9" startPc="268435590"/>
+        <entry arg="true" endPc="268435749" name="strokeColor" stackId="10" startPc="268435590"/>
+        <entry arg="true" endPc="268435749" name="textColor" stackId="11" startPc="268435590"/>
+        <entry endPc="268435748" name="cx" stackId="12" startPc="268435601"/>
+        <entry endPc="268435748" name="cy" stackId="13" startPc="268435601"/>
+        <entry arg="true" endPc="268436549" name="dc" stackId="1" startPc="268435750"/>
+        <entry endPc="268436548" name="width" stackId="2" startPc="268435753"/>
+        <entry endPc="268436548" name="height" stackId="3" startPc="268435753"/>
+        <entry endPc="268436548" name="padX" stackId="4" startPc="268435753"/>
+        <entry endPc="268436548" name="padY" stackId="5" startPc="268435753"/>
+        <entry endPc="268436548" name="minBtnH" stackId="6" startPc="268435753"/>
+        <entry endPc="268436548" name="maxWPct" stackId="7" startPc="268435753"/>
+        <entry endPc="268436548" name="bottomInset" stackId="8" startPc="268435753"/>
+        <entry endPc="268436548" name="wMargin" stackId="9" startPc="268435753"/>
+        <entry endPc="268436548" name="maxW" stackId="10" startPc="268435753"/>
+        <entry endPc="268436548" name="bfont" stackId="11" startPc="268435753"/>
+        <entry endPc="268436548" name="bdims" stackId="12" startPc="268435753"/>
+        <entry endPc="268436548" name="bdw" stackId="13" startPc="268435753"/>
+        <entry endPc="268436548" name="bwp" stackId="14" startPc="268435753"/>
+        <entry endPc="268436548" name="bw" stackId="15" startPc="268435753"/>
+        <entry endPc="268436548" name="bh" stackId="16" startPc="268435753"/>
+        <entry endPc="268436548" name="bfh" stackId="17" startPc="268435753"/>
+        <entry endPc="268436548" name="bneedW" stackId="18" startPc="268435753"/>
+        <entry endPc="268436548" name="br" stackId="19" startPc="268435753"/>
+        <entry endPc="268436548" name="lineGap" stackId="20" startPc="268435753"/>
+        <entry endPc="268436548" name="backReserve" stackId="21" startPc="268435753"/>
+        <entry endPc="268436548" name="fhHello" stackId="22" startPc="268435753"/>
+        <entry endPc="268436548" name="fhSub" stackId="23" startPc="268435753"/>
+        <entry endPc="268436548" name="blockH" stackId="24" startPc="268435753"/>
+        <entry endPc="268436548" name="contentTop" stackId="25" startPc="268435753"/>
+        <entry arg="true" endPc="268436629" name="x" stackId="1" startPc="268436550"/>
+        <entry arg="true" endPc="268436629" name="y" stackId="2" startPc="268436550"/>
+        <entry arg="true" endPc="268436812" name="subtitle" stackId="1" startPc="268436630"/>
+        <entry arg="true" endPc="268437006" name="dc" stackId="1" startPc="268436813"/>
+        <entry endPc="268437005" name="width" stackId="2" startPc="268436816"/>
+        <entry arg="true" endPc="268437162" name="x" stackId="1" startPc="268437007"/>
+        <entry arg="true" endPc="268437162" name="y" stackId="2" startPc="268437007"/>
+        <entry arg="true" endPc="268438598" name="dc" stackId="1" startPc="268437163"/>
+        <entry endPc="268438597" name="width" stackId="2" startPc="268437166"/>
+        <entry endPc="268438597" name="height" stackId="3" startPc="268437166"/>
+        <entry endPc="268438597" name="padX" stackId="4" startPc="268437166"/>
+        <entry endPc="268438597" name="padY" stackId="5" startPc="268437166"/>
+        <entry endPc="268438597" name="minBtnH" stackId="6" startPc="268437166"/>
+        <entry endPc="268438597" name="maxWPct" stackId="7" startPc="268437166"/>
+        <entry endPc="268438597" name="roundBiasY" stackId="8" startPc="268437166"/>
+        <entry endPc="268438597" name="rowGap" stackId="9" startPc="268437166"/>
+        <entry endPc="268438597" name="wMargin" stackId="10" startPc="268437166"/>
+        <entry endPc="268438597" name="maxW" stackId="11" startPc="268437166"/>
+        <entry endPc="268438597" name="font" stackId="12" startPc="268437166"/>
+        <entry endPc="268438597" name="dims0" stackId="13" startPc="268437166"/>
+        <entry endPc="268438597" name="dims1" stackId="14" startPc="268437166"/>
+        <entry endPc="268438597" name="dims2" stackId="15" startPc="268437166"/>
+        <entry endPc="268438597" name="d0w" stackId="16" startPc="268437166"/>
+        <entry endPc="268438597" name="d1w" stackId="17" startPc="268437166"/>
+        <entry endPc="268438597" name="d2w" stackId="18" startPc="268437166"/>
+        <entry endPc="268438597" name="w0" stackId="19" startPc="268437166"/>
+        <entry endPc="268438597" name="w1" stackId="20" startPc="268437166"/>
+        <entry endPc="268438597" name="w2" stackId="21" startPc="268437166"/>
+        <entry endPc="268438597" name="m0" stackId="22" startPc="268437166"/>
+        <entry endPc="268438597" name="m1" stackId="23" startPc="268437166"/>
+        <entry endPc="268438597" name="m2" stackId="24" startPc="268437166"/>
+        <entry endPc="268438597" name="maxTW" stackId="25" startPc="268437166"/>
+        <entry endPc="268438597" name="maxTH" stackId="26" startPc="268437166"/>
+        <entry endPc="268438597" name="t1h" stackId="27" startPc="268437166"/>
+        <entry endPc="268438597" name="t2h" stackId="28" startPc="268437166"/>
+        <entry endPc="268438597" name="fh" stackId="29" startPc="268437166"/>
+        <entry endPc="268438597" name="needW" stackId="30" startPc="268437166"/>
+        <entry endPc="268438597" name="totalH" stackId="31" startPc="268437166"/>
+        <entry endPc="268438597" name="startY" stackId="32" startPc="268437166"/>
+        <entry endPc="268438597" name="r" stackId="33" startPc="268437166"/>
+        <entry arg="true" endPc="268438833" name="idx" stackId="1" startPc="268438793"/>
+        <entry arg="true" endPc="268439023" name="dc" stackId="1" startPc="268438834"/>
+        <entry arg="true" endPc="268439047" name="home" stackId="1" startPc="268439024"/>
+        <entry arg="true" endPc="268439206" name="clickEvent" stackId="1" startPc="268439048"/>
+        <entry endPc="268439206" name="coords" stackId="2" startPc="268439051"/>
+        <entry endPc="268439206" name="x" stackId="3" startPc="268439051"/>
+        <entry endPc="268439206" name="y" stackId="4" startPc="268439051"/>
+        <entry endPc="268439206" name="idx" stackId="5" startPc="268439051"/>
+        <entry endPc="268439206" name="sub" stackId="6" startPc="268439051"/>
+        <entry endPc="268439206" name="detail" stackId="7" startPc="268439051"/>
+        <entry endPc="268439266" name="homeView" stackId="1" startPc="268439214"/>
+        <entry arg="true" endPc="268439324" name="detail" stackId="1" startPc="268439301"/>
+        <entry arg="true" endPc="268439416" name="clickEvent" stackId="1" startPc="268439325"/>
+        <entry endPc="268439416" name="coords" stackId="2" startPc="268439328"/>
+        <entry endPc="268439416" name="x" stackId="3" startPc="268439328"/>
+        <entry endPc="268439416" name="y" stackId="4" startPc="268439328"/>
+    </localVars>
+    <deviceInfo deviceVersion="64e9a617e9472a32c43687e18cd12264b67a820e" partNumber="006-B4570-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BackLabel"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="CompassLabel"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="HelloLabel"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SavedLabel"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="PositionLabel"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="58" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/PillUi" offset="152" parentId="globals" symbolId="PillUi" type="module"/>
+        <dataEntry label="globals/FeatureDetailView" offset="196" parentId="globals" symbolId="FeatureDetailView" type="class"/>
+        <dataEntry label="globals/HomeView" offset="384" parentId="globals" symbolId="HomeView" type="class"/>
+        <dataEntry label="globals/HomeInputDelegate" offset="563" parentId="globals" symbolId="HomeInputDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="634" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/FirePointWatchApp" offset="678" parentId="globals" symbolId="FirePointWatchApp" type="class"/>
+        <dataEntry label="globals/FeatureDetailInputDelegate" offset="731" parentId="globals" symbolId="FeatureDetailInputDelegate" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="811" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="846" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="PillUi">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="FeatureDetailView" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435483" name="&lt;init&gt;" parent="HomeView" startPc="268435472">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435495" name="&lt;init&gt;" parent="HomeInputDelegate" startPc="268435484">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435515" name="&lt;init&gt;" parent="Rez" startPc="268435496">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435527" name="&lt;init&gt;" parent="FirePointWatchApp" startPc="268435516">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435539" name="&lt;init&gt;" parent="FeatureDetailInputDelegate" startPc="268435528">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435589" name="drawPill" parent="PillUi" startPc="268435540">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="w"/>
+            <param id="h"/>
+            <param id="r"/>
+            <param id="label"/>
+            <param id="font"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435749" name="drawPillColored" parent="PillUi" startPc="268435590">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="w"/>
+            <param id="h"/>
+            <param id="r"/>
+            <param id="label"/>
+            <param id="font"/>
+            <param id="fillColor"/>
+            <param id="strokeColor"/>
+            <param id="textColor"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436549" name="onLayout" parent="FeatureDetailView" startPc="268435750">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436629" name="hitBackButton" parent="FeatureDetailView" startPc="268436550">
+            <param id="x"/>
+            <param id="y"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436812" name="initialize" parent="FeatureDetailView" startPc="268436630">
+            <param id="subtitle"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437006" name="onUpdate" parent="FeatureDetailView" startPc="268436813">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437162" name="hitButtonIndex" parent="HomeView" startPc="268437007">
+            <param id="x"/>
+            <param id="y"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438598" name="onLayout" parent="HomeView" startPc="268437163">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438792" name="initialize" parent="HomeView" startPc="268438599">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438833" name="getSubtitleForIndex" parent="HomeView" startPc="268438793">
+            <param id="idx"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439023" name="onUpdate" parent="HomeView" startPc="268438834">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439047" name="initialize" parent="HomeInputDelegate" startPc="268439024">
+            <param id="home"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439206" name="onTap" parent="HomeInputDelegate" startPc="268439048">
+            <param id="clickEvent"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439210" name="onSelect" parent="HomeInputDelegate" startPc="268439207">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439266" name="getInitialView" parent="FirePointWatchApp" startPc="268439211">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439281" name="initialize" parent="FirePointWatchApp" startPc="268439267">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439300" name="onBack" parent="FeatureDetailInputDelegate" startPc="268439282">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439324" name="initialize" parent="FeatureDetailInputDelegate" startPc="268439301">
+            <param id="detail"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439416" name="onTap" parent="FeatureDetailInputDelegate" startPc="268439325">
+            <param id="clickEvent"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439435" name="onSelect" parent="FeatureDetailInputDelegate" startPc="268439417">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

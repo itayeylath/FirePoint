@@ -1,0 +1,8 @@
+<resources>
+    <string id="AppName">FirePointPOC</string>
+    <string id="HelloLabel">Hello</string>
+    <string id="CompassLabel">Compass</string>
+    <string id="PositionLabel">Position</string>
+    <string id="SavedLabel">Saved</string>
+    <string id="BackLabel">back</string>
+</resources>

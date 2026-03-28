@@ -1,0 +1,175 @@
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Lang,1,13,17]; ]
+using Toybox.Lang;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc"; @line = 4; @symbol_classdef = [FeatureDetailInputDelegate,4,6,32]; @symbol_extends<0> = [WatchUi,4,41,48]; @symbol_extends<1> = [InputDelegate,4,49,62]; ]
+class FeatureDetailInputDelegate extends WatchUi.InputDelegate {
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc"; @line = 6; @position = 8; @symbol_vardef = [_detail,6,8,15]; @symbol_type<0> = [FeatureDetailView,6,19,36]; ]
+    var _detail as FeatureDetailView;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc"; @line = 8; @symbol_functiondef = [initialize,8,13,23]; @symbol_param<0> = [detail,8,24,30]; @symbol_param<0>_type<0> = [FeatureDetailView,8,34,51]; ]
+    function initialize(detail as FeatureDetailView) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_8_53_11_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 9 8 ]
+        symbol [ InputDelegate %tmp.2 9 8 21 ];
+        %tmp.2 = getv ? :InputDelegate;
+        symbol [ initialize %tmp.3 9 22 32 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 10 8 ]
+        %tmp.4 = lgetv %detail;
+        symbol [ detail %tmp.4 10 18 24 ];
+        symbol [ _detail ? 10 8 15 ];
+        putv self :_detail %tmp.4;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_8_53_11_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc"; @line = 13; @symbol_functiondef = [onSelect,13,13,21]; @symbol_return<0> = [Lang,13,27,31]; @symbol_return<1> = [Boolean,13,32,39]; ]
+    function onSelect() as Lang.Boolean {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_13_40_16_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 14 8 ]
+        symbol [ WatchUi %tmp.1 14 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 14 16 23 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ WatchUi %tmp.3 14 24 31 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_RIGHT %tmp.4 14 32 43 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_RIGHT;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 15 8 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_13_40_16_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc"; @line = 18; @symbol_functiondef = [onBack,18,13,19]; @symbol_return<0> = [Lang,18,25,29]; @symbol_return<1> = [Boolean,18,30,37]; ]
+    function onBack() as Lang.Boolean {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_18_38_21_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 19 8 ]
+        symbol [ WatchUi %tmp.1 19 8 15 ];
+        %tmp.1 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.2 19 16 23 ];
+        %tmp.2 = getv function %tmp.1 :popView;
+        symbol [ WatchUi %tmp.3 19 24 31 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_RIGHT %tmp.4 19 32 43 ];
+        %tmp.4 = getv %tmp.3 :SLIDE_RIGHT;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 20 8 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_18_38_21_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc"; @line = 23; @symbol_functiondef = [onTap,23,13,18]; @symbol_param<0> = [clickEvent,23,19,29]; @symbol_param<0>_type<0> = [WatchUi,23,33,40]; @symbol_param<0>_type<1> = [ClickEvent,23,41,51]; @symbol_return<0> = [Lang,23,56,60]; @symbol_return<1> = [Boolean,23,61,68]; ]
+    function onTap(clickEvent as WatchUi.ClickEvent) as Lang.Boolean {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_23_69_35_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 24 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_23_69_35_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_23_69_35_4_stop" ]
+        %coords.1 = local;
+        symbol [ coords %coords.1 24 12 18 ];
+        %tmp.1 = lgetv %clickEvent;
+        symbol [ clickEvent %tmp.1 24 21 31 ];
+        symbol [ getCoordinates %tmp.2 24 32 46 ];
+        %tmp.2 = getv function %tmp.1 :getCoordinates;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %coords.1 %tmp.3;
+        symbol [ coords %coords.1 24 12 18 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 25 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_8_27_8_if_stmt:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_12_25_46_begin:
+        %tmp.4 = lgetv %coords.1;
+        symbol [ coords %tmp.4 25 12 18 ];
+        %tmp.5 = null;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bt %tmp.6 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_8_27_8_if_true;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_30_25_46_false:
+        %tmp.7 = lgetv %coords.1;
+        symbol [ coords %tmp.7 25 30 36 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        symbol [ size %tmp.9 25 37 41 ];
+        %tmp.9 = getv function %tmp.8 :size;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = 2;
+        %tmp.12 = lt %tmp.10 %tmp.11;
+        push %tmp.12;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_30_25_46_end:
+        %tmp.13 = phi [%tmp.6 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_12_25_46_begin] [%tmp.12 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_30_25_46_false] [%tmp.13 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_30_25_46_end];
+        bf %tmp.13 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_8_27_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_8_27_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_49_27_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 26 12 ]
+        %tmp.14 = false;
+        ret %tmp.14;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_49_27_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_8_27_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_25_8_27_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 28 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_23_69_35_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_23_69_35_4_stop" ]
+        %x.2 = local;
+        symbol [ x %x.2 28 12 13 ];
+        %tmp.15 = lgetv %coords.1;
+        symbol [ coords %tmp.15 28 16 22 ];
+        %tmp.16 = 0;
+        %tmp.17 = agetv %tmp.15 %tmp.16;
+        %tmp.18 = as %tmp.17 Lang.Number;
+        symbol [ Lang %tmp.18 28 29 33 ];
+        symbol [ Number %tmp.18 28 34 40 ];
+        lputv %x.2 %tmp.18;
+        symbol [ x %x.2 28 12 13 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 29 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_23_69_35_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_23_69_35_4_stop" ]
+        %y.3 = local;
+        symbol [ y %y.3 29 12 13 ];
+        %tmp.19 = lgetv %coords.1;
+        symbol [ coords %tmp.19 29 16 22 ];
+        %tmp.20 = 1;
+        %tmp.21 = agetv %tmp.19 %tmp.20;
+        %tmp.22 = as %tmp.21 Lang.Number;
+        symbol [ Lang %tmp.22 29 29 33 ];
+        symbol [ Number %tmp.22 29 34 40 ];
+        lputv %y.3 %tmp.22;
+        symbol [ y %y.3 29 12 13 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 30 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_30_8_33_8_if_stmt:
+        symbol [ _detail %tmp.24 30 12 19 ];
+        %tmp.24 = getv ? :_detail;
+        symbol [ hitBackButton %tmp.25 30 20 33 ];
+        %tmp.25 = getv function %tmp.24 :hitBackButton;
+        %tmp.26 = lgetv %x.2;
+        symbol [ x %tmp.26 30 34 35 ];
+        %tmp.27 = lgetv %y.3;
+        symbol [ y %tmp.27 30 37 38 ];
+        %tmp.28 = invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27);
+        bf %tmp.28 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_30_8_33_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_30_8_33_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_30_41_33_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 31 12 ]
+        symbol [ WatchUi %tmp.29 31 12 19 ];
+        %tmp.29 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.30 31 20 27 ];
+        %tmp.30 = getv function %tmp.29 :popView;
+        symbol [ WatchUi %tmp.31 31 28 35 ];
+        %tmp.31 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_RIGHT %tmp.32 31 36 47 ];
+        %tmp.32 = getv %tmp.31 :SLIDE_RIGHT;
+        invoke %tmp.29 %tmp.30(%tmp.32);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 32 12 ]
+        %tmp.33 = true;
+        ret %tmp.33;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_30_41_33_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_30_8_33_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_30_8_33_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc" 34 8 ]
+        %tmp.34 = false;
+        ret %tmp.34;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailInputDelegate_mc_23_69_35_4_stop:
+    }
+}
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailInputDelegate.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,56 @@
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Application,1,13,24]; ]
+using Toybox.Application;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 4; @symbol_classdef = [FirePointWatchApp,4,6,23]; @symbol_extends<0> = [Application,4,32,43]; @symbol_extends<1> = [AppBase,4,44,51]; ]
+class FirePointWatchApp extends Application.AppBase {
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    function initialize() as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_6_26_8_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 7 8 ]
+        symbol [ AppBase %tmp.2 7 8 15 ];
+        %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 7 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_6_26_8_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 10; @symbol_functiondef = [getInitialView,10,13,27]; ]
+    function getInitialView() {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_10_30_13_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 11 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_10_30_13_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_10_30_13_4_stop" ]
+        %homeView.1 = local;
+        symbol [ homeView %homeView.1 11 12 20 ];
+        symbol [ HomeView %tmp.4 11 27 35 ];
+        %tmp.4 = getv ? :HomeView;
+        %tmp.1 = newc %tmp.4 ();
+        lputv %homeView.1 %tmp.1;
+        symbol [ homeView %homeView.1 11 12 20 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 12 8 ]
+        %tmp.5 = newa 2;
+        %tmp.6 = lgetv %homeView.1;
+        symbol [ homeView %tmp.6 12 17 25 ];
+        %tmp.7 = dup %tmp.5;
+        %tmp.8 = aputv %tmp.7 0 %tmp.6;
+        symbol [ HomeInputDelegate %tmp.12 12 31 48 ];
+        %tmp.12 = getv ? :HomeInputDelegate;
+        %tmp.13 = lgetv %homeView.1;
+        symbol [ homeView %tmp.13 12 49 57 ];
+        %tmp.9 = newc %tmp.12 (%tmp.13);
+        %tmp.14 = dup %tmp.8;
+        %tmp.15 = aputv %tmp.14 1 %tmp.9;
+        ret %tmp.15;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_10_30_13_4_stop:
+    }
+}
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 1; ]
+<init> {
+}

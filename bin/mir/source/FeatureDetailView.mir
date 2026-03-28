@@ -1,0 +1,1151 @@
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Lang,1,13,17]; ]
+using Toybox.Lang;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Graphics,3,13,21]; ]
+using Toybox.Graphics;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 5; @symbol_classdef = [FeatureDetailView,5,6,23]; @symbol_extends<0> = [WatchUi,5,32,39]; @symbol_extends<1> = [View,5,40,44]; ]
+class FeatureDetailView extends WatchUi.View {
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 7; @position = 8; @symbol_vardef = [_subtitle,7,8,17]; @symbol_type<0> = [Lang,7,21,25]; @symbol_type<1> = [String,7,26,32]; ]
+    var _subtitle as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 8; @position = 8; @symbol_vardef = [_helloLine,8,8,18]; @symbol_type<0> = [Lang,8,22,26]; @symbol_type<1> = [String,8,27,33]; ]
+    var _helloLine as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 9; @position = 8; @symbol_vardef = [_backLabel,9,8,18]; @symbol_type<0> = [Lang,9,22,26]; @symbol_type<1> = [String,9,27,33]; ]
+    var _backLabel as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 11; @position = 8; @symbol_vardef = [_helloFont,11,8,18]; @symbol_type<0> = [Graphics,11,22,30]; @symbol_type<1> = [FontDefinition,11,31,45]; ]
+    var _helloFont as Graphics.FontDefinition;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 12; @position = 8; @symbol_vardef = [_subFont,12,8,16]; @symbol_type<0> = [Graphics,12,20,28]; @symbol_type<1> = [FontDefinition,12,29,43]; ]
+    var _subFont as Graphics.FontDefinition;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 13; @position = 8; @symbol_vardef = [_backFont,13,8,17]; @symbol_type<0> = [Graphics,13,21,29]; @symbol_type<1> = [FontDefinition,13,30,44]; ]
+    var _backFont as Graphics.FontDefinition;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 15; @position = 8; @symbol_vardef = [_helloBaselineY,15,8,23]; @symbol_type<0> = [Lang,15,27,31]; @symbol_type<1> = [Number,15,32,38]; ]
+    var _helloBaselineY as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 16; @position = 8; @symbol_vardef = [_subBaselineY,16,8,21]; @symbol_type<0> = [Lang,16,25,29]; @symbol_type<1> = [Number,16,30,36]; ]
+    var _subBaselineY as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 18; @position = 8; @symbol_vardef = [_backX,18,8,14]; @symbol_type<0> = [Lang,18,18,22]; @symbol_type<1> = [Number,18,23,29]; ]
+    var _backX as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 19; @position = 8; @symbol_vardef = [_backY,19,8,14]; @symbol_type<0> = [Lang,19,18,22]; @symbol_type<1> = [Number,19,23,29]; ]
+    var _backY as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 20; @position = 8; @symbol_vardef = [_backW,20,8,14]; @symbol_type<0> = [Lang,20,18,22]; @symbol_type<1> = [Number,20,23,29]; ]
+    var _backW as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 21; @position = 8; @symbol_vardef = [_backH,21,8,14]; @symbol_type<0> = [Lang,21,18,22]; @symbol_type<1> = [Number,21,23,29]; ]
+    var _backH as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 22; @position = 8; @symbol_vardef = [_backRadius,22,8,19]; @symbol_type<0> = [Lang,22,23,27]; @symbol_type<1> = [Number,22,28,34]; ]
+    var _backRadius as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 24; @symbol_functiondef = [initialize,24,13,23]; @symbol_param<0> = [subtitle,24,24,32]; @symbol_param<0>_type<0> = [Lang,24,36,40]; @symbol_param<0>_type<1> = [String,24,41,47]; ]
+    function initialize(subtitle as Lang.String) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_24_49_39_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 25 8 ]
+        symbol [ View %tmp.2 25 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 25 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 26 8 ]
+        %tmp.4 = lgetv %subtitle;
+        symbol [ subtitle %tmp.4 26 20 28 ];
+        symbol [ _subtitle ? 26 8 17 ];
+        putv self :_subtitle %tmp.4;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 27 8 ]
+        symbol [ WatchUi %tmp.5 27 21 28 ];
+        %tmp.5 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.6 27 29 41 ];
+        %tmp.6 = getv function %tmp.5 :loadResource;
+        symbol [ Rez %tmp.8 27 42 45 ];
+        %tmp.8 = getv ? :Rez;
+        symbol [ Strings %tmp.9 27 46 53 ];
+        %tmp.9 = getv %tmp.8 :Strings;
+        symbol [ HelloLabel %tmp.10 27 54 64 ];
+        %tmp.10 = getv %tmp.9 :HelloLabel;
+        %tmp.11 = invoke %tmp.5 %tmp.6(%tmp.10);
+        %tmp.12 = as %tmp.11 Lang.String;
+        symbol [ Lang %tmp.12 27 69 73 ];
+        symbol [ String %tmp.12 27 74 80 ];
+        symbol [ _helloLine ? 27 8 18 ];
+        putv self :_helloLine %tmp.12;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 28 8 ]
+        symbol [ WatchUi %tmp.13 28 21 28 ];
+        %tmp.13 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.14 28 29 41 ];
+        %tmp.14 = getv function %tmp.13 :loadResource;
+        symbol [ Rez %tmp.16 28 42 45 ];
+        %tmp.16 = getv ? :Rez;
+        symbol [ Strings %tmp.17 28 46 53 ];
+        %tmp.17 = getv %tmp.16 :Strings;
+        symbol [ BackLabel %tmp.18 28 54 63 ];
+        %tmp.18 = getv %tmp.17 :BackLabel;
+        %tmp.19 = invoke %tmp.13 %tmp.14(%tmp.18);
+        %tmp.20 = as %tmp.19 Lang.String;
+        symbol [ Lang %tmp.20 28 68 72 ];
+        symbol [ String %tmp.20 28 73 79 ];
+        symbol [ _backLabel ? 28 8 18 ];
+        putv self :_backLabel %tmp.20;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 29 8 ]
+        symbol [ Graphics %tmp.21 29 21 29 ];
+        %tmp.21 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.22 29 30 41 ];
+        %tmp.22 = getv %tmp.21 :FONT_MEDIUM;
+        symbol [ _helloFont ? 29 8 18 ];
+        putv self :_helloFont %tmp.22;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 30 8 ]
+        symbol [ Graphics %tmp.23 30 19 27 ];
+        %tmp.23 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.24 30 28 39 ];
+        %tmp.24 = getv %tmp.23 :FONT_MEDIUM;
+        symbol [ _subFont ? 30 8 16 ];
+        putv self :_subFont %tmp.24;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 31 8 ]
+        symbol [ Graphics %tmp.25 31 20 28 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.26 31 29 39 ];
+        %tmp.26 = getv %tmp.25 :FONT_SMALL;
+        symbol [ _backFont ? 31 8 17 ];
+        putv self :_backFont %tmp.26;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 32 8 ]
+        %tmp.27 = 0;
+        symbol [ _helloBaselineY ? 32 8 23 ];
+        putv self :_helloBaselineY %tmp.27;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 33 8 ]
+        %tmp.28 = 0;
+        symbol [ _subBaselineY ? 33 8 21 ];
+        putv self :_subBaselineY %tmp.28;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 34 8 ]
+        %tmp.29 = 0;
+        symbol [ _backX ? 34 8 14 ];
+        putv self :_backX %tmp.29;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 35 8 ]
+        %tmp.30 = 0;
+        symbol [ _backY ? 35 8 14 ];
+        putv self :_backY %tmp.30;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 36 8 ]
+        %tmp.31 = 0;
+        symbol [ _backW ? 36 8 14 ];
+        putv self :_backW %tmp.31;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 37 8 ]
+        %tmp.32 = 0;
+        symbol [ _backH ? 37 8 14 ];
+        putv self :_backH %tmp.32;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 38 8 ]
+        %tmp.33 = 0;
+        symbol [ _backRadius ? 38 8 19 ];
+        putv self :_backRadius %tmp.33;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_24_49_39_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 41; @symbol_functiondef = [onLayout,41,13,21]; @symbol_param<0> = [dc,41,22,24]; @symbol_param<0>_type<0> = [Graphics,41,28,36]; @symbol_param<0>_type<1> = [Dc,41,37,39]; ]
+    function onLayout(dc as Graphics.Dc) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 42 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 42 12 17 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 42 20 22 ];
+        symbol [ getWidth %tmp.2 42 23 31 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 42 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 43 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 43 12 18 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 43 21 23 ];
+        symbol [ getHeight %tmp.5 43 24 33 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+        symbol [ height %height.2 43 12 18 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 44 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %padX.3 = local;
+        symbol [ padX %padX.3 44 12 16 ];
+        %tmp.7 = 24;
+        lputv %padX.3 %tmp.7;
+        symbol [ padX %padX.3 44 12 16 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 45 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %padY.4 = local;
+        symbol [ padY %padY.4 45 12 16 ];
+        %tmp.8 = 16;
+        lputv %padY.4 %tmp.8;
+        symbol [ padY %padY.4 45 12 16 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 46 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %minBtnH.5 = local;
+        symbol [ minBtnH %minBtnH.5 46 12 19 ];
+        %tmp.9 = 48;
+        lputv %minBtnH.5 %tmp.9;
+        symbol [ minBtnH %minBtnH.5 46 12 19 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 47 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %maxWPct.6 = local;
+        symbol [ maxWPct %maxWPct.6 47 12 19 ];
+        %tmp.10 = 70;
+        lputv %maxWPct.6 %tmp.10;
+        symbol [ maxWPct %maxWPct.6 47 12 19 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 48 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %bottomInset.7 = local;
+        symbol [ bottomInset %bottomInset.7 48 12 23 ];
+        %tmp.11 = 26;
+        lputv %bottomInset.7 %tmp.11;
+        symbol [ bottomInset %bottomInset.7 48 12 23 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 49 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %wMargin.8 = local;
+        symbol [ wMargin %wMargin.8 49 12 19 ];
+        %tmp.12 = 8;
+        lputv %wMargin.8 %tmp.12;
+        symbol [ wMargin %wMargin.8 49 12 19 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 51 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %maxW.9 = local;
+        symbol [ maxW %maxW.9 51 12 16 ];
+        %tmp.13 = lgetv %width.1;
+        symbol [ width %tmp.13 51 20 25 ];
+        %tmp.14 = lgetv %maxWPct.6;
+        symbol [ maxWPct %tmp.14 51 28 35 ];
+        %tmp.15 = mul %tmp.13 %tmp.14;
+        %tmp.16 = 100;
+        %tmp.17 = div %tmp.15 %tmp.16;
+        lputv %maxW.9 %tmp.17;
+        symbol [ maxW %maxW.9 51 12 16 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 52 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %bfont.10 = local;
+        symbol [ bfont %bfont.10 52 12 17 ];
+        symbol [ Graphics %tmp.18 52 20 28 ];
+        %tmp.18 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.19 52 29 39 ];
+        %tmp.19 = getv %tmp.18 :FONT_SMALL;
+        lputv %bfont.10 %tmp.19;
+        symbol [ bfont %bfont.10 52 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 53 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %bdims.11 = local;
+        symbol [ bdims %bdims.11 53 12 17 ];
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 53 20 22 ];
+        symbol [ getTextDimensions %tmp.21 53 23 40 ];
+        %tmp.21 = getv function %tmp.20 :getTextDimensions;
+        symbol [ _backLabel %tmp.23 53 41 51 ];
+        %tmp.23 = getv ? :_backLabel;
+        %tmp.24 = lgetv %bfont.10;
+        symbol [ bfont %tmp.24 53 53 58 ];
+        %tmp.25 = invoke %tmp.20 %tmp.21(%tmp.23, %tmp.24);
+        lputv %bdims.11 %tmp.25;
+        symbol [ bdims %bdims.11 53 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 54 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_8_57_8_if_stmt:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_12_54_44_begin:
+        %tmp.26 = lgetv %bdims.11;
+        symbol [ bdims %tmp.26 54 12 17 ];
+        %tmp.27 = null;
+        %tmp.28 = eq %tmp.26 %tmp.27;
+        bt %tmp.28 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_8_57_8_if_true;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_29_54_44_false:
+        %tmp.29 = lgetv %bdims.11;
+        symbol [ bdims %tmp.29 54 29 34 ];
+        %tmp.30 = as %tmp.29 { (!Null) };
+        symbol [ size %tmp.31 54 35 39 ];
+        %tmp.31 = getv function %tmp.30 :size;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        %tmp.33 = 2;
+        %tmp.34 = lt %tmp.32 %tmp.33;
+        push %tmp.34;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_29_54_44_end:
+        %tmp.35 = phi [%tmp.28 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_12_54_44_begin] [%tmp.34 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_29_54_44_false] [%tmp.35 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_29_54_44_end];
+        bf %tmp.35 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_8_57_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_8_57_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_47_57_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 55 12 ]
+        %tmp.36 = 0;
+        symbol [ _backW ? 55 12 18 ];
+        putv self :_backW %tmp.36;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 56 12 ]
+        ret ?;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_47_57_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_8_57_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_54_8_57_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 59 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %bdw.12 = local;
+        symbol [ bdw %bdw.12 59 12 15 ];
+        %tmp.37 = lgetv %bdims.11;
+        symbol [ bdims %tmp.37 59 18 23 ];
+        %tmp.38 = 0;
+        %tmp.39 = agetv %tmp.37 %tmp.38;
+        %tmp.40 = as %tmp.39 Lang.Number;
+        symbol [ Lang %tmp.40 59 30 34 ];
+        symbol [ Number %tmp.40 59 35 41 ];
+        lputv %bdw.12 %tmp.40;
+        symbol [ bdw %bdw.12 59 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 60 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %bwp.13 = local;
+        symbol [ bwp %bwp.13 60 12 15 ];
+        %tmp.41 = lgetv %dc;
+        symbol [ dc %tmp.41 60 18 20 ];
+        symbol [ getTextWidthInPixels %tmp.42 60 21 41 ];
+        %tmp.42 = getv function %tmp.41 :getTextWidthInPixels;
+        symbol [ _backLabel %tmp.44 60 42 52 ];
+        %tmp.44 = getv ? :_backLabel;
+        %tmp.45 = lgetv %bfont.10;
+        symbol [ bfont %tmp.45 60 54 59 ];
+        %tmp.46 = invoke %tmp.41 %tmp.42(%tmp.44, %tmp.45);
+        lputv %bwp.13 %tmp.46;
+        symbol [ bwp %bwp.13 60 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 61 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %bw.14 = local;
+        symbol [ bw %bw.14 61 12 14 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_61_17_61_35_begin:
+        %tmp.47 = lgetv %bdw.12;
+        symbol [ bdw %tmp.47 61 17 20 ];
+        %tmp.48 = lgetv %bwp.13;
+        symbol [ bwp %tmp.48 61 23 26 ];
+        %tmp.49 = gt %tmp.47 %tmp.48;
+        bf %tmp.49 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_61_17_61_35_else_false;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_61_17_61_35_true:
+        %tmp.50 = lgetv %bdw.12;
+        symbol [ bdw %tmp.50 61 29 32 ];
+        push %tmp.50;
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_61_17_61_35_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_61_17_61_35_else_false:
+        %tmp.51 = lgetv %bwp.13;
+        symbol [ bwp %tmp.51 61 35 38 ];
+        push %tmp.51;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_61_17_61_35_end:
+        %tmp.52 = phi [%tmp.49 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_61_17_61_35_begin] [%tmp.50 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_61_17_61_35_true] [%tmp.51 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_61_17_61_35_else_false] [%tmp.52 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_61_17_61_35_end];
+        lputv %bw.14 %tmp.52;
+        symbol [ bw %bw.14 61 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 62 8 ]
+        %tmp.53 = lgetv %bw.14;
+        symbol [ bw %tmp.53 62 13 15 ];
+        %tmp.54 = lgetv %wMargin.8;
+        symbol [ wMargin %tmp.54 62 18 25 ];
+        %tmp.55 = add %tmp.53 %tmp.54;
+        lputv %bw.14 %tmp.55;
+        symbol [ bw %bw.14 62 8 10 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 63 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %bh.15 = local;
+        symbol [ bh %bh.15 63 12 14 ];
+        %tmp.56 = lgetv %bdims.11;
+        symbol [ bdims %tmp.56 63 17 22 ];
+        %tmp.57 = 1;
+        %tmp.58 = agetv %tmp.56 %tmp.57;
+        %tmp.59 = as %tmp.58 Lang.Number;
+        symbol [ Lang %tmp.59 63 29 33 ];
+        symbol [ Number %tmp.59 63 34 40 ];
+        lputv %bh.15 %tmp.59;
+        symbol [ bh %bh.15 63 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 64 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %bfh.16 = local;
+        symbol [ bfh %bfh.16 64 12 15 ];
+        %tmp.60 = lgetv %dc;
+        symbol [ dc %tmp.60 64 18 20 ];
+        symbol [ getFontHeight %tmp.61 64 21 34 ];
+        %tmp.61 = getv function %tmp.60 :getFontHeight;
+        %tmp.62 = lgetv %bfont.10;
+        symbol [ bfont %tmp.62 64 35 40 ];
+        %tmp.63 = invoke %tmp.60 %tmp.61(%tmp.62);
+        lputv %bfh.16 %tmp.63;
+        symbol [ bfh %bfh.16 64 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 65 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_65_8_67_8_if_stmt:
+        %tmp.64 = lgetv %bfh.16;
+        symbol [ bfh %tmp.64 65 12 15 ];
+        %tmp.65 = lgetv %bh.15;
+        symbol [ bh %tmp.65 65 18 20 ];
+        %tmp.66 = gt %tmp.64 %tmp.65;
+        bf %tmp.66 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_65_8_67_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_65_8_67_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_65_22_67_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 66 12 ]
+        %tmp.67 = lgetv %bfh.16;
+        symbol [ bfh %tmp.67 66 17 20 ];
+        lputv %bh.15 %tmp.67;
+        symbol [ bh %bh.15 66 12 14 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_65_22_67_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_65_8_67_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_65_8_67_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 68 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %bneedW.17 = local;
+        symbol [ bneedW %bneedW.17 68 12 18 ];
+        %tmp.68 = lgetv %bw.14;
+        symbol [ bw %tmp.68 68 21 23 ];
+        %tmp.69 = 2;
+        %tmp.70 = lgetv %padX.3;
+        symbol [ padX %tmp.70 68 30 34 ];
+        %tmp.71 = mul %tmp.69 %tmp.70;
+        %tmp.72 = add %tmp.68 %tmp.71;
+        lputv %bneedW.17 %tmp.72;
+        symbol [ bneedW %bneedW.17 68 12 18 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 69 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_69_8_86_8_if_stmt:
+        %tmp.73 = lgetv %bneedW.17;
+        symbol [ bneedW %tmp.73 69 12 18 ];
+        %tmp.74 = lgetv %maxW.9;
+        symbol [ maxW %tmp.74 69 21 25 ];
+        %tmp.75 = gt %tmp.73 %tmp.74;
+        bf %tmp.75 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_69_8_86_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_69_8_86_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_69_27_86_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 70 12 ]
+        symbol [ Graphics %tmp.76 70 20 28 ];
+        %tmp.76 = getm $.Toybox.Graphics;
+        symbol [ FONT_SYSTEM_TINY %tmp.77 70 29 45 ];
+        %tmp.77 = getv %tmp.76 :FONT_SYSTEM_TINY;
+        lputv %bfont.10 %tmp.77;
+        symbol [ bfont %bfont.10 70 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 71 12 ]
+        %tmp.78 = lgetv %dc;
+        symbol [ dc %tmp.78 71 20 22 ];
+        symbol [ getTextDimensions %tmp.79 71 23 40 ];
+        %tmp.79 = getv function %tmp.78 :getTextDimensions;
+        symbol [ _backLabel %tmp.81 71 41 51 ];
+        %tmp.81 = getv ? :_backLabel;
+        %tmp.82 = lgetv %bfont.10;
+        symbol [ bfont %tmp.82 71 53 58 ];
+        %tmp.83 = invoke %tmp.78 %tmp.79(%tmp.81, %tmp.82);
+        lputv %bdims.11 %tmp.83;
+        symbol [ bdims %bdims.11 71 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 72 12 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_12_75_12_if_stmt:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_16_72_48_begin:
+        %tmp.84 = lgetv %bdims.11;
+        symbol [ bdims %tmp.84 72 16 21 ];
+        %tmp.85 = null;
+        %tmp.86 = eq %tmp.84 %tmp.85;
+        bt %tmp.86 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_12_75_12_if_true;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_33_72_48_false:
+        %tmp.87 = lgetv %bdims.11;
+        symbol [ bdims %tmp.87 72 33 38 ];
+        %tmp.88 = as %tmp.87 { (!Null) };
+        symbol [ size %tmp.89 72 39 43 ];
+        %tmp.89 = getv function %tmp.88 :size;
+        %tmp.90 = invoke %tmp.88 %tmp.89();
+        %tmp.91 = 2;
+        %tmp.92 = lt %tmp.90 %tmp.91;
+        push %tmp.92;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_33_72_48_end:
+        %tmp.93 = phi [%tmp.86 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_16_72_48_begin] [%tmp.92 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_33_72_48_false] [%tmp.93 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_33_72_48_end];
+        bf %tmp.93 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_12_75_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_12_75_12_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_51_75_12_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 73 16 ]
+        %tmp.94 = 0;
+        symbol [ _backW ? 73 16 22 ];
+        putv self :_backW %tmp.94;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 74 16 ]
+        ret ?;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_51_75_12_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_12_75_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_72_12_75_12_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 76 12 ]
+        %tmp.95 = lgetv %bdims.11;
+        symbol [ bdims %tmp.95 76 18 23 ];
+        %tmp.96 = 0;
+        %tmp.97 = agetv %tmp.95 %tmp.96;
+        %tmp.98 = as %tmp.97 Lang.Number;
+        symbol [ Lang %tmp.98 76 30 34 ];
+        symbol [ Number %tmp.98 76 35 41 ];
+        lputv %bdw.12 %tmp.98;
+        symbol [ bdw %bdw.12 76 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 77 12 ]
+        %tmp.99 = lgetv %dc;
+        symbol [ dc %tmp.99 77 18 20 ];
+        symbol [ getTextWidthInPixels %tmp.100 77 21 41 ];
+        %tmp.100 = getv function %tmp.99 :getTextWidthInPixels;
+        symbol [ _backLabel %tmp.102 77 42 52 ];
+        %tmp.102 = getv ? :_backLabel;
+        %tmp.103 = lgetv %bfont.10;
+        symbol [ bfont %tmp.103 77 54 59 ];
+        %tmp.104 = invoke %tmp.99 %tmp.100(%tmp.102, %tmp.103);
+        lputv %bwp.13 %tmp.104;
+        symbol [ bwp %bwp.13 77 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 78 12 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_78_17_78_35_begin:
+        %tmp.105 = lgetv %bdw.12;
+        symbol [ bdw %tmp.105 78 17 20 ];
+        %tmp.106 = lgetv %bwp.13;
+        symbol [ bwp %tmp.106 78 23 26 ];
+        %tmp.107 = gt %tmp.105 %tmp.106;
+        bf %tmp.107 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_78_17_78_35_else_false;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_78_17_78_35_true:
+        %tmp.108 = lgetv %bdw.12;
+        symbol [ bdw %tmp.108 78 29 32 ];
+        push %tmp.108;
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_78_17_78_35_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_78_17_78_35_else_false:
+        %tmp.109 = lgetv %bwp.13;
+        symbol [ bwp %tmp.109 78 35 38 ];
+        push %tmp.109;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_78_17_78_35_end:
+        %tmp.110 = phi [%tmp.107 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_78_17_78_35_begin] [%tmp.108 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_78_17_78_35_true] [%tmp.109 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_78_17_78_35_else_false] [%tmp.110 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_78_17_78_35_end];
+        lputv %bw.14 %tmp.110;
+        symbol [ bw %bw.14 78 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 79 12 ]
+        %tmp.111 = lgetv %bw.14;
+        symbol [ bw %tmp.111 79 17 19 ];
+        %tmp.112 = lgetv %wMargin.8;
+        symbol [ wMargin %tmp.112 79 22 29 ];
+        %tmp.113 = add %tmp.111 %tmp.112;
+        lputv %bw.14 %tmp.113;
+        symbol [ bw %bw.14 79 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 80 12 ]
+        %tmp.114 = lgetv %bdims.11;
+        symbol [ bdims %tmp.114 80 17 22 ];
+        %tmp.115 = 1;
+        %tmp.116 = agetv %tmp.114 %tmp.115;
+        %tmp.117 = as %tmp.116 Lang.Number;
+        symbol [ Lang %tmp.117 80 29 33 ];
+        symbol [ Number %tmp.117 80 34 40 ];
+        lputv %bh.15 %tmp.117;
+        symbol [ bh %bh.15 80 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 81 12 ]
+        %tmp.118 = lgetv %dc;
+        symbol [ dc %tmp.118 81 18 20 ];
+        symbol [ getFontHeight %tmp.119 81 21 34 ];
+        %tmp.119 = getv function %tmp.118 :getFontHeight;
+        %tmp.120 = lgetv %bfont.10;
+        symbol [ bfont %tmp.120 81 35 40 ];
+        %tmp.121 = invoke %tmp.118 %tmp.119(%tmp.120);
+        lputv %bfh.16 %tmp.121;
+        symbol [ bfh %bfh.16 81 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 82 12 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_82_12_84_12_if_stmt:
+        %tmp.122 = lgetv %bfh.16;
+        symbol [ bfh %tmp.122 82 16 19 ];
+        %tmp.123 = lgetv %bh.15;
+        symbol [ bh %tmp.123 82 22 24 ];
+        %tmp.124 = gt %tmp.122 %tmp.123;
+        bf %tmp.124 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_82_12_84_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_82_12_84_12_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_82_26_84_12_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 83 16 ]
+        %tmp.125 = lgetv %bfh.16;
+        symbol [ bfh %tmp.125 83 21 24 ];
+        lputv %bh.15 %tmp.125;
+        symbol [ bh %bh.15 83 16 18 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_82_26_84_12_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_82_12_84_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_82_12_84_12_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 85 12 ]
+        %tmp.126 = lgetv %bw.14;
+        symbol [ bw %tmp.126 85 21 23 ];
+        %tmp.127 = 2;
+        %tmp.128 = lgetv %padX.3;
+        symbol [ padX %tmp.128 85 30 34 ];
+        %tmp.129 = mul %tmp.127 %tmp.128;
+        %tmp.130 = add %tmp.126 %tmp.129;
+        lputv %bneedW.17 %tmp.130;
+        symbol [ bneedW %bneedW.17 85 12 18 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_69_27_86_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_69_8_86_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_69_8_86_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 88 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_88_8_105_8_if_stmt:
+        %tmp.131 = lgetv %bneedW.17;
+        symbol [ bneedW %tmp.131 88 12 18 ];
+        %tmp.132 = lgetv %maxW.9;
+        symbol [ maxW %tmp.132 88 21 25 ];
+        %tmp.133 = gt %tmp.131 %tmp.132;
+        bf %tmp.133 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_88_8_105_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_88_8_105_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_88_27_105_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 89 12 ]
+        symbol [ Graphics %tmp.134 89 20 28 ];
+        %tmp.134 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.135 89 29 39 ];
+        %tmp.135 = getv %tmp.134 :FONT_XTINY;
+        lputv %bfont.10 %tmp.135;
+        symbol [ bfont %bfont.10 89 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 90 12 ]
+        %tmp.136 = lgetv %dc;
+        symbol [ dc %tmp.136 90 20 22 ];
+        symbol [ getTextDimensions %tmp.137 90 23 40 ];
+        %tmp.137 = getv function %tmp.136 :getTextDimensions;
+        symbol [ _backLabel %tmp.139 90 41 51 ];
+        %tmp.139 = getv ? :_backLabel;
+        %tmp.140 = lgetv %bfont.10;
+        symbol [ bfont %tmp.140 90 53 58 ];
+        %tmp.141 = invoke %tmp.136 %tmp.137(%tmp.139, %tmp.140);
+        lputv %bdims.11 %tmp.141;
+        symbol [ bdims %bdims.11 90 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 91 12 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_12_94_12_if_stmt:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_16_91_48_begin:
+        %tmp.142 = lgetv %bdims.11;
+        symbol [ bdims %tmp.142 91 16 21 ];
+        %tmp.143 = null;
+        %tmp.144 = eq %tmp.142 %tmp.143;
+        bt %tmp.144 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_12_94_12_if_true;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_33_91_48_false:
+        %tmp.145 = lgetv %bdims.11;
+        symbol [ bdims %tmp.145 91 33 38 ];
+        %tmp.146 = as %tmp.145 { (!Null) };
+        symbol [ size %tmp.147 91 39 43 ];
+        %tmp.147 = getv function %tmp.146 :size;
+        %tmp.148 = invoke %tmp.146 %tmp.147();
+        %tmp.149 = 2;
+        %tmp.150 = lt %tmp.148 %tmp.149;
+        push %tmp.150;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_33_91_48_end:
+        %tmp.151 = phi [%tmp.144 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_16_91_48_begin] [%tmp.150 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_33_91_48_false] [%tmp.151 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_33_91_48_end];
+        bf %tmp.151 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_12_94_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_12_94_12_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_51_94_12_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 92 16 ]
+        %tmp.152 = 0;
+        symbol [ _backW ? 92 16 22 ];
+        putv self :_backW %tmp.152;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 93 16 ]
+        ret ?;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_51_94_12_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_12_94_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_91_12_94_12_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 95 12 ]
+        %tmp.153 = lgetv %bdims.11;
+        symbol [ bdims %tmp.153 95 18 23 ];
+        %tmp.154 = 0;
+        %tmp.155 = agetv %tmp.153 %tmp.154;
+        %tmp.156 = as %tmp.155 Lang.Number;
+        symbol [ Lang %tmp.156 95 30 34 ];
+        symbol [ Number %tmp.156 95 35 41 ];
+        lputv %bdw.12 %tmp.156;
+        symbol [ bdw %bdw.12 95 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 96 12 ]
+        %tmp.157 = lgetv %dc;
+        symbol [ dc %tmp.157 96 18 20 ];
+        symbol [ getTextWidthInPixels %tmp.158 96 21 41 ];
+        %tmp.158 = getv function %tmp.157 :getTextWidthInPixels;
+        symbol [ _backLabel %tmp.160 96 42 52 ];
+        %tmp.160 = getv ? :_backLabel;
+        %tmp.161 = lgetv %bfont.10;
+        symbol [ bfont %tmp.161 96 54 59 ];
+        %tmp.162 = invoke %tmp.157 %tmp.158(%tmp.160, %tmp.161);
+        lputv %bwp.13 %tmp.162;
+        symbol [ bwp %bwp.13 96 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 97 12 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_97_17_97_35_begin:
+        %tmp.163 = lgetv %bdw.12;
+        symbol [ bdw %tmp.163 97 17 20 ];
+        %tmp.164 = lgetv %bwp.13;
+        symbol [ bwp %tmp.164 97 23 26 ];
+        %tmp.165 = gt %tmp.163 %tmp.164;
+        bf %tmp.165 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_97_17_97_35_else_false;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_97_17_97_35_true:
+        %tmp.166 = lgetv %bdw.12;
+        symbol [ bdw %tmp.166 97 29 32 ];
+        push %tmp.166;
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_97_17_97_35_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_97_17_97_35_else_false:
+        %tmp.167 = lgetv %bwp.13;
+        symbol [ bwp %tmp.167 97 35 38 ];
+        push %tmp.167;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_97_17_97_35_end:
+        %tmp.168 = phi [%tmp.165 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_97_17_97_35_begin] [%tmp.166 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_97_17_97_35_true] [%tmp.167 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_97_17_97_35_else_false] [%tmp.168 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_97_17_97_35_end];
+        lputv %bw.14 %tmp.168;
+        symbol [ bw %bw.14 97 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 98 12 ]
+        %tmp.169 = lgetv %bw.14;
+        symbol [ bw %tmp.169 98 17 19 ];
+        %tmp.170 = lgetv %wMargin.8;
+        symbol [ wMargin %tmp.170 98 22 29 ];
+        %tmp.171 = add %tmp.169 %tmp.170;
+        lputv %bw.14 %tmp.171;
+        symbol [ bw %bw.14 98 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 99 12 ]
+        %tmp.172 = lgetv %bdims.11;
+        symbol [ bdims %tmp.172 99 17 22 ];
+        %tmp.173 = 1;
+        %tmp.174 = agetv %tmp.172 %tmp.173;
+        %tmp.175 = as %tmp.174 Lang.Number;
+        symbol [ Lang %tmp.175 99 29 33 ];
+        symbol [ Number %tmp.175 99 34 40 ];
+        lputv %bh.15 %tmp.175;
+        symbol [ bh %bh.15 99 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 100 12 ]
+        %tmp.176 = lgetv %dc;
+        symbol [ dc %tmp.176 100 18 20 ];
+        symbol [ getFontHeight %tmp.177 100 21 34 ];
+        %tmp.177 = getv function %tmp.176 :getFontHeight;
+        %tmp.178 = lgetv %bfont.10;
+        symbol [ bfont %tmp.178 100 35 40 ];
+        %tmp.179 = invoke %tmp.176 %tmp.177(%tmp.178);
+        lputv %bfh.16 %tmp.179;
+        symbol [ bfh %bfh.16 100 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 101 12 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_101_12_103_12_if_stmt:
+        %tmp.180 = lgetv %bfh.16;
+        symbol [ bfh %tmp.180 101 16 19 ];
+        %tmp.181 = lgetv %bh.15;
+        symbol [ bh %tmp.181 101 22 24 ];
+        %tmp.182 = gt %tmp.180 %tmp.181;
+        bf %tmp.182 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_101_12_103_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_101_12_103_12_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_101_26_103_12_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 102 16 ]
+        %tmp.183 = lgetv %bfh.16;
+        symbol [ bfh %tmp.183 102 21 24 ];
+        lputv %bh.15 %tmp.183;
+        symbol [ bh %bh.15 102 16 18 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_101_26_103_12_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_101_12_103_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_101_12_103_12_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 104 12 ]
+        %tmp.184 = lgetv %bw.14;
+        symbol [ bw %tmp.184 104 21 23 ];
+        %tmp.185 = 2;
+        %tmp.186 = lgetv %padX.3;
+        symbol [ padX %tmp.186 104 30 34 ];
+        %tmp.187 = mul %tmp.185 %tmp.186;
+        %tmp.188 = add %tmp.184 %tmp.187;
+        lputv %bneedW.17 %tmp.188;
+        symbol [ bneedW %bneedW.17 104 12 18 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_88_27_105_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_88_8_105_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_88_8_105_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 107 8 ]
+        %tmp.189 = lgetv %bfont.10;
+        symbol [ bfont %tmp.189 107 20 25 ];
+        symbol [ _backFont ? 107 8 17 ];
+        putv self :_backFont %tmp.189;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 108 8 ]
+        %tmp.190 = lgetv %bneedW.17;
+        symbol [ bneedW %tmp.190 108 17 23 ];
+        symbol [ _backW ? 108 8 14 ];
+        putv self :_backW %tmp.190;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 109 8 ]
+        %tmp.191 = lgetv %bh.15;
+        symbol [ bh %tmp.191 109 17 19 ];
+        %tmp.192 = 2;
+        %tmp.193 = lgetv %padY.4;
+        symbol [ padY %tmp.193 109 26 30 ];
+        %tmp.194 = mul %tmp.192 %tmp.193;
+        %tmp.195 = add %tmp.191 %tmp.194;
+        symbol [ _backH ? 109 8 14 ];
+        putv self :_backH %tmp.195;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 110 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_110_8_112_8_if_stmt:
+        symbol [ _backH %tmp.197 110 12 18 ];
+        %tmp.197 = getv ? :_backH;
+        %tmp.198 = lgetv %minBtnH.5;
+        symbol [ minBtnH %tmp.198 110 21 28 ];
+        %tmp.199 = lt %tmp.197 %tmp.198;
+        bf %tmp.199 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_110_8_112_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_110_8_112_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_110_30_112_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 111 12 ]
+        %tmp.200 = lgetv %minBtnH.5;
+        symbol [ minBtnH %tmp.200 111 21 28 ];
+        symbol [ _backH ? 111 12 18 ];
+        putv self :_backH %tmp.200;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_110_30_112_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_110_8_112_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_110_8_112_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 114 8 ]
+        %tmp.201 = lgetv %width.1;
+        symbol [ width %tmp.201 114 18 23 ];
+        symbol [ _backW %tmp.203 114 26 32 ];
+        %tmp.203 = getv ? :_backW;
+        %tmp.204 = sub %tmp.201 %tmp.203;
+        %tmp.205 = 2;
+        %tmp.206 = div %tmp.204 %tmp.205;
+        symbol [ _backX ? 114 8 14 ];
+        putv self :_backX %tmp.206;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 115 8 ]
+        %tmp.207 = lgetv %height.2;
+        symbol [ height %tmp.207 115 17 23 ];
+        symbol [ _backH %tmp.209 115 26 32 ];
+        %tmp.209 = getv ? :_backH;
+        %tmp.210 = sub %tmp.207 %tmp.209;
+        %tmp.211 = lgetv %bottomInset.7;
+        symbol [ bottomInset %tmp.211 115 35 46 ];
+        %tmp.212 = sub %tmp.210 %tmp.211;
+        symbol [ _backY ? 115 8 14 ];
+        putv self :_backY %tmp.212;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 117 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %br.18 = local;
+        symbol [ br %br.18 117 12 14 ];
+        symbol [ _backH %tmp.214 117 17 23 ];
+        %tmp.214 = getv ? :_backH;
+        %tmp.215 = 2;
+        %tmp.216 = div %tmp.214 %tmp.215;
+        lputv %br.18 %tmp.216;
+        symbol [ br %br.18 117 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 118 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_118_8_120_8_if_stmt:
+        %tmp.217 = lgetv %br.18;
+        symbol [ br %tmp.217 118 12 14 ];
+        symbol [ _backW %tmp.219 118 17 23 ];
+        %tmp.219 = getv ? :_backW;
+        %tmp.220 = 2;
+        %tmp.221 = div %tmp.219 %tmp.220;
+        %tmp.222 = gt %tmp.217 %tmp.221;
+        bf %tmp.222 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_118_8_120_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_118_8_120_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_118_29_120_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 119 12 ]
+        symbol [ _backW %tmp.224 119 17 23 ];
+        %tmp.224 = getv ? :_backW;
+        %tmp.225 = 2;
+        %tmp.226 = div %tmp.224 %tmp.225;
+        lputv %br.18 %tmp.226;
+        symbol [ br %br.18 119 12 14 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_118_29_120_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_118_8_120_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_118_8_120_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 121 8 ]
+        %tmp.227 = lgetv %br.18;
+        symbol [ br %tmp.227 121 22 24 ];
+        symbol [ _backRadius ? 121 8 19 ];
+        putv self :_backRadius %tmp.227;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 123 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %lineGap.19 = local;
+        symbol [ lineGap %lineGap.19 123 12 19 ];
+        %tmp.228 = 8;
+        lputv %lineGap.19 %tmp.228;
+        symbol [ lineGap %lineGap.19 123 12 19 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 124 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %backReserve.20 = local;
+        symbol [ backReserve %backReserve.20 124 12 23 ];
+        symbol [ _backH %tmp.230 124 26 32 ];
+        %tmp.230 = getv ? :_backH;
+        %tmp.231 = 40;
+        %tmp.232 = add %tmp.230 %tmp.231;
+        lputv %backReserve.20 %tmp.232;
+        symbol [ backReserve %backReserve.20 124 12 23 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 125 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %fhHello.21 = local;
+        symbol [ fhHello %fhHello.21 125 12 19 ];
+        %tmp.233 = lgetv %dc;
+        symbol [ dc %tmp.233 125 22 24 ];
+        symbol [ getFontHeight %tmp.234 125 25 38 ];
+        %tmp.234 = getv function %tmp.233 :getFontHeight;
+        symbol [ _helloFont %tmp.236 125 39 49 ];
+        %tmp.236 = getv ? :_helloFont;
+        %tmp.237 = invoke %tmp.233 %tmp.234(%tmp.236);
+        lputv %fhHello.21 %tmp.237;
+        symbol [ fhHello %fhHello.21 125 12 19 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 126 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %fhSub.22 = local;
+        symbol [ fhSub %fhSub.22 126 12 17 ];
+        %tmp.238 = lgetv %dc;
+        symbol [ dc %tmp.238 126 20 22 ];
+        symbol [ getFontHeight %tmp.239 126 23 36 ];
+        %tmp.239 = getv function %tmp.238 :getFontHeight;
+        symbol [ _subFont %tmp.241 126 37 45 ];
+        %tmp.241 = getv ? :_subFont;
+        %tmp.242 = invoke %tmp.238 %tmp.239(%tmp.241);
+        lputv %fhSub.22 %tmp.242;
+        symbol [ fhSub %fhSub.22 126 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 127 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %blockH.23 = local;
+        symbol [ blockH %blockH.23 127 12 18 ];
+        %tmp.243 = lgetv %fhHello.21;
+        symbol [ fhHello %tmp.243 127 21 28 ];
+        %tmp.244 = lgetv %lineGap.19;
+        symbol [ lineGap %tmp.244 127 31 38 ];
+        %tmp.245 = add %tmp.243 %tmp.244;
+        %tmp.246 = lgetv %fhSub.22;
+        symbol [ fhSub %tmp.246 127 41 46 ];
+        %tmp.247 = add %tmp.245 %tmp.246;
+        lputv %blockH.23 %tmp.247;
+        symbol [ blockH %blockH.23 127 12 18 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 128 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop" ]
+        %contentTop.24 = local;
+        symbol [ contentTop %contentTop.24 128 12 22 ];
+        %tmp.248 = lgetv %height.2;
+        symbol [ height %tmp.248 128 26 32 ];
+        %tmp.249 = lgetv %backReserve.20;
+        symbol [ backReserve %tmp.249 128 35 46 ];
+        %tmp.250 = sub %tmp.248 %tmp.249;
+        %tmp.251 = lgetv %blockH.23;
+        symbol [ blockH %tmp.251 128 49 55 ];
+        %tmp.252 = sub %tmp.250 %tmp.251;
+        %tmp.253 = 2;
+        %tmp.254 = div %tmp.252 %tmp.253;
+        lputv %contentTop.24 %tmp.254;
+        symbol [ contentTop %contentTop.24 128 12 22 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 129 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_129_8_131_8_if_stmt:
+        %tmp.255 = lgetv %contentTop.24;
+        symbol [ contentTop %tmp.255 129 12 22 ];
+        %tmp.256 = 4;
+        %tmp.257 = lt %tmp.255 %tmp.256;
+        bf %tmp.257 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_129_8_131_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_129_8_131_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_129_28_131_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 130 12 ]
+        %tmp.258 = 4;
+        lputv %contentTop.24 %tmp.258;
+        symbol [ contentTop %contentTop.24 130 12 22 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_129_28_131_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_129_8_131_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_129_8_131_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 133 8 ]
+        %tmp.259 = lgetv %contentTop.24;
+        symbol [ contentTop %tmp.259 133 26 36 ];
+        symbol [ Graphics %tmp.260 133 39 47 ];
+        %tmp.260 = getm $.Toybox.Graphics;
+        symbol [ getFontAscent %tmp.261 133 48 61 ];
+        %tmp.261 = getv function %tmp.260 :getFontAscent;
+        symbol [ _helloFont %tmp.263 133 62 72 ];
+        %tmp.263 = getv ? :_helloFont;
+        %tmp.264 = invoke %tmp.260 %tmp.261(%tmp.263);
+        %tmp.265 = add %tmp.259 %tmp.264;
+        symbol [ _helloBaselineY ? 133 8 23 ];
+        putv self :_helloBaselineY %tmp.265;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 134 8 ]
+        %tmp.266 = lgetv %contentTop.24;
+        symbol [ contentTop %tmp.266 134 24 34 ];
+        %tmp.267 = lgetv %fhHello.21;
+        symbol [ fhHello %tmp.267 134 37 44 ];
+        %tmp.268 = add %tmp.266 %tmp.267;
+        %tmp.269 = lgetv %lineGap.19;
+        symbol [ lineGap %tmp.269 134 47 54 ];
+        %tmp.270 = add %tmp.268 %tmp.269;
+        symbol [ Graphics %tmp.271 134 57 65 ];
+        %tmp.271 = getm $.Toybox.Graphics;
+        symbol [ getFontAscent %tmp.272 134 66 79 ];
+        %tmp.272 = getv function %tmp.271 :getFontAscent;
+        symbol [ _subFont %tmp.274 134 80 88 ];
+        %tmp.274 = getv ? :_subFont;
+        %tmp.275 = invoke %tmp.271 %tmp.272(%tmp.274);
+        %tmp.276 = add %tmp.270 %tmp.275;
+        symbol [ _subBaselineY ? 134 8 21 ];
+        putv self :_subBaselineY %tmp.276;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_41_49_135_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 137; @symbol_functiondef = [hitBackButton,137,13,26]; @symbol_param<0> = [x,137,27,28]; @symbol_param<0>_type<0> = [Lang,137,32,36]; @symbol_param<0>_type<1> = [Number,137,37,43]; @symbol_param<1> = [y,137,45,46]; @symbol_param<1>_type<0> = [Lang,137,50,54]; @symbol_param<1>_type<1> = [Number,137,55,61]; @symbol_return<0> = [Lang,137,66,70]; @symbol_return<1> = [Boolean,137,71,78]; ]
+    function hitBackButton(x as Lang.Number, y as Lang.Number) as Lang.Boolean {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_137_79_142_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 138 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_138_8_140_8_if_stmt:
+        symbol [ _backW %tmp.2 138 12 18 ];
+        %tmp.2 = getv ? :_backW;
+        %tmp.3 = 0;
+        %tmp.4 = lte %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_138_8_140_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_138_8_140_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_138_25_140_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 139 12 ]
+        %tmp.5 = false;
+        ret %tmp.5;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_138_25_140_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_138_8_140_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_138_8_140_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 141 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_15_141_81_begin:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_15_141_58_begin:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_15_141_43_begin:
+        %tmp.6 = lgetv %x;
+        symbol [ x %tmp.6 141 15 16 ];
+        symbol [ _backX %tmp.8 141 20 26 ];
+        %tmp.8 = getv ? :_backX;
+        %tmp.9 = gte %tmp.6 %tmp.8;
+        %tmp.10 = dup %tmp.9;
+        bf %tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_30_141_43_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_30_141_43_true:
+        %tmp.11 = lgetv %x;
+        symbol [ x %tmp.11 141 30 31 ];
+        symbol [ _backX %tmp.13 141 34 40 ];
+        %tmp.13 = getv ? :_backX;
+        symbol [ _backW %tmp.15 141 43 49 ];
+        %tmp.15 = getv ? :_backW;
+        %tmp.16 = add %tmp.13 %tmp.15;
+        %tmp.17 = lt %tmp.11 %tmp.16;
+        %tmp.18 = and %tmp.9 %tmp.17;
+        push %tmp.18;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_30_141_43_end:
+        %tmp.19 = phi [%tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_15_141_43_begin] [%tmp.18 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_30_141_43_true] [%tmp.19 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_30_141_43_end];
+        %tmp.20 = dup %tmp.19;
+        bf %tmp.20 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_53_141_58_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_53_141_58_true:
+        %tmp.21 = lgetv %y;
+        symbol [ y %tmp.21 141 53 54 ];
+        symbol [ _backY %tmp.23 141 58 64 ];
+        %tmp.23 = getv ? :_backY;
+        %tmp.24 = gte %tmp.21 %tmp.23;
+        %tmp.25 = and %tmp.19 %tmp.24;
+        push %tmp.25;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_53_141_58_end:
+        %tmp.26 = phi [%tmp.20 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_15_141_58_begin] [%tmp.25 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_53_141_58_true] [%tmp.26 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_53_141_58_end];
+        %tmp.27 = dup %tmp.26;
+        bf %tmp.27 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_68_141_81_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_68_141_81_true:
+        %tmp.28 = lgetv %y;
+        symbol [ y %tmp.28 141 68 69 ];
+        symbol [ _backY %tmp.30 141 72 78 ];
+        %tmp.30 = getv ? :_backY;
+        symbol [ _backH %tmp.32 141 81 87 ];
+        %tmp.32 = getv ? :_backH;
+        %tmp.33 = add %tmp.30 %tmp.32;
+        %tmp.34 = lt %tmp.28 %tmp.33;
+        %tmp.35 = and %tmp.26 %tmp.34;
+        push %tmp.35;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_68_141_81_end:
+        %tmp.36 = phi [%tmp.27 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_15_141_81_begin] [%tmp.35 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_68_141_81_true] [%tmp.36 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_141_68_141_81_end];
+        ret %tmp.36;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_137_79_142_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 144; @symbol_functiondef = [onUpdate,144,13,21]; @symbol_param<0> = [dc,144,22,24]; @symbol_param<0>_type<0> = [Graphics,144,28,36]; @symbol_param<0>_type<1> = [Dc,144,37,39]; ]
+    function onUpdate(dc as Graphics.Dc) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_144_49_182_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 145 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_144_49_182_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_144_49_182_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 145 12 17 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 145 20 22 ];
+        symbol [ getWidth %tmp.2 145 23 31 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 145 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 147 8 ]
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 147 8 10 ];
+        symbol [ setColor %tmp.5 147 11 19 ];
+        %tmp.5 = getv function %tmp.4 :setColor;
+        symbol [ Graphics %tmp.6 147 20 28 ];
+        %tmp.6 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.7 147 29 40 ];
+        %tmp.7 = getv %tmp.6 :COLOR_WHITE;
+        symbol [ Graphics %tmp.8 147 42 50 ];
+        %tmp.8 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.9 147 51 62 ];
+        %tmp.9 = getv %tmp.8 :COLOR_BLACK;
+        invoke %tmp.4 %tmp.5(%tmp.7, %tmp.9);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 148 8 ]
+        %tmp.10 = lgetv %dc;
+        symbol [ dc %tmp.10 148 8 10 ];
+        symbol [ clear %tmp.11 148 11 16 ];
+        %tmp.11 = getv function %tmp.10 :clear;
+        invoke %tmp.10 %tmp.11();
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 150 8 ]
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 150 8 10 ];
+        symbol [ setColor %tmp.13 150 11 19 ];
+        %tmp.13 = getv function %tmp.12 :setColor;
+        symbol [ Graphics %tmp.14 150 20 28 ];
+        %tmp.14 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.15 150 29 40 ];
+        %tmp.15 = getv %tmp.14 :COLOR_WHITE;
+        symbol [ Graphics %tmp.16 150 42 50 ];
+        %tmp.16 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.17 150 51 62 ];
+        %tmp.17 = getv %tmp.16 :COLOR_BLACK;
+        invoke %tmp.12 %tmp.13(%tmp.15, %tmp.17);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 151 8 ]
+        %tmp.18 = lgetv %dc;
+        symbol [ dc %tmp.18 151 8 10 ];
+        symbol [ drawText %tmp.19 151 11 19 ];
+        %tmp.19 = getv function %tmp.18 :drawText;
+        %tmp.20 = lgetv %width.1;
+        symbol [ width %tmp.20 152 12 17 ];
+        %tmp.21 = 2;
+        %tmp.22 = div %tmp.20 %tmp.21;
+        symbol [ _helloBaselineY %tmp.24 153 12 27 ];
+        %tmp.24 = getv ? :_helloBaselineY;
+        symbol [ _helloFont %tmp.26 154 12 22 ];
+        %tmp.26 = getv ? :_helloFont;
+        symbol [ _helloLine %tmp.28 155 12 22 ];
+        %tmp.28 = getv ? :_helloLine;
+        symbol [ Graphics %tmp.29 156 12 20 ];
+        %tmp.29 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.30 156 21 40 ];
+        %tmp.30 = getv %tmp.29 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.18 %tmp.19(%tmp.22, %tmp.24, %tmp.26, %tmp.28, %tmp.30);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 159 8 ]
+        %tmp.31 = lgetv %dc;
+        symbol [ dc %tmp.31 159 8 10 ];
+        symbol [ drawText %tmp.32 159 11 19 ];
+        %tmp.32 = getv function %tmp.31 :drawText;
+        %tmp.33 = lgetv %width.1;
+        symbol [ width %tmp.33 160 12 17 ];
+        %tmp.34 = 2;
+        %tmp.35 = div %tmp.33 %tmp.34;
+        symbol [ _subBaselineY %tmp.37 161 12 25 ];
+        %tmp.37 = getv ? :_subBaselineY;
+        symbol [ _subFont %tmp.39 162 12 20 ];
+        %tmp.39 = getv ? :_subFont;
+        symbol [ _subtitle %tmp.41 163 12 21 ];
+        %tmp.41 = getv ? :_subtitle;
+        symbol [ Graphics %tmp.42 164 12 20 ];
+        %tmp.42 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.43 164 21 40 ];
+        %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.31 %tmp.32(%tmp.35, %tmp.37, %tmp.39, %tmp.41, %tmp.43);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 167 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_167_8_181_8_if_stmt:
+        symbol [ _backW %tmp.45 167 12 18 ];
+        %tmp.45 = getv ? :_backW;
+        %tmp.46 = 0;
+        %tmp.47 = gt %tmp.45 %tmp.46;
+        bf %tmp.47 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_167_8_181_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_167_8_181_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_167_24_181_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc" 168 12 ]
+        symbol [ PillUi %tmp.49 168 12 18 ];
+        %tmp.49 = getv ? :PillUi;
+        symbol [ drawPillColored %tmp.50 168 19 34 ];
+        %tmp.50 = getv function %tmp.49 :drawPillColored;
+        %tmp.51 = lgetv %dc;
+        symbol [ dc %tmp.51 169 16 18 ];
+        symbol [ _backX %tmp.53 170 16 22 ];
+        %tmp.53 = getv ? :_backX;
+        symbol [ _backY %tmp.55 171 16 22 ];
+        %tmp.55 = getv ? :_backY;
+        symbol [ _backW %tmp.57 172 16 22 ];
+        %tmp.57 = getv ? :_backW;
+        symbol [ _backH %tmp.59 173 16 22 ];
+        %tmp.59 = getv ? :_backH;
+        symbol [ _backRadius %tmp.61 174 16 27 ];
+        %tmp.61 = getv ? :_backRadius;
+        symbol [ _backLabel %tmp.63 175 16 26 ];
+        %tmp.63 = getv ? :_backLabel;
+        symbol [ _backFont %tmp.65 176 16 25 ];
+        %tmp.65 = getv ? :_backFont;
+        symbol [ Graphics %tmp.66 177 16 24 ];
+        %tmp.66 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.67 177 25 38 ];
+        %tmp.67 = getv %tmp.66 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.68 178 16 24 ];
+        %tmp.68 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.69 178 25 36 ];
+        %tmp.69 = getv %tmp.68 :COLOR_WHITE;
+        symbol [ Graphics %tmp.70 179 16 24 ];
+        %tmp.70 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.71 179 25 36 ];
+        %tmp.71 = getv %tmp.70 :COLOR_WHITE;
+        invoke %tmp.49 %tmp.50(%tmp.51, %tmp.53, %tmp.55, %tmp.57, %tmp.59, %tmp.61, %tmp.63, %tmp.65, %tmp.67, %tmp.69, %tmp.71);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_167_24_181_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_167_8_181_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_167_8_181_8_if_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FeatureDetailView_mc_144_49_182_4_stop:
+    }
+}
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FeatureDetailView.mc"; @line = 1; ]
+<init> {
+}
