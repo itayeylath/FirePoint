@@ -1,0 +1,185 @@
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Lang,1,13,17]; ]
+using Toybox.Lang;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Position,2,13,21]; ]
+using Toybox.Position;
+//! Coordinate formatting for the Position screen.
+//!
+//! **MGRS:** Garmin exposes `Position.GEO_MGRS` and `Location.toGeoString(GEO_MGRS)` — use that
+//! for real MGRS output when the runtime succeeds.
+//!
+//! **UTM:** Connect IQ only documents four `GEO_*` formats (DEG, DM, DMS, MGRS). There is no
+//! `GEO_UTM` or official UTM string API — do not fabricate UTM strings; UI uses explicit placeholders.
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc"; @line = 11; @symbol_moduledef = [PositionFormatHelper,11,7,27]; ]
+module PositionFormatHelper {
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc"; @line = 11; ]
+    <init> {
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc"; @line = 13; @symbol_functiondef = [formatLatLon,13,13,25]; @symbol_param<0> = [loc,13,26,29]; @symbol_param<0>_type<0> = [Position,13,33,41]; @symbol_param<0>_type<1> = [Location,13,42,50]; @symbol_return<0> = [Lang,13,55,59]; @symbol_return<1> = [String,13,60,66]; ]
+    function formatLatLon(loc as Position.Location) as Lang.String {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_13_67_23_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc" 14 8 ]
+        try @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_beginTry @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_endTry @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_catch @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_finally;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_beginTry:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_12_16_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc" 15 12 ]
+        %tmp.1 = lgetv %loc;
+        symbol [ loc %tmp.1 15 19 22 ];
+        symbol [ toGeoString %tmp.2 15 23 34 ];
+        %tmp.2 = getv function %tmp.1 :toGeoString;
+        symbol [ Position %tmp.3 15 35 43 ];
+        %tmp.3 = getm $.Toybox.Position;
+        symbol [ GEO_DEG %tmp.4 15 44 51 ];
+        %tmp.4 = getv %tmp.3 :GEO_DEG;
+        %tmp.5 = invoke %tmp.1 %tmp.2(%tmp.4);
+        jsr @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_finally;
+        ret %tmp.5;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_12_16_8_stop:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_endTry:
+        jsr @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_finally;
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_catch:
+        %tmp.6 = exception;
+        push %tmp.6;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc" 16 10 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_catch" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_16_10_22_8_end" ]
+        %e.1 = local;
+        symbol [ e %e.1 16 17 18 ];
+        %tmp.7 = dup %tmp.6;
+        lputv %e.1 %tmp.7;
+        symbol [ e %e.1 16 17 18 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_16_20_22_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc" 17 12 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_16_20_22_8_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_16_20_22_8_stop" ]
+        %deg.2 = local;
+        symbol [ deg %deg.2 17 16 19 ];
+        %tmp.8 = lgetv %loc;
+        symbol [ loc %tmp.8 17 22 25 ];
+        symbol [ toDegrees %tmp.9 17 26 35 ];
+        %tmp.9 = getv function %tmp.8 :toDegrees;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        lputv %deg.2 %tmp.10;
+        symbol [ deg %deg.2 17 16 19 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc" 18 12 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_12_20_12_if_stmt:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_16_18_45_begin:
+        %tmp.11 = lgetv %deg.2;
+        symbol [ deg %tmp.11 18 16 19 ];
+        %tmp.12 = null;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        bf %tmp.13 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_12_20_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_31_18_45_true:
+        %tmp.14 = lgetv %deg.2;
+        symbol [ deg %tmp.14 18 31 34 ];
+        %tmp.15 = as %tmp.14 { (!Null) };
+        symbol [ size %tmp.16 18 35 39 ];
+        %tmp.16 = getv function %tmp.15 :size;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        %tmp.18 = 2;
+        %tmp.19 = gte %tmp.17 %tmp.18;
+        push %tmp.19;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_31_18_45_end:
+        %tmp.20 = phi [%tmp.13 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_16_18_45_begin] [%tmp.19 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_31_18_45_true] [%tmp.20 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_31_18_45_end];
+        bf %tmp.20 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_12_20_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_12_20_12_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_48_20_12_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc" 19 16 ]
+        pop;
+        %tmp.21 = lgetv %deg.2;
+        symbol [ deg %tmp.21 19 23 26 ];
+        %tmp.22 = as %tmp.21 { (!Null) };
+        %tmp.23 = 0;
+        %tmp.24 = agetv %tmp.22 %tmp.23;
+        symbol [ toString %tmp.25 19 30 38 ];
+        %tmp.25 = getv function %tmp.24 :toString;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        %tmp.27 = ", ";
+        %tmp.28 = add %tmp.26 %tmp.27;
+        %tmp.29 = lgetv %deg.2;
+        symbol [ deg %tmp.29 19 50 53 ];
+        %tmp.30 = as %tmp.29 { (!Null) };
+        %tmp.31 = 1;
+        %tmp.32 = agetv %tmp.30 %tmp.31;
+        symbol [ toString %tmp.33 19 57 65 ];
+        %tmp.33 = getv function %tmp.32 :toString;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        %tmp.35 = add %tmp.28 %tmp.34;
+        jsr @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_finally;
+        ret %tmp.35;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_48_20_12_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_12_20_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_18_12_20_12_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc" 21 12 ]
+        pop;
+        %tmp.36 = "";
+        jsr @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_finally;
+        ret %tmp.36;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_16_20_22_8_stop:
+        jsr @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_finally;
+        pop;
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_16_10_22_8_end:
+        try @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_catch @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_16_10_22_8_end @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_16_10_22_8_end @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_finally;
+        jsr @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_finally;
+        throw %tmp.6;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_finally:
+        jsrret;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_14_8_22_8_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_13_67_23_4_stop:
+    }
+    //! Returns null if `toGeoString(GEO_MGRS)` fails (e.g. polar edge cases).
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc"; @line = 26; @symbol_functiondef = [formatMgrs,26,13,23]; @symbol_param<0> = [loc,26,24,27]; @symbol_param<0>_type<0> = [Position,26,31,39]; @symbol_param<0>_type<1> = [Location,26,40,48]; @symbol_return<0> = [Lang,26,53,57]; @symbol_return<1> = [String,26,58,64]; ]
+    function formatMgrs(loc as Position.Location) as Lang.String or Null {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_26_73_32_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc" 27 8 ]
+        try @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_beginTry @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_endTry @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_catch @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_finally;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_beginTry:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_12_29_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc" 28 12 ]
+        %tmp.1 = lgetv %loc;
+        symbol [ loc %tmp.1 28 19 22 ];
+        symbol [ toGeoString %tmp.2 28 23 34 ];
+        %tmp.2 = getv function %tmp.1 :toGeoString;
+        symbol [ Position %tmp.3 28 35 43 ];
+        %tmp.3 = getm $.Toybox.Position;
+        symbol [ GEO_MGRS %tmp.4 28 44 52 ];
+        %tmp.4 = getv %tmp.3 :GEO_MGRS;
+        %tmp.5 = invoke %tmp.1 %tmp.2(%tmp.4);
+        jsr @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_finally;
+        ret %tmp.5;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_12_29_8_stop:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_endTry:
+        jsr @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_finally;
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_catch:
+        %tmp.6 = exception;
+        push %tmp.6;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc" 29 10 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_catch" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_29_10_31_8_end" ]
+        %e.1 = local;
+        symbol [ e %e.1 29 17 18 ];
+        %tmp.7 = dup %tmp.6;
+        lputv %e.1 %tmp.7;
+        symbol [ e %e.1 29 17 18 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_29_20_31_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc" 30 12 ]
+        pop;
+        %tmp.8 = null;
+        jsr @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_finally;
+        ret %tmp.8;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_29_20_31_8_stop:
+        jsr @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_finally;
+        pop;
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_29_10_31_8_end:
+        try @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_catch @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_29_10_31_8_end @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_29_10_31_8_end @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_finally;
+        jsr @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_finally;
+        throw %tmp.6;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_finally:
+        jsrret;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_27_8_31_8_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PositionFormatHelper_mc_26_73_32_4_stop:
+    }
+}
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormatHelper.mc"; @line = 1; ]
+<init> {
+}

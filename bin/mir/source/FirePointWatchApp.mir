@@ -1,54 +1,380 @@
 [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Application,1,13,24]; ]
 using Toybox.Application;
-[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Lang,2,13,17]; ]
+using Toybox.Lang;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Position,3,13,21]; ]
+using Toybox.Position;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [WatchUi,4,13,20]; ]
 using Toybox.WatchUi;
-[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 4; @symbol_classdef = [FirePointWatchApp,4,6,23]; @symbol_extends<0> = [Application,4,32,43]; @symbol_extends<1> = [AppBase,4,44,51]; ]
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 6; @symbol_classdef = [FirePointWatchApp,6,6,23]; @symbol_extends<0> = [Application,6,32,43]; @symbol_extends<1> = [AppBase,6,44,51]; ]
 class FirePointWatchApp extends Application.AppBase {
-    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 4; ]
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 6; ]
     <init> {
     }
-    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 4; ]
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 6; ]
     static
     <init> {
     }
-    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 8; @position = 8; @symbol_vardef = [_compassView,8,8,20]; @symbol_type<0> = [CompassView,8,24,35]; ]
+    var _compassView as CompassView or Null;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 9; @position = 8; @symbol_vardef = [_positionView,9,8,21]; @symbol_type<0> = [PositionView,9,25,37]; ]
+    var _positionView as PositionView or Null;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 11; @symbol_functiondef = [initialize,11,13,23]; ]
     function initialize() as Void {
-_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_6_26_8_4_start:
-[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 7 8 ]
-        symbol [ AppBase %tmp.2 7 8 15 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_11_26_15_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 12 8 ]
+        symbol [ AppBase %tmp.2 12 8 15 ];
         %tmp.2 = getv ? :AppBase;
-        symbol [ initialize %tmp.3 7 16 26 ];
+        symbol [ initialize %tmp.3 12 16 26 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_6_26_8_4_stop:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 13 8 ]
+        %tmp.4 = null;
+        symbol [ _compassView ? 13 8 20 ];
+        putv self :_compassView %tmp.4;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 14 8 ]
+        %tmp.5 = null;
+        symbol [ _positionView ? 14 8 21 ];
+        putv self :_positionView %tmp.5;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_11_26_15_4_stop:
     }
-    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 10; @symbol_functiondef = [getInitialView,10,13,27]; ]
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 17; @symbol_functiondef = [registerCompassView,17,13,32]; @symbol_param<0> = [v,17,33,34]; @symbol_param<0>_type<0> = [CompassView,17,38,49]; ]
+    function registerCompassView(v as CompassView) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_17_59_19_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 18 8 ]
+        %tmp.1 = lgetv %v;
+        symbol [ v %tmp.1 18 23 24 ];
+        symbol [ _compassView ? 18 8 20 ];
+        putv self :_compassView %tmp.1;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_17_59_19_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 21; @symbol_functiondef = [unregisterCompassView,21,13,34]; @symbol_param<0> = [v,21,35,36]; @symbol_param<0>_type<0> = [CompassView,21,40,51]; ]
+    function unregisterCompassView(v as CompassView) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_21_61_25_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 22 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_8_24_8_if_stmt:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_12_22_52_begin:
+        symbol [ _compassView %tmp.2 22 12 24 ];
+        %tmp.2 = getv ? :_compassView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_8_24_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_36_22_52_true:
+        symbol [ _compassView %tmp.6 22 36 48 ];
+        %tmp.6 = getv ? :_compassView;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        %tmp.8 = lgetv %v;
+        symbol [ v %tmp.8 22 52 53 ];
+        %tmp.9 = eq %tmp.7 %tmp.8;
+        push %tmp.9;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_36_22_52_end:
+        %tmp.10 = phi [%tmp.4 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_12_22_52_begin] [%tmp.9 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_36_22_52_true] [%tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_36_22_52_end];
+        bf %tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_8_24_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_8_24_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_55_24_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 23 12 ]
+        %tmp.11 = null;
+        symbol [ _compassView ? 23 12 24 ];
+        putv self :_compassView %tmp.11;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_55_24_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_8_24_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_22_8_24_8_if_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_21_61_25_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 27; @symbol_functiondef = [registerPositionView,27,13,33]; @symbol_param<0> = [v,27,34,35]; @symbol_param<0>_type<0> = [PositionView,27,39,51]; ]
+    function registerPositionView(v as PositionView) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_27_61_29_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 28 8 ]
+        %tmp.1 = lgetv %v;
+        symbol [ v %tmp.1 28 24 25 ];
+        symbol [ _positionView ? 28 8 21 ];
+        putv self :_positionView %tmp.1;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_27_61_29_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 31; @symbol_functiondef = [unregisterPositionView,31,13,35]; @symbol_param<0> = [v,31,36,37]; @symbol_param<0>_type<0> = [PositionView,31,41,53]; ]
+    function unregisterPositionView(v as PositionView) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_31_63_35_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 32 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_8_34_8_if_stmt:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_12_32_54_begin:
+        symbol [ _positionView %tmp.2 32 12 25 ];
+        %tmp.2 = getv ? :_positionView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_8_34_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_37_32_54_true:
+        symbol [ _positionView %tmp.6 32 37 50 ];
+        %tmp.6 = getv ? :_positionView;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        %tmp.8 = lgetv %v;
+        symbol [ v %tmp.8 32 54 55 ];
+        %tmp.9 = eq %tmp.7 %tmp.8;
+        push %tmp.9;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_37_32_54_end:
+        %tmp.10 = phi [%tmp.4 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_12_32_54_begin] [%tmp.9 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_37_32_54_true] [%tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_37_32_54_end];
+        bf %tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_8_34_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_8_34_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_57_34_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 33 12 ]
+        %tmp.11 = null;
+        symbol [ _positionView ? 33 12 25 ];
+        putv self :_positionView %tmp.11;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_57_34_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_8_34_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_32_8_34_8_if_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_31_63_35_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 37; @symbol_functiondef = [onPosition,37,13,23]; @symbol_param<0> = [info,37,24,28]; @symbol_param<0>_type<0> = [Position,37,32,40]; @symbol_param<0>_type<1> = [Info,37,41,45]; ]
+    function onPosition(info as Position.Info) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_37_55_45_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 38 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_38_8_44_8_if_stmt:
+        symbol [ _compassView %tmp.2 38 12 24 ];
+        %tmp.2 = getv ? :_compassView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_38_8_44_8_if_false;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_38_8_44_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_38_34_41_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 39 12 ]
+        symbol [ _compassView %tmp.6 39 12 24 ];
+        %tmp.6 = getv ? :_compassView;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ applyHeadingInfo %tmp.8 39 25 41 ];
+        %tmp.8 = getv function %tmp.7 :applyHeadingInfo;
+        %tmp.9 = lgetv %info;
+        symbol [ info %tmp.9 39 42 46 ];
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 40 12 ]
+        symbol [ WatchUi %tmp.10 40 12 19 ];
+        %tmp.10 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.11 40 20 33 ];
+        %tmp.11 = getv function %tmp.10 :requestUpdate;
+        invoke %tmp.10 %tmp.11();
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_38_34_41_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_38_8_44_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_38_8_44_8_if_false:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 41 15 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_41_15_44_8_if_stmt:
+        symbol [ _positionView %tmp.13 41 19 32 ];
+        %tmp.13 = getv ? :_positionView;
+        %tmp.14 = null;
+        %tmp.15 = ne %tmp.13 %tmp.14;
+        bf %tmp.15 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_41_15_44_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_41_15_44_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_41_42_44_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 42 12 ]
+        symbol [ _positionView %tmp.17 42 12 25 ];
+        %tmp.17 = getv ? :_positionView;
+        %tmp.18 = as %tmp.17 { (!Null) };
+        symbol [ applyPositionInfo %tmp.19 42 26 43 ];
+        %tmp.19 = getv function %tmp.18 :applyPositionInfo;
+        %tmp.20 = lgetv %info;
+        symbol [ info %tmp.20 42 44 48 ];
+        invoke %tmp.18 %tmp.19(%tmp.20);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 43 12 ]
+        symbol [ WatchUi %tmp.21 43 12 19 ];
+        %tmp.21 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.22 43 20 33 ];
+        %tmp.22 = getv function %tmp.21 :requestUpdate;
+        invoke %tmp.21 %tmp.22();
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_41_42_44_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_41_15_44_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_41_15_44_8_if_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_38_8_44_8_if_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_37_55_45_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 47; @symbol_functiondef = [beginCompass,47,13,25]; @symbol_param<0> = [compass,47,26,33]; @symbol_param<0>_type<0> = [CompassView,47,37,48]; ]
+    function beginCompass(compass as CompassView) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_47_58_52_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 48 8 ]
+        %tmp.1 = self;
+        symbol [ registerCompassView %tmp.2 48 8 27 ];
+        %tmp.2 = getv function %tmp.1 :registerCompassView;
+        %tmp.3 = lgetv %compass;
+        symbol [ compass %tmp.3 48 28 35 ];
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 49 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_49_8_51_8_if_stmt:
+        symbol [ Toybox %tmp.5 49 12 18 ];
+        %tmp.5 = getv ? :Toybox;
+        %tmp.7 = const :Position;
+        symbol [ Position %tmp.7 49 24 32 const ];
+        %tmp.8 = canhazplz %tmp.5 %tmp.7;
+        bf %tmp.8 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_49_8_51_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_49_8_51_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_49_34_51_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 50 12 ]
+        symbol [ Position %tmp.9 50 12 20 ];
+        %tmp.9 = getm $.Toybox.Position;
+        symbol [ enableLocationEvents %tmp.10 50 21 41 ];
+        %tmp.10 = getv function %tmp.9 :enableLocationEvents;
+        symbol [ Position %tmp.11 50 42 50 ];
+        %tmp.11 = getm $.Toybox.Position;
+        symbol [ LOCATION_CONTINUOUS %tmp.12 50 51 70 ];
+        %tmp.12 = getv %tmp.11 :LOCATION_CONTINUOUS;
+        %tmp.13 = self;
+        symbol [ method %tmp.14 50 72 78 ];
+        %tmp.14 = getv function %tmp.13 :method;
+        %tmp.16 = const :onPosition;
+        symbol [ onPosition %tmp.16 50 80 90 const ];
+        %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.17);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_49_34_51_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_49_8_51_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_49_8_51_8_if_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_47_58_52_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 54; @symbol_functiondef = [endCompass,54,13,23]; @symbol_param<0> = [compass,54,24,31]; @symbol_param<0>_type<0> = [CompassView,54,35,46]; ]
+    function endCompass(compass as CompassView) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_54_56_59_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 55 8 ]
+        %tmp.1 = self;
+        symbol [ unregisterCompassView %tmp.2 55 8 29 ];
+        %tmp.2 = getv function %tmp.1 :unregisterCompassView;
+        %tmp.3 = lgetv %compass;
+        symbol [ compass %tmp.3 55 30 37 ];
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 56 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_56_8_58_8_if_stmt:
+        symbol [ Toybox %tmp.5 56 12 18 ];
+        %tmp.5 = getv ? :Toybox;
+        %tmp.7 = const :Position;
+        symbol [ Position %tmp.7 56 24 32 const ];
+        %tmp.8 = canhazplz %tmp.5 %tmp.7;
+        bf %tmp.8 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_56_8_58_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_56_8_58_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_56_34_58_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 57 12 ]
+        symbol [ Position %tmp.9 57 12 20 ];
+        %tmp.9 = getm $.Toybox.Position;
+        symbol [ enableLocationEvents %tmp.10 57 21 41 ];
+        %tmp.10 = getv function %tmp.9 :enableLocationEvents;
+        symbol [ Position %tmp.11 57 42 50 ];
+        %tmp.11 = getm $.Toybox.Position;
+        symbol [ LOCATION_DISABLE %tmp.12 57 51 67 ];
+        %tmp.12 = getv %tmp.11 :LOCATION_DISABLE;
+        %tmp.13 = self;
+        symbol [ method %tmp.14 57 69 75 ];
+        %tmp.14 = getv function %tmp.13 :method;
+        %tmp.16 = const :onPosition;
+        symbol [ onPosition %tmp.16 57 77 87 const ];
+        %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.17);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_56_34_58_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_56_8_58_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_56_8_58_8_if_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_54_56_59_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 61; @symbol_functiondef = [beginPosition,61,13,26]; @symbol_param<0> = [posView,61,27,34]; @symbol_param<0>_type<0> = [PositionView,61,38,50]; ]
+    function beginPosition(posView as PositionView) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_61_60_66_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 62 8 ]
+        %tmp.1 = self;
+        symbol [ registerPositionView %tmp.2 62 8 28 ];
+        %tmp.2 = getv function %tmp.1 :registerPositionView;
+        %tmp.3 = lgetv %posView;
+        symbol [ posView %tmp.3 62 29 36 ];
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 63 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_63_8_65_8_if_stmt:
+        symbol [ Toybox %tmp.5 63 12 18 ];
+        %tmp.5 = getv ? :Toybox;
+        %tmp.7 = const :Position;
+        symbol [ Position %tmp.7 63 24 32 const ];
+        %tmp.8 = canhazplz %tmp.5 %tmp.7;
+        bf %tmp.8 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_63_8_65_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_63_8_65_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_63_34_65_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 64 12 ]
+        symbol [ Position %tmp.9 64 12 20 ];
+        %tmp.9 = getm $.Toybox.Position;
+        symbol [ enableLocationEvents %tmp.10 64 21 41 ];
+        %tmp.10 = getv function %tmp.9 :enableLocationEvents;
+        symbol [ Position %tmp.11 64 42 50 ];
+        %tmp.11 = getm $.Toybox.Position;
+        symbol [ LOCATION_CONTINUOUS %tmp.12 64 51 70 ];
+        %tmp.12 = getv %tmp.11 :LOCATION_CONTINUOUS;
+        %tmp.13 = self;
+        symbol [ method %tmp.14 64 72 78 ];
+        %tmp.14 = getv function %tmp.13 :method;
+        %tmp.16 = const :onPosition;
+        symbol [ onPosition %tmp.16 64 80 90 const ];
+        %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.17);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_63_34_65_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_63_8_65_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_63_8_65_8_if_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_61_60_66_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 68; @symbol_functiondef = [endPosition,68,13,24]; @symbol_param<0> = [posView,68,25,32]; @symbol_param<0>_type<0> = [PositionView,68,36,48]; ]
+    function endPosition(posView as PositionView) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_68_58_73_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 69 8 ]
+        %tmp.1 = self;
+        symbol [ unregisterPositionView %tmp.2 69 8 30 ];
+        %tmp.2 = getv function %tmp.1 :unregisterPositionView;
+        %tmp.3 = lgetv %posView;
+        symbol [ posView %tmp.3 69 31 38 ];
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 70 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_70_8_72_8_if_stmt:
+        symbol [ Toybox %tmp.5 70 12 18 ];
+        %tmp.5 = getv ? :Toybox;
+        %tmp.7 = const :Position;
+        symbol [ Position %tmp.7 70 24 32 const ];
+        %tmp.8 = canhazplz %tmp.5 %tmp.7;
+        bf %tmp.8 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_70_8_72_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_70_8_72_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_70_34_72_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 71 12 ]
+        symbol [ Position %tmp.9 71 12 20 ];
+        %tmp.9 = getm $.Toybox.Position;
+        symbol [ enableLocationEvents %tmp.10 71 21 41 ];
+        %tmp.10 = getv function %tmp.9 :enableLocationEvents;
+        symbol [ Position %tmp.11 71 42 50 ];
+        %tmp.11 = getm $.Toybox.Position;
+        symbol [ LOCATION_DISABLE %tmp.12 71 51 67 ];
+        %tmp.12 = getv %tmp.11 :LOCATION_DISABLE;
+        %tmp.13 = self;
+        symbol [ method %tmp.14 71 69 75 ];
+        %tmp.14 = getv function %tmp.13 :method;
+        %tmp.16 = const :onPosition;
+        symbol [ onPosition %tmp.16 71 77 87 const ];
+        %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.17);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_70_34_72_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_70_8_72_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_70_8_72_8_if_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_68_58_73_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 75; @symbol_functiondef = [getInitialView,75,13,27]; ]
     function getInitialView() {
-_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_10_30_13_4_start:
-[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 11 8 ]
-        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_10_30_13_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_10_30_13_4_stop" ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_75_30_78_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 76 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_75_30_78_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_75_30_78_4_stop" ]
         %homeView.1 = local;
-        symbol [ homeView %homeView.1 11 12 20 ];
-        symbol [ HomeView %tmp.4 11 27 35 ];
+        symbol [ homeView %homeView.1 76 12 20 ];
+        symbol [ HomeView %tmp.4 76 27 35 ];
         %tmp.4 = getv ? :HomeView;
         %tmp.1 = newc %tmp.4 ();
         lputv %homeView.1 %tmp.1;
-        symbol [ homeView %homeView.1 11 12 20 ];
-[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 12 8 ]
+        symbol [ homeView %homeView.1 76 12 20 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc" 77 8 ]
         %tmp.5 = newa 2;
         %tmp.6 = lgetv %homeView.1;
-        symbol [ homeView %tmp.6 12 17 25 ];
+        symbol [ homeView %tmp.6 77 17 25 ];
         %tmp.7 = dup %tmp.5;
         %tmp.8 = aputv %tmp.7 0 %tmp.6;
-        symbol [ HomeInputDelegate %tmp.12 12 31 48 ];
+        symbol [ HomeInputDelegate %tmp.12 77 31 48 ];
         %tmp.12 = getv ? :HomeInputDelegate;
         %tmp.13 = lgetv %homeView.1;
-        symbol [ homeView %tmp.13 12 49 57 ];
+        symbol [ homeView %tmp.13 77 49 57 ];
         %tmp.9 = newc %tmp.12 (%tmp.13);
         %tmp.14 = dup %tmp.8;
         %tmp.15 = aputv %tmp.14 1 %tmp.9;
         ret %tmp.15;
-_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_10_30_13_4_stop:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_FirePointWatchApp_mc_75_30_78_4_stop:
     }
 }
 [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/FirePointWatchApp.mc"; @line = 1; ]

@@ -1,0 +1,20 @@
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormat.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Lang,1,13,17]; ]
+using Toybox.Lang;
+//! Display mode order: MGRS -> UTM -> Lat/Lon -> MGRS.
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormat.mc"; @line = 4; @symbol_moduledef = [PositionFormat,4,7,21]; ]
+module PositionFormat {
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormat.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormat.mc"; @line = 5; @position = 10; @symbol_constdef = [MGRS,5,10,14]; ]
+    const MGRS = 0;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormat.mc"; @line = 6; @position = 10; @symbol_constdef = [UTM,6,10,13]; ]
+    const UTM = 1;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormat.mc"; @line = 7; @position = 10; @symbol_constdef = [LAT_LON,7,10,17]; ]
+    const LAT_LON = 2;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormat.mc"; @line = 8; @position = 10; @symbol_constdef = [MODE_COUNT,8,10,20]; ]
+    const MODE_COUNT = 3;
+}
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PositionFormat.mc"; @line = 1; ]
+<init> {
+}

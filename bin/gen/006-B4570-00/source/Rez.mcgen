@@ -10,12 +10,30 @@ module Rez {
     } // Drawables
 
     module Strings {
-        (:initialized) var SavedLabel as ResourceId;
-        (:initialized) var CompassLabel as ResourceId;
+        (:initialized) var CompassSave as ResourceId;
+        (:initialized) var PositionScreenTitle as ResourceId;
+        (:initialized) var CompassDegSuffix as ResourceId;
+        (:initialized) var PositionNextFormat as ResourceId;
+        (:initialized) var PositionAltMeters as ResourceId;
         (:initialized) var HelloLabel as ResourceId;
-        (:initialized) var PositionLabel as ResourceId;
+        (:initialized) var CompassTitle as ResourceId;
+        (:initialized) var PositionUnavailable as ResourceId;
+        (:initialized) var PositionWaitingGps as ResourceId;
+        (:initialized) var PositionUtmUnavailable as ResourceId;
+        (:initialized) var PositionAltPrefix as ResourceId;
         (:initialized) var AppName as ResourceId;
+        (:initialized) var CompassToggleToDeg as ResourceId;
+        (:initialized) var PositionAltNone as ResourceId;
+        (:initialized) var SavedLabel as ResourceId;
+        (:initialized) var CompassWaiting as ResourceId;
+        (:initialized) var CompassLabel as ResourceId;
+        (:initialized) var PositionSave as ResourceId;
+        (:initialized) var CompassToggleToMil as ResourceId;
+        (:initialized) var PositionLabel as ResourceId;
+        (:initialized) var PositionMgrsUnavailable as ResourceId;
         (:initialized) var BackLabel as ResourceId;
+        (:initialized) var CompassUnavailable as ResourceId;
+        (:initialized) var CompassMilSuffix as ResourceId;
     } // Strings
 
     module Styles {

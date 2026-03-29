@@ -25,6 +25,16 @@ class HomeInputDelegate extends WatchUi.InputDelegate {
         if (idx < 0) {
             return false;
         }
+        if (idx == 0) {
+            var compass = new CompassView();
+            WatchUi.pushView(compass, new CompassInputDelegate(compass), WatchUi.SLIDE_LEFT);
+            return true;
+        }
+        if (idx == 1) {
+            var pos = new PositionView();
+            WatchUi.pushView(pos, new PositionInputDelegate(pos), WatchUi.SLIDE_LEFT);
+            return true;
+        }
         var sub = _home.getSubtitleForIndex(idx);
         var detail = new FeatureDetailView(sub);
         WatchUi.pushView(detail, new FeatureDetailInputDelegate(detail), WatchUi.SLIDE_LEFT);

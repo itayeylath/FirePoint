@@ -1,0 +1,270 @@
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Application,1,13,24]; ]
+using Toybox.Application;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Application,2,13,24]; @symbol_usingdef<2> = [Storage,2,25,32]; ]
+using Toybox.Application.Storage;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Lang,3,13,17]; ]
+using Toybox.Lang;
+//! Saved GPS points. **UTM** is always stored as null: Connect IQ has no official UTM formatter.
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc"; @line = 6; @symbol_moduledef = [PointStore,6,7,17]; ]
+module PointStore {
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc"; @line = 8; @position = 10; @symbol_constdef = [_KEY_POINTS,8,10,21]; ]
+    const _KEY_POINTS = "points";
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc"; @line = 9; @position = 10; @symbol_constdef = [_KEY_SEQ,9,10,18]; ]
+    const _KEY_SEQ = "pointSeq";
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc"; @line = 11; @symbol_functiondef = [savePoint,11,13,22]; @symbol_param<0> = [lat,12,8,11]; @symbol_param<0>_type<0> = [Lang,12,15,19]; @symbol_param<0>_type<1> = [Float,12,20,25]; @symbol_param<1> = [lon,13,8,11]; @symbol_param<1>_type<0> = [Lang,13,15,19]; @symbol_param<1>_type<1> = [Float,13,20,25]; @symbol_param<2> = [latLonDisplay,14,8,21]; @symbol_param<2>_type<0> = [Lang,14,25,29]; @symbol_param<2>_type<1> = [String,14,30,36]; @symbol_param<3> = [mgrs,15,8,12]; @symbol_param<3>_type<0> = [Lang,15,16,20]; @symbol_param<3>_type<1> = [String,15,21,27]; @symbol_param<4> = [altitude,16,8,16]; @symbol_param<4>_type<0> = [Lang,16,20,24]; @symbol_param<4>_type<1> = [Float,16,25,30]; ]
+    function savePoint(lat as Lang.Float, lon as Lang.Float, latLonDisplay as Lang.String, mgrs as Lang.String or Null, altitude as Lang.Float or Null) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 18 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_18_8_20_8_if_stmt:
+        symbol [ Toybox %tmp.2 18 14 20 ];
+        %tmp.2 = getv ? :Toybox;
+        %tmp.4 = const :Storage;
+        symbol [ Storage %tmp.4 18 26 33 const ];
+        %tmp.5 = canhazplz %tmp.2 %tmp.4;
+        %tmp.6 = not %tmp.5;
+        bf %tmp.6 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_18_8_20_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_18_8_20_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_18_36_20_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 19 12 ]
+        ret ?;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_18_36_20_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_18_8_20_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_18_8_20_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 22 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_stop" ]
+        %seqObj.1 = local;
+        symbol [ seqObj %seqObj.1 22 12 18 ];
+        symbol [ Storage %tmp.7 22 21 28 ];
+        %tmp.7 = getm $.Toybox.Application.Storage;
+        symbol [ getValue %tmp.8 22 29 37 ];
+        %tmp.8 = getv function %tmp.7 :getValue;
+        symbol [ _KEY_SEQ %tmp.10 22 38 46 ];
+        %tmp.10 = getv ? :_KEY_SEQ;
+        %tmp.11 = invoke %tmp.7 %tmp.8(%tmp.10);
+        lputv %seqObj.1 %tmp.11;
+        symbol [ seqObj %seqObj.1 22 12 18 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 23 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_stop" ]
+        %seq.2 = local;
+        symbol [ seq %seq.2 23 12 15 ];
+        %tmp.12 = 0;
+        lputv %seq.2 %tmp.12;
+        symbol [ seq %seq.2 23 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 24 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_24_8_26_8_if_stmt:
+        %tmp.13 = lgetv %seqObj.1;
+        symbol [ seqObj %tmp.13 24 12 18 ];
+        %tmp.14 = null;
+        %tmp.15 = ne %tmp.13 %tmp.14;
+        bf %tmp.15 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_24_8_26_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_24_8_26_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_24_28_26_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 25 12 ]
+        %tmp.16 = lgetv %seqObj.1;
+        symbol [ seqObj %tmp.16 25 18 24 ];
+        %tmp.17 = as %tmp.16 { (!Null) };
+        %tmp.18 = as %tmp.17 Lang.Number;
+        symbol [ Lang %tmp.18 25 28 32 ];
+        symbol [ Number %tmp.18 25 33 39 ];
+        lputv %seq.2 %tmp.18;
+        symbol [ seq %seq.2 25 12 15 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_24_28_26_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_24_8_26_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_24_8_26_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 27 8 ]
+        %tmp.19 = lgetv %seq.2;
+        symbol [ seq %tmp.19 27 14 17 ];
+        %tmp.20 = 1;
+        %tmp.21 = add %tmp.19 %tmp.20;
+        lputv %seq.2 %tmp.21;
+        symbol [ seq %seq.2 27 8 11 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 28 8 ]
+        symbol [ Storage %tmp.22 28 8 15 ];
+        %tmp.22 = getm $.Toybox.Application.Storage;
+        symbol [ setValue %tmp.23 28 16 24 ];
+        %tmp.23 = getv function %tmp.22 :setValue;
+        symbol [ _KEY_SEQ %tmp.25 28 25 33 ];
+        %tmp.25 = getv ? :_KEY_SEQ;
+        %tmp.26 = lgetv %seq.2;
+        symbol [ seq %tmp.26 28 35 38 ];
+        invoke %tmp.22 %tmp.23(%tmp.25, %tmp.26);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 30 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_stop" ]
+        %name.3 = local;
+        symbol [ name %name.3 30 12 16 ];
+        %tmp.27 = "Pt ";
+        %tmp.28 = lgetv %seq.2;
+        symbol [ seq %tmp.28 30 27 30 ];
+        symbol [ toString %tmp.29 30 31 39 ];
+        %tmp.29 = getv function %tmp.28 :toString;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        %tmp.31 = add %tmp.27 %tmp.30;
+        lputv %name.3 %tmp.31;
+        symbol [ name %name.3 30 12 16 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 32 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_stop" ]
+        %entry.4 = local;
+        symbol [ entry %entry.4 32 12 17 ];
+        %tmp.32 = newd Lang.Dictionary 9;
+        symbol [ Lang %tmp.32 42 13 17 ];
+        symbol [ Dictionary %tmp.32 42 18 28 ];
+        %tmp.33 = "type";
+        %tmp.34 = "point";
+        %tmp.35 = dup %tmp.32;
+        %tmp.36 = aputv %tmp.35 %tmp.33 %tmp.34;
+        %tmp.37 = "name";
+        %tmp.38 = lgetv %name.3;
+        symbol [ name %tmp.38 34 22 26 ];
+        %tmp.39 = dup %tmp.36;
+        %tmp.40 = aputv %tmp.39 %tmp.37 %tmp.38;
+        %tmp.41 = "timestamp";
+        %tmp.42 = lgetv %seq.2;
+        symbol [ seq %tmp.42 35 27 30 ];
+        %tmp.43 = dup %tmp.40;
+        %tmp.44 = aputv %tmp.43 %tmp.41 %tmp.42;
+        %tmp.45 = "lat";
+        %tmp.46 = lgetv %lat;
+        symbol [ lat %tmp.46 36 21 24 ];
+        %tmp.47 = dup %tmp.44;
+        %tmp.48 = aputv %tmp.47 %tmp.45 %tmp.46;
+        %tmp.49 = "lon";
+        %tmp.50 = lgetv %lon;
+        symbol [ lon %tmp.50 37 21 24 ];
+        %tmp.51 = dup %tmp.48;
+        %tmp.52 = aputv %tmp.51 %tmp.49 %tmp.50;
+        %tmp.53 = "latLonDisplay";
+        %tmp.54 = lgetv %latLonDisplay;
+        symbol [ latLonDisplay %tmp.54 38 31 44 ];
+        %tmp.55 = dup %tmp.52;
+        %tmp.56 = aputv %tmp.55 %tmp.53 %tmp.54;
+        %tmp.57 = "mgrs";
+        %tmp.58 = lgetv %mgrs;
+        symbol [ mgrs %tmp.58 39 22 26 ];
+        %tmp.59 = dup %tmp.56;
+        %tmp.60 = aputv %tmp.59 %tmp.57 %tmp.58;
+        %tmp.61 = "utm";
+        %tmp.62 = null;
+        %tmp.63 = dup %tmp.60;
+        %tmp.64 = aputv %tmp.63 %tmp.61 %tmp.62;
+        %tmp.65 = "altitude";
+        %tmp.66 = lgetv %altitude;
+        symbol [ altitude %tmp.66 41 26 34 ];
+        %tmp.67 = dup %tmp.64;
+        %tmp.68 = aputv %tmp.67 %tmp.65 %tmp.66;
+        lputv %entry.4 %tmp.68;
+        symbol [ entry %entry.4 32 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 44 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_stop" ]
+        %raw.5 = local;
+        symbol [ raw %raw.5 44 12 15 ];
+        symbol [ Storage %tmp.69 44 18 25 ];
+        %tmp.69 = getm $.Toybox.Application.Storage;
+        symbol [ getValue %tmp.70 44 26 34 ];
+        %tmp.70 = getv function %tmp.69 :getValue;
+        symbol [ _KEY_POINTS %tmp.72 44 35 46 ];
+        %tmp.72 = getv ? :_KEY_POINTS;
+        %tmp.73 = invoke %tmp.69 %tmp.70(%tmp.72);
+        lputv %raw.5 %tmp.73;
+        symbol [ raw %raw.5 44 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 45 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_stop" ]
+        %next.6 = local;
+        symbol [ next %next.6 45 12 16 ];
+        %tmp.74 = newa 0 Lang.Array;
+        symbol [ Lang %tmp.74 45 25 29 ];
+        symbol [ Array %tmp.74 45 30 35 ];
+        lputv %next.6 %tmp.74;
+        symbol [ next %next.6 45 12 16 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 46 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_46_8_51_8_if_stmt:
+        %tmp.75 = lgetv %raw.5;
+        symbol [ raw %tmp.75 46 12 15 ];
+        %tmp.76 = null;
+        %tmp.77 = ne %tmp.75 %tmp.76;
+        bf %tmp.77 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_46_8_51_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_46_8_51_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_46_25_51_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 47 12 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_46_25_51_8_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_46_25_51_8_stop" ]
+        %oldList.7 = local;
+        symbol [ oldList %oldList.7 47 16 23 ];
+        %tmp.78 = lgetv %raw.5;
+        symbol [ raw %tmp.78 47 26 29 ];
+        %tmp.79 = as %tmp.78 { (!Null) };
+        %tmp.80 = as %tmp.79 Lang.Array;
+        symbol [ Lang %tmp.80 47 33 37 ];
+        symbol [ Array %tmp.80 47 38 43 ];
+        lputv %oldList.7 %tmp.80;
+        symbol [ oldList %oldList.7 47 16 23 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 48 12 ]
+        for @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_12_50_12_for_test @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_12_50_12_for_incr @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_12_50_12_for_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_12_50_12_for_init:
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_12_50_12_for_begin" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_12_50_12_for_end" ]
+        %i.8 = local;
+        symbol [ i %i.8 48 21 22 ];
+        %tmp.81 = 0;
+        lputv %i.8 %tmp.81;
+        symbol [ i %i.8 48 21 22 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_12_50_12_for_test:
+        %tmp.82 = lgetv %i.8;
+        symbol [ i %tmp.82 48 28 29 ];
+        %tmp.83 = lgetv %oldList.7;
+        symbol [ oldList %tmp.83 48 32 39 ];
+        symbol [ size %tmp.84 48 40 44 ];
+        %tmp.84 = getv function %tmp.83 :size;
+        %tmp.85 = invoke %tmp.83 %tmp.84();
+        %tmp.86 = lt %tmp.82 %tmp.85;
+        bf %tmp.86 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_12_50_12_for_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_12_50_12_for_begin:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_53_50_12_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 49 16 ]
+        %tmp.87 = lgetv %next.6;
+        symbol [ next %tmp.87 49 16 20 ];
+        symbol [ add %tmp.88 49 21 24 ];
+        %tmp.88 = getv function %tmp.87 :add;
+        %tmp.89 = lgetv %oldList.7;
+        symbol [ oldList %tmp.89 49 25 32 ];
+        %tmp.90 = lgetv %i.8;
+        symbol [ i %tmp.90 49 33 34 ];
+        %tmp.91 = agetv %tmp.89 %tmp.90;
+        invoke %tmp.87 %tmp.88(%tmp.91);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_53_50_12_stop:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_12_50_12_for_incr:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 48 ]
+        %tmp.94 = lgetv %i.8;
+        symbol [ i %tmp.94 48 48 49 ];
+        %tmp.95 = add %tmp.94 1;
+        lputv %i.8 %tmp.95;
+        symbol [ i %i.8 48 48 49 ];
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_12_50_12_for_test;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_48_12_50_12_for_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_46_25_51_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_46_8_51_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_46_8_51_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 52 8 ]
+        %tmp.96 = lgetv %next.6;
+        symbol [ next %tmp.96 52 8 12 ];
+        symbol [ add %tmp.97 52 13 16 ];
+        %tmp.97 = getv function %tmp.96 :add;
+        %tmp.98 = lgetv %entry.4;
+        symbol [ entry %tmp.98 52 17 22 ];
+        invoke %tmp.96 %tmp.97(%tmp.98);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc" 53 8 ]
+        symbol [ Storage %tmp.99 53 8 15 ];
+        %tmp.99 = getm $.Toybox.Application.Storage;
+        symbol [ setValue %tmp.100 53 16 24 ];
+        %tmp.100 = getv function %tmp.99 :setValue;
+        symbol [ _KEY_POINTS %tmp.102 53 25 36 ];
+        %tmp.102 = getv ? :_KEY_POINTS;
+        %tmp.103 = lgetv %next.6;
+        symbol [ next %tmp.103 53 38 42 ];
+        invoke %tmp.99 %tmp.100(%tmp.102, %tmp.103);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_PointStore_mc_17_14_54_4_stop:
+    }
+}
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/PointStore.mc"; @line = 1; ]
+<init> {
+}

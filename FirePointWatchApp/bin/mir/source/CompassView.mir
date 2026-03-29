@@ -1,0 +1,2588 @@
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Application,1,13,24]; ]
+using Toybox.Application;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Graphics,2,13,21]; ]
+using Toybox.Graphics;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Lang,3,13,17]; ]
+using Toybox.Lang;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Position,4,13,21]; ]
+using Toybox.Position;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [WatchUi,5,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 7; @symbol_classdef = [CompassView,7,6,17]; @symbol_extends<0> = [WatchUi,7,26,33]; @symbol_extends<1> = [View,7,34,38]; ]
+class CompassView extends WatchUi.View {
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    //! true = primary line shows mils (6400 default)
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 10; @position = 8; @symbol_vardef = [_primaryMils,10,8,20]; @symbol_type<0> = [Lang,10,24,28]; @symbol_type<1> = [Boolean,10,29,36]; ]
+    var _primaryMils as Lang.Boolean;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 12; @position = 8; @symbol_vardef = [_unsupported,12,8,20]; @symbol_type<0> = [Lang,12,24,28]; @symbol_type<1> = [Boolean,12,29,36]; ]
+    var _unsupported as Lang.Boolean;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 13; @position = 8; @symbol_vardef = [_headingReady,13,8,21]; @symbol_type<0> = [Lang,13,25,29]; @symbol_type<1> = [Boolean,13,30,37]; ]
+    var _headingReady as Lang.Boolean;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 14; @position = 8; @symbol_vardef = [_degInt,14,8,15]; @symbol_type<0> = [Lang,14,19,23]; @symbol_type<1> = [Number,14,24,30]; ]
+    var _degInt as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 15; @position = 8; @symbol_vardef = [_milsInt,15,8,16]; @symbol_type<0> = [Lang,15,20,24]; @symbol_type<1> = [Number,15,25,31]; ]
+    var _milsInt as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 17; @position = 8; @symbol_vardef = [_mainText,17,8,17]; @symbol_type<0> = [Lang,17,21,25]; @symbol_type<1> = [String,17,26,32]; ]
+    var _mainText as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 18; @position = 8; @symbol_vardef = [_subText,18,8,16]; @symbol_type<0> = [Lang,18,20,24]; @symbol_type<1> = [String,18,25,31]; ]
+    var _subText as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 20; @position = 8; @symbol_vardef = [_titleStr,20,8,17]; @symbol_type<0> = [Lang,20,21,25]; @symbol_type<1> = [String,20,26,32]; ]
+    var _titleStr as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 21; @position = 8; @symbol_vardef = [_waitingStr,21,8,19]; @symbol_type<0> = [Lang,21,23,27]; @symbol_type<1> = [String,21,28,34]; ]
+    var _waitingStr as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 22; @position = 8; @symbol_vardef = [_unavailableStr,22,8,23]; @symbol_type<0> = [Lang,22,27,31]; @symbol_type<1> = [String,22,32,38]; ]
+    var _unavailableStr as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 23; @position = 8; @symbol_vardef = [_saveLabel,23,8,18]; @symbol_type<0> = [Lang,23,22,26]; @symbol_type<1> = [String,23,27,33]; ]
+    var _saveLabel as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 24; @position = 8; @symbol_vardef = [_backLabel,24,8,18]; @symbol_type<0> = [Lang,24,22,26]; @symbol_type<1> = [String,24,27,33]; ]
+    var _backLabel as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 25; @position = 8; @symbol_vardef = [_toggleToDegLabel,25,8,25]; @symbol_type<0> = [Lang,25,29,33]; @symbol_type<1> = [String,25,34,40]; ]
+    var _toggleToDegLabel as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 26; @position = 8; @symbol_vardef = [_toggleToMilLabel,26,8,25]; @symbol_type<0> = [Lang,26,29,33]; @symbol_type<1> = [String,26,34,40]; ]
+    var _toggleToMilLabel as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 27; @position = 8; @symbol_vardef = [_milSuffix,27,8,18]; @symbol_type<0> = [Lang,27,22,26]; @symbol_type<1> = [String,27,27,33]; ]
+    var _milSuffix as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 28; @position = 8; @symbol_vardef = [_degSuffix,28,8,18]; @symbol_type<0> = [Lang,28,22,26]; @symbol_type<1> = [String,28,27,33]; ]
+    var _degSuffix as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 30; @position = 8; @symbol_vardef = [_titleBaselineY,30,8,23]; @symbol_type<0> = [Lang,30,27,31]; @symbol_type<1> = [Number,30,32,38]; ]
+    var _titleBaselineY as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 31; @position = 8; @symbol_vardef = [_statusBaselineY,31,8,24]; @symbol_type<0> = [Lang,31,28,32]; @symbol_type<1> = [Number,31,33,39]; ]
+    var _statusBaselineY as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 32; @position = 8; @symbol_vardef = [_mainBaselineY,32,8,22]; @symbol_type<0> = [Lang,32,26,30]; @symbol_type<1> = [Number,32,31,37]; ]
+    var _mainBaselineY as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 33; @position = 8; @symbol_vardef = [_subBaselineY,33,8,21]; @symbol_type<0> = [Lang,33,25,29]; @symbol_type<1> = [Number,33,30,36]; ]
+    var _subBaselineY as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 35; @position = 8; @symbol_vardef = [_titleFont,35,8,18]; @symbol_type<0> = [Graphics,35,22,30]; @symbol_type<1> = [FontDefinition,35,31,45]; ]
+    var _titleFont as Graphics.FontDefinition;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 36; @position = 8; @symbol_vardef = [_statusFont,36,8,19]; @symbol_type<0> = [Graphics,36,23,31]; @symbol_type<1> = [FontDefinition,36,32,46]; ]
+    var _statusFont as Graphics.FontDefinition;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 37; @position = 8; @symbol_vardef = [_mainFont,37,8,17]; @symbol_type<0> = [Graphics,37,21,29]; @symbol_type<1> = [FontDefinition,37,30,44]; ]
+    var _mainFont as Graphics.FontDefinition;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 38; @position = 8; @symbol_vardef = [_subFont,38,8,16]; @symbol_type<0> = [Graphics,38,20,28]; @symbol_type<1> = [FontDefinition,38,29,43]; ]
+    var _subFont as Graphics.FontDefinition;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 40; @position = 8; @symbol_vardef = [_toggleX,40,8,16]; @symbol_type<0> = [Lang,40,20,24]; @symbol_type<1> = [Number,40,25,31]; ]
+    var _toggleX as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 41; @position = 8; @symbol_vardef = [_toggleY,41,8,16]; @symbol_type<0> = [Lang,41,20,24]; @symbol_type<1> = [Number,41,25,31]; ]
+    var _toggleY as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 42; @position = 8; @symbol_vardef = [_toggleW,42,8,16]; @symbol_type<0> = [Lang,42,20,24]; @symbol_type<1> = [Number,42,25,31]; ]
+    var _toggleW as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 43; @position = 8; @symbol_vardef = [_toggleH,43,8,16]; @symbol_type<0> = [Lang,43,20,24]; @symbol_type<1> = [Number,43,25,31]; ]
+    var _toggleH as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 44; @position = 8; @symbol_vardef = [_toggleR,44,8,16]; @symbol_type<0> = [Lang,44,20,24]; @symbol_type<1> = [Number,44,25,31]; ]
+    var _toggleR as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 45; @position = 8; @symbol_vardef = [_toggleFont,45,8,19]; @symbol_type<0> = [Graphics,45,23,31]; @symbol_type<1> = [FontDefinition,45,32,46]; ]
+    var _toggleFont as Graphics.FontDefinition;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 46; @position = 8; @symbol_vardef = [_toggleLabel,46,8,20]; @symbol_type<0> = [Lang,46,24,28]; @symbol_type<1> = [String,46,29,35]; ]
+    var _toggleLabel as Lang.String;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 48; @position = 8; @symbol_vardef = [_saveX,48,8,14]; @symbol_type<0> = [Lang,48,18,22]; @symbol_type<1> = [Number,48,23,29]; ]
+    var _saveX as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 49; @position = 8; @symbol_vardef = [_saveY,49,8,14]; @symbol_type<0> = [Lang,49,18,22]; @symbol_type<1> = [Number,49,23,29]; ]
+    var _saveY as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 50; @position = 8; @symbol_vardef = [_saveW,50,8,14]; @symbol_type<0> = [Lang,50,18,22]; @symbol_type<1> = [Number,50,23,29]; ]
+    var _saveW as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 51; @position = 8; @symbol_vardef = [_saveH,51,8,14]; @symbol_type<0> = [Lang,51,18,22]; @symbol_type<1> = [Number,51,23,29]; ]
+    var _saveH as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 52; @position = 8; @symbol_vardef = [_saveR,52,8,14]; @symbol_type<0> = [Lang,52,18,22]; @symbol_type<1> = [Number,52,23,29]; ]
+    var _saveR as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 53; @position = 8; @symbol_vardef = [_saveFont,53,8,17]; @symbol_type<0> = [Graphics,53,21,29]; @symbol_type<1> = [FontDefinition,53,30,44]; ]
+    var _saveFont as Graphics.FontDefinition;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 55; @position = 8; @symbol_vardef = [_backX,55,8,14]; @symbol_type<0> = [Lang,55,18,22]; @symbol_type<1> = [Number,55,23,29]; ]
+    var _backX as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 56; @position = 8; @symbol_vardef = [_backY,56,8,14]; @symbol_type<0> = [Lang,56,18,22]; @symbol_type<1> = [Number,56,23,29]; ]
+    var _backY as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 57; @position = 8; @symbol_vardef = [_backW,57,8,14]; @symbol_type<0> = [Lang,57,18,22]; @symbol_type<1> = [Number,57,23,29]; ]
+    var _backW as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 58; @position = 8; @symbol_vardef = [_backH,58,8,14]; @symbol_type<0> = [Lang,58,18,22]; @symbol_type<1> = [Number,58,23,29]; ]
+    var _backH as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 59; @position = 8; @symbol_vardef = [_backR,59,8,14]; @symbol_type<0> = [Lang,59,18,22]; @symbol_type<1> = [Number,59,23,29]; ]
+    var _backR as Lang.Number;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 60; @position = 8; @symbol_vardef = [_backFont,60,8,17]; @symbol_type<0> = [Graphics,60,21,29]; @symbol_type<1> = [FontDefinition,60,30,44]; ]
+    var _backFont as Graphics.FontDefinition;
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 62; @symbol_functiondef = [initialize,62,13,23]; ]
+    function initialize() as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_62_26_114_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 63 8 ]
+        symbol [ View %tmp.2 63 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 63 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 64 8 ]
+        %tmp.4 = true;
+        symbol [ _primaryMils ? 64 8 20 ];
+        putv self :_primaryMils %tmp.4;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 65 8 ]
+        symbol [ Toybox %tmp.6 65 25 31 ];
+        %tmp.6 = getv ? :Toybox;
+        %tmp.8 = const :Position;
+        symbol [ Position %tmp.8 65 37 45 const ];
+        %tmp.9 = canhazplz %tmp.6 %tmp.8;
+        %tmp.10 = not %tmp.9;
+        symbol [ _unsupported ? 65 8 20 ];
+        putv self :_unsupported %tmp.10;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 66 8 ]
+        %tmp.11 = false;
+        symbol [ _headingReady ? 66 8 21 ];
+        putv self :_headingReady %tmp.11;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 67 8 ]
+        %tmp.12 = 0;
+        symbol [ _degInt ? 67 8 15 ];
+        putv self :_degInt %tmp.12;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 68 8 ]
+        %tmp.13 = 0;
+        symbol [ _milsInt ? 68 8 16 ];
+        putv self :_milsInt %tmp.13;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 69 8 ]
+        %tmp.14 = "";
+        symbol [ _mainText ? 69 8 17 ];
+        putv self :_mainText %tmp.14;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 70 8 ]
+        %tmp.15 = "";
+        symbol [ _subText ? 70 8 16 ];
+        putv self :_subText %tmp.15;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 72 8 ]
+        symbol [ WatchUi %tmp.16 72 20 27 ];
+        %tmp.16 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.17 72 28 40 ];
+        %tmp.17 = getv function %tmp.16 :loadResource;
+        symbol [ Rez %tmp.19 72 41 44 ];
+        %tmp.19 = getv ? :Rez;
+        symbol [ Strings %tmp.20 72 45 52 ];
+        %tmp.20 = getv %tmp.19 :Strings;
+        symbol [ CompassTitle %tmp.21 72 53 65 ];
+        %tmp.21 = getv %tmp.20 :CompassTitle;
+        %tmp.22 = invoke %tmp.16 %tmp.17(%tmp.21);
+        %tmp.23 = as %tmp.22 Lang.String;
+        symbol [ Lang %tmp.23 72 70 74 ];
+        symbol [ String %tmp.23 72 75 81 ];
+        symbol [ _titleStr ? 72 8 17 ];
+        putv self :_titleStr %tmp.23;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 73 8 ]
+        symbol [ WatchUi %tmp.24 73 22 29 ];
+        %tmp.24 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.25 73 30 42 ];
+        %tmp.25 = getv function %tmp.24 :loadResource;
+        symbol [ Rez %tmp.27 73 43 46 ];
+        %tmp.27 = getv ? :Rez;
+        symbol [ Strings %tmp.28 73 47 54 ];
+        %tmp.28 = getv %tmp.27 :Strings;
+        symbol [ CompassWaiting %tmp.29 73 55 69 ];
+        %tmp.29 = getv %tmp.28 :CompassWaiting;
+        %tmp.30 = invoke %tmp.24 %tmp.25(%tmp.29);
+        %tmp.31 = as %tmp.30 Lang.String;
+        symbol [ Lang %tmp.31 73 74 78 ];
+        symbol [ String %tmp.31 73 79 85 ];
+        symbol [ _waitingStr ? 73 8 19 ];
+        putv self :_waitingStr %tmp.31;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 74 8 ]
+        symbol [ WatchUi %tmp.32 74 26 33 ];
+        %tmp.32 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.33 74 34 46 ];
+        %tmp.33 = getv function %tmp.32 :loadResource;
+        symbol [ Rez %tmp.35 74 47 50 ];
+        %tmp.35 = getv ? :Rez;
+        symbol [ Strings %tmp.36 74 51 58 ];
+        %tmp.36 = getv %tmp.35 :Strings;
+        symbol [ CompassUnavailable %tmp.37 74 59 77 ];
+        %tmp.37 = getv %tmp.36 :CompassUnavailable;
+        %tmp.38 = invoke %tmp.32 %tmp.33(%tmp.37);
+        %tmp.39 = as %tmp.38 Lang.String;
+        symbol [ Lang %tmp.39 74 82 86 ];
+        symbol [ String %tmp.39 74 87 93 ];
+        symbol [ _unavailableStr ? 74 8 23 ];
+        putv self :_unavailableStr %tmp.39;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 75 8 ]
+        symbol [ WatchUi %tmp.40 75 21 28 ];
+        %tmp.40 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.41 75 29 41 ];
+        %tmp.41 = getv function %tmp.40 :loadResource;
+        symbol [ Rez %tmp.43 75 42 45 ];
+        %tmp.43 = getv ? :Rez;
+        symbol [ Strings %tmp.44 75 46 53 ];
+        %tmp.44 = getv %tmp.43 :Strings;
+        symbol [ CompassSave %tmp.45 75 54 65 ];
+        %tmp.45 = getv %tmp.44 :CompassSave;
+        %tmp.46 = invoke %tmp.40 %tmp.41(%tmp.45);
+        %tmp.47 = as %tmp.46 Lang.String;
+        symbol [ Lang %tmp.47 75 70 74 ];
+        symbol [ String %tmp.47 75 75 81 ];
+        symbol [ _saveLabel ? 75 8 18 ];
+        putv self :_saveLabel %tmp.47;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 76 8 ]
+        symbol [ WatchUi %tmp.48 76 21 28 ];
+        %tmp.48 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.49 76 29 41 ];
+        %tmp.49 = getv function %tmp.48 :loadResource;
+        symbol [ Rez %tmp.51 76 42 45 ];
+        %tmp.51 = getv ? :Rez;
+        symbol [ Strings %tmp.52 76 46 53 ];
+        %tmp.52 = getv %tmp.51 :Strings;
+        symbol [ BackLabel %tmp.53 76 54 63 ];
+        %tmp.53 = getv %tmp.52 :BackLabel;
+        %tmp.54 = invoke %tmp.48 %tmp.49(%tmp.53);
+        %tmp.55 = as %tmp.54 Lang.String;
+        symbol [ Lang %tmp.55 76 68 72 ];
+        symbol [ String %tmp.55 76 73 79 ];
+        symbol [ _backLabel ? 76 8 18 ];
+        putv self :_backLabel %tmp.55;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 77 8 ]
+        symbol [ WatchUi %tmp.56 77 28 35 ];
+        %tmp.56 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.57 77 36 48 ];
+        %tmp.57 = getv function %tmp.56 :loadResource;
+        symbol [ Rez %tmp.59 77 49 52 ];
+        %tmp.59 = getv ? :Rez;
+        symbol [ Strings %tmp.60 77 53 60 ];
+        %tmp.60 = getv %tmp.59 :Strings;
+        symbol [ CompassToggleToDeg %tmp.61 77 61 79 ];
+        %tmp.61 = getv %tmp.60 :CompassToggleToDeg;
+        %tmp.62 = invoke %tmp.56 %tmp.57(%tmp.61);
+        %tmp.63 = as %tmp.62 Lang.String;
+        symbol [ Lang %tmp.63 77 84 88 ];
+        symbol [ String %tmp.63 77 89 95 ];
+        symbol [ _toggleToDegLabel ? 77 8 25 ];
+        putv self :_toggleToDegLabel %tmp.63;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 78 8 ]
+        symbol [ WatchUi %tmp.64 78 28 35 ];
+        %tmp.64 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.65 78 36 48 ];
+        %tmp.65 = getv function %tmp.64 :loadResource;
+        symbol [ Rez %tmp.67 78 49 52 ];
+        %tmp.67 = getv ? :Rez;
+        symbol [ Strings %tmp.68 78 53 60 ];
+        %tmp.68 = getv %tmp.67 :Strings;
+        symbol [ CompassToggleToMil %tmp.69 78 61 79 ];
+        %tmp.69 = getv %tmp.68 :CompassToggleToMil;
+        %tmp.70 = invoke %tmp.64 %tmp.65(%tmp.69);
+        %tmp.71 = as %tmp.70 Lang.String;
+        symbol [ Lang %tmp.71 78 84 88 ];
+        symbol [ String %tmp.71 78 89 95 ];
+        symbol [ _toggleToMilLabel ? 78 8 25 ];
+        putv self :_toggleToMilLabel %tmp.71;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 79 8 ]
+        symbol [ WatchUi %tmp.72 79 21 28 ];
+        %tmp.72 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.73 79 29 41 ];
+        %tmp.73 = getv function %tmp.72 :loadResource;
+        symbol [ Rez %tmp.75 79 42 45 ];
+        %tmp.75 = getv ? :Rez;
+        symbol [ Strings %tmp.76 79 46 53 ];
+        %tmp.76 = getv %tmp.75 :Strings;
+        symbol [ CompassMilSuffix %tmp.77 79 54 70 ];
+        %tmp.77 = getv %tmp.76 :CompassMilSuffix;
+        %tmp.78 = invoke %tmp.72 %tmp.73(%tmp.77);
+        %tmp.79 = as %tmp.78 Lang.String;
+        symbol [ Lang %tmp.79 79 75 79 ];
+        symbol [ String %tmp.79 79 80 86 ];
+        symbol [ _milSuffix ? 79 8 18 ];
+        putv self :_milSuffix %tmp.79;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 80 8 ]
+        symbol [ WatchUi %tmp.80 80 21 28 ];
+        %tmp.80 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.81 80 29 41 ];
+        %tmp.81 = getv function %tmp.80 :loadResource;
+        symbol [ Rez %tmp.83 80 42 45 ];
+        %tmp.83 = getv ? :Rez;
+        symbol [ Strings %tmp.84 80 46 53 ];
+        %tmp.84 = getv %tmp.83 :Strings;
+        symbol [ CompassDegSuffix %tmp.85 80 54 70 ];
+        %tmp.85 = getv %tmp.84 :CompassDegSuffix;
+        %tmp.86 = invoke %tmp.80 %tmp.81(%tmp.85);
+        %tmp.87 = as %tmp.86 Lang.String;
+        symbol [ Lang %tmp.87 80 75 79 ];
+        symbol [ String %tmp.87 80 80 86 ];
+        symbol [ _degSuffix ? 80 8 18 ];
+        putv self :_degSuffix %tmp.87;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 82 8 ]
+        symbol [ _toggleToDegLabel %tmp.89 82 23 40 ];
+        %tmp.89 = getv ? :_toggleToDegLabel;
+        symbol [ _toggleLabel ? 82 8 20 ];
+        putv self :_toggleLabel %tmp.89;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 84 8 ]
+        symbol [ Graphics %tmp.90 84 21 29 ];
+        %tmp.90 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.91 84 30 41 ];
+        %tmp.91 = getv %tmp.90 :FONT_MEDIUM;
+        symbol [ _titleFont ? 84 8 18 ];
+        putv self :_titleFont %tmp.91;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 85 8 ]
+        symbol [ Graphics %tmp.92 85 22 30 ];
+        %tmp.92 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.93 85 31 41 ];
+        %tmp.93 = getv %tmp.92 :FONT_SMALL;
+        symbol [ _statusFont ? 85 8 19 ];
+        putv self :_statusFont %tmp.93;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 86 8 ]
+        symbol [ Graphics %tmp.94 86 20 28 ];
+        %tmp.94 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_HOT %tmp.95 86 29 44 ];
+        %tmp.95 = getv %tmp.94 :FONT_NUMBER_HOT;
+        symbol [ _mainFont ? 86 8 17 ];
+        putv self :_mainFont %tmp.95;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 87 8 ]
+        symbol [ Graphics %tmp.96 87 19 27 ];
+        %tmp.96 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.97 87 28 39 ];
+        %tmp.97 = getv %tmp.96 :FONT_MEDIUM;
+        symbol [ _subFont ? 87 8 16 ];
+        putv self :_subFont %tmp.97;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 89 8 ]
+        %tmp.98 = 0;
+        symbol [ _titleBaselineY ? 89 8 23 ];
+        putv self :_titleBaselineY %tmp.98;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 90 8 ]
+        %tmp.99 = 0;
+        symbol [ _statusBaselineY ? 90 8 24 ];
+        putv self :_statusBaselineY %tmp.99;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 91 8 ]
+        %tmp.100 = 0;
+        symbol [ _mainBaselineY ? 91 8 22 ];
+        putv self :_mainBaselineY %tmp.100;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 92 8 ]
+        %tmp.101 = 0;
+        symbol [ _subBaselineY ? 92 8 21 ];
+        putv self :_subBaselineY %tmp.101;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 94 8 ]
+        %tmp.102 = 0;
+        symbol [ _toggleX ? 94 8 16 ];
+        putv self :_toggleX %tmp.102;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 95 8 ]
+        %tmp.103 = 0;
+        symbol [ _toggleY ? 95 8 16 ];
+        putv self :_toggleY %tmp.103;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 96 8 ]
+        %tmp.104 = 0;
+        symbol [ _toggleW ? 96 8 16 ];
+        putv self :_toggleW %tmp.104;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 97 8 ]
+        %tmp.105 = 0;
+        symbol [ _toggleH ? 97 8 16 ];
+        putv self :_toggleH %tmp.105;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 98 8 ]
+        %tmp.106 = 0;
+        symbol [ _toggleR ? 98 8 16 ];
+        putv self :_toggleR %tmp.106;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 99 8 ]
+        symbol [ Graphics %tmp.107 99 22 30 ];
+        %tmp.107 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.108 99 31 41 ];
+        %tmp.108 = getv %tmp.107 :FONT_SMALL;
+        symbol [ _toggleFont ? 99 8 19 ];
+        putv self :_toggleFont %tmp.108;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 101 8 ]
+        %tmp.109 = 0;
+        symbol [ _saveX ? 101 8 14 ];
+        putv self :_saveX %tmp.109;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 102 8 ]
+        %tmp.110 = 0;
+        symbol [ _saveY ? 102 8 14 ];
+        putv self :_saveY %tmp.110;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 103 8 ]
+        %tmp.111 = 0;
+        symbol [ _saveW ? 103 8 14 ];
+        putv self :_saveW %tmp.111;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 104 8 ]
+        %tmp.112 = 0;
+        symbol [ _saveH ? 104 8 14 ];
+        putv self :_saveH %tmp.112;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 105 8 ]
+        %tmp.113 = 0;
+        symbol [ _saveR ? 105 8 14 ];
+        putv self :_saveR %tmp.113;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 106 8 ]
+        symbol [ Graphics %tmp.114 106 20 28 ];
+        %tmp.114 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.115 106 29 39 ];
+        %tmp.115 = getv %tmp.114 :FONT_SMALL;
+        symbol [ _saveFont ? 106 8 17 ];
+        putv self :_saveFont %tmp.115;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 108 8 ]
+        %tmp.116 = 0;
+        symbol [ _backX ? 108 8 14 ];
+        putv self :_backX %tmp.116;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 109 8 ]
+        %tmp.117 = 0;
+        symbol [ _backY ? 109 8 14 ];
+        putv self :_backY %tmp.117;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 110 8 ]
+        %tmp.118 = 0;
+        symbol [ _backW ? 110 8 14 ];
+        putv self :_backW %tmp.118;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 111 8 ]
+        %tmp.119 = 0;
+        symbol [ _backH ? 111 8 14 ];
+        putv self :_backH %tmp.119;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 112 8 ]
+        %tmp.120 = 0;
+        symbol [ _backR ? 112 8 14 ];
+        putv self :_backR %tmp.120;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 113 8 ]
+        symbol [ Graphics %tmp.121 113 20 28 ];
+        %tmp.121 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.122 113 29 39 ];
+        %tmp.122 = getv %tmp.121 :FONT_SMALL;
+        symbol [ _backFont ? 113 8 17 ];
+        putv self :_backFont %tmp.122;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_62_26_114_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 116; @symbol_functiondef = [onShow,116,13,19]; ]
+    function onShow() as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_116_30_122_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 117 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_117_8_119_8_if_stmt:
+        symbol [ _unsupported %tmp.2 117 12 24 ];
+        %tmp.2 = getv ? :_unsupported;
+        bf %tmp.2 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_117_8_119_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_117_8_119_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_117_26_119_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 118 12 ]
+        ret ?;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_117_26_119_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_117_8_119_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_117_8_119_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 120 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_116_30_122_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_116_30_122_4_stop" ]
+        %app.1 = local;
+        symbol [ app %app.1 120 12 15 ];
+        symbol [ Application %tmp.3 120 18 29 ];
+        %tmp.3 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.4 120 30 36 ];
+        %tmp.4 = getv function %tmp.3 :getApp;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        lputv %app.1 %tmp.5;
+        symbol [ app %app.1 120 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 121 8 ]
+        %tmp.6 = lgetv %app.1;
+        symbol [ app %tmp.6 121 9 12 ];
+        %tmp.7 = as %tmp.6 FirePointWatchApp;
+        symbol [ FirePointWatchApp %tmp.7 121 16 33 ];
+        symbol [ beginCompass %tmp.8 121 35 47 ];
+        %tmp.8 = getv function %tmp.7 :beginCompass;
+        %tmp.9 = self;
+        symbol [ self %tmp.9 121 48 52 ];
+        invoke %tmp.7 %tmp.8(%tmp.9);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_116_30_122_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 124; @symbol_functiondef = [onHide,124,13,19]; ]
+    function onHide() as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_124_30_127_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 125 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_124_30_127_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_124_30_127_4_stop" ]
+        %app.1 = local;
+        symbol [ app %app.1 125 12 15 ];
+        symbol [ Application %tmp.1 125 18 29 ];
+        %tmp.1 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.2 125 30 36 ];
+        %tmp.2 = getv function %tmp.1 :getApp;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %app.1 %tmp.3;
+        symbol [ app %app.1 125 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 126 8 ]
+        %tmp.4 = lgetv %app.1;
+        symbol [ app %tmp.4 126 9 12 ];
+        %tmp.5 = as %tmp.4 FirePointWatchApp;
+        symbol [ FirePointWatchApp %tmp.5 126 16 33 ];
+        symbol [ endCompass %tmp.6 126 35 45 ];
+        %tmp.6 = getv function %tmp.5 :endCompass;
+        %tmp.7 = self;
+        symbol [ self %tmp.7 126 46 50 ];
+        invoke %tmp.5 %tmp.6(%tmp.7);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_124_30_127_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 129; @symbol_functiondef = [applyHeadingInfo,129,13,29]; @symbol_param<0> = [info,129,30,34]; @symbol_param<0>_type<0> = [Position,129,38,46]; @symbol_param<0>_type<1> = [Info,129,47,51]; ]
+    function applyHeadingInfo(info as Position.Info) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_129_61_144_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 130 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_130_8_132_8_if_stmt:
+        symbol [ _unsupported %tmp.2 130 12 24 ];
+        %tmp.2 = getv ? :_unsupported;
+        bf %tmp.2 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_130_8_132_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_130_8_132_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_130_26_132_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 131 12 ]
+        ret ?;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_130_26_132_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_130_8_132_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_130_8_132_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 133 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_129_61_144_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_129_61_144_4_stop" ]
+        %h.1 = local;
+        symbol [ h %h.1 133 12 13 ];
+        %tmp.3 = lgetv %info;
+        symbol [ info %tmp.3 133 16 20 ];
+        symbol [ heading %tmp.4 133 21 28 ];
+        %tmp.4 = getv %tmp.3 :heading;
+        lputv %h.1 %tmp.4;
+        symbol [ h %h.1 133 12 13 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 134 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_134_8_137_8_if_stmt:
+        %tmp.5 = lgetv %h.1;
+        symbol [ h %tmp.5 134 12 13 ];
+        %tmp.6 = null;
+        %tmp.7 = eq %tmp.5 %tmp.6;
+        bf %tmp.7 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_134_8_137_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_134_8_137_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_134_23_137_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 135 12 ]
+        %tmp.8 = false;
+        symbol [ _headingReady ? 135 12 25 ];
+        putv self :_headingReady %tmp.8;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 136 12 ]
+        ret ?;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_134_23_137_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_134_8_137_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_134_8_137_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 138 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_129_61_144_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_129_61_144_4_stop" ]
+        %deg.2 = local;
+        symbol [ deg %deg.2 138 12 15 ];
+        symbol [ CompassMath %tmp.10 138 18 29 ];
+        %tmp.10 = getv ? :CompassMath;
+        symbol [ radiansToDegreesInt %tmp.11 138 30 49 ];
+        %tmp.11 = getv function %tmp.10 :radiansToDegreesInt;
+        %tmp.12 = lgetv %h.1;
+        symbol [ h %tmp.12 138 50 51 ];
+        %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
+        lputv %deg.2 %tmp.13;
+        symbol [ deg %deg.2 138 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 139 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_129_61_144_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_129_61_144_4_stop" ]
+        %mils.3 = local;
+        symbol [ mils %mils.3 139 12 16 ];
+        symbol [ CompassMath %tmp.15 139 19 30 ];
+        %tmp.15 = getv ? :CompassMath;
+        symbol [ degreesToMils6400 %tmp.16 139 31 48 ];
+        %tmp.16 = getv function %tmp.15 :degreesToMils6400;
+        %tmp.17 = lgetv %deg.2;
+        symbol [ deg %tmp.17 139 49 52 ];
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        lputv %mils.3 %tmp.18;
+        symbol [ mils %mils.3 139 12 16 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 140 8 ]
+        %tmp.19 = lgetv %deg.2;
+        symbol [ deg %tmp.19 140 18 21 ];
+        symbol [ _degInt ? 140 8 15 ];
+        putv self :_degInt %tmp.19;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 141 8 ]
+        %tmp.20 = lgetv %mils.3;
+        symbol [ mils %tmp.20 141 19 23 ];
+        symbol [ _milsInt ? 141 8 16 ];
+        putv self :_milsInt %tmp.20;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 142 8 ]
+        %tmp.21 = true;
+        symbol [ _headingReady ? 142 8 21 ];
+        putv self :_headingReady %tmp.21;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 143 8 ]
+        %tmp.22 = self;
+        symbol [ rebuildPrimaryStrings %tmp.23 143 8 29 ];
+        %tmp.23 = getv function %tmp.22 :rebuildPrimaryStrings;
+        invoke %tmp.22 %tmp.23();
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_129_61_144_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 146; @symbol_functiondef = [rebuildPrimaryStrings,146,13,34]; ]
+    function rebuildPrimaryStrings() as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_146_45_157_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 147 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_147_8_149_8_if_stmt:
+        symbol [ _headingReady %tmp.2 147 13 26 ];
+        %tmp.2 = getv ? :_headingReady;
+        %tmp.3 = not %tmp.2;
+        bf %tmp.3 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_147_8_149_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_147_8_149_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_147_28_149_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 148 12 ]
+        ret ?;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_147_28_149_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_147_8_149_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_147_8_149_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 150 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_150_8_156_8_if_stmt:
+        symbol [ _primaryMils %tmp.5 150 12 24 ];
+        %tmp.5 = getv ? :_primaryMils;
+        bf %tmp.5 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_150_8_156_8_if_else_false;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_150_8_156_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_150_26_153_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 151 12 ]
+        symbol [ _milsInt %tmp.7 151 24 32 ];
+        %tmp.7 = getv ? :_milsInt;
+        symbol [ toString %tmp.8 151 33 41 ];
+        %tmp.8 = getv function %tmp.7 :toString;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        symbol [ _milSuffix %tmp.11 151 46 56 ];
+        %tmp.11 = getv ? :_milSuffix;
+        %tmp.12 = add %tmp.9 %tmp.11;
+        symbol [ _mainText ? 151 12 21 ];
+        putv self :_mainText %tmp.12;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 152 12 ]
+        symbol [ _degInt %tmp.14 152 23 30 ];
+        %tmp.14 = getv ? :_degInt;
+        symbol [ toString %tmp.15 152 31 39 ];
+        %tmp.15 = getv function %tmp.14 :toString;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        symbol [ _degSuffix %tmp.18 152 44 54 ];
+        %tmp.18 = getv ? :_degSuffix;
+        %tmp.19 = add %tmp.16 %tmp.18;
+        symbol [ _subText ? 152 12 20 ];
+        putv self :_subText %tmp.19;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_150_26_153_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_150_8_156_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_150_8_156_8_if_else_false:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_153_15_156_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 154 12 ]
+        symbol [ _degInt %tmp.21 154 24 31 ];
+        %tmp.21 = getv ? :_degInt;
+        symbol [ toString %tmp.22 154 32 40 ];
+        %tmp.22 = getv function %tmp.21 :toString;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        symbol [ _degSuffix %tmp.25 154 45 55 ];
+        %tmp.25 = getv ? :_degSuffix;
+        %tmp.26 = add %tmp.23 %tmp.25;
+        symbol [ _mainText ? 154 12 21 ];
+        putv self :_mainText %tmp.26;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 155 12 ]
+        symbol [ _milsInt %tmp.28 155 23 31 ];
+        %tmp.28 = getv ? :_milsInt;
+        symbol [ toString %tmp.29 155 32 40 ];
+        %tmp.29 = getv function %tmp.28 :toString;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        symbol [ _milSuffix %tmp.32 155 45 55 ];
+        %tmp.32 = getv ? :_milSuffix;
+        %tmp.33 = add %tmp.30 %tmp.32;
+        symbol [ _subText ? 155 12 20 ];
+        putv self :_subText %tmp.33;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_153_15_156_8_stop:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_150_8_156_8_if_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_146_45_157_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 159; @symbol_functiondef = [togglePrimaryUnit,159,13,30]; ]
+    function togglePrimaryUnit() as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_159_41_165_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 160 8 ]
+        symbol [ _primaryMils %tmp.2 160 24 36 ];
+        %tmp.2 = getv ? :_primaryMils;
+        %tmp.3 = not %tmp.2;
+        symbol [ _primaryMils ? 160 8 20 ];
+        putv self :_primaryMils %tmp.3;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 161 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_161_23_161_58_begin:
+        symbol [ _primaryMils %tmp.5 161 23 35 ];
+        %tmp.5 = getv ? :_primaryMils;
+        bf %tmp.5 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_161_23_161_58_else_false;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_161_23_161_58_true:
+        symbol [ _toggleToDegLabel %tmp.7 161 38 55 ];
+        %tmp.7 = getv ? :_toggleToDegLabel;
+        push %tmp.7;
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_161_23_161_58_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_161_23_161_58_else_false:
+        symbol [ _toggleToMilLabel %tmp.9 161 58 75 ];
+        %tmp.9 = getv ? :_toggleToMilLabel;
+        push %tmp.9;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_161_23_161_58_end:
+        %tmp.10 = phi [%tmp.5 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_161_23_161_58_begin] [%tmp.7 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_161_23_161_58_true] [%tmp.9 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_161_23_161_58_else_false] [%tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_161_23_161_58_end];
+        symbol [ _toggleLabel ? 161 8 20 ];
+        putv self :_toggleLabel %tmp.10;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 162 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_162_8_164_8_if_stmt:
+        symbol [ _headingReady %tmp.12 162 12 25 ];
+        %tmp.12 = getv ? :_headingReady;
+        bf %tmp.12 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_162_8_164_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_162_8_164_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_162_27_164_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 163 12 ]
+        %tmp.13 = self;
+        symbol [ rebuildPrimaryStrings %tmp.14 163 12 33 ];
+        %tmp.14 = getv function %tmp.13 :rebuildPrimaryStrings;
+        invoke %tmp.13 %tmp.14();
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_162_27_164_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_162_8_164_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_162_8_164_8_if_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_159_41_165_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 167; @symbol_functiondef = [saveCurrentBearing,167,13,31]; ]
+    function saveCurrentBearing() as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_167_42_172_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 168 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_168_8_170_8_if_stmt:
+        symbol [ _headingReady %tmp.2 168 13 26 ];
+        %tmp.2 = getv ? :_headingReady;
+        %tmp.3 = not %tmp.2;
+        bf %tmp.3 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_168_8_170_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_168_8_170_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_168_28_170_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 169 12 ]
+        ret ?;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_168_28_170_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_168_8_170_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_168_8_170_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 171 8 ]
+        symbol [ BearingStore %tmp.5 171 8 20 ];
+        %tmp.5 = getv ? :BearingStore;
+        symbol [ saveBearing %tmp.6 171 21 32 ];
+        %tmp.6 = getv function %tmp.5 :saveBearing;
+        symbol [ _degInt %tmp.8 171 33 40 ];
+        %tmp.8 = getv ? :_degInt;
+        symbol [ _milsInt %tmp.10 171 42 50 ];
+        %tmp.10 = getv ? :_milsInt;
+        invoke %tmp.5 %tmp.6(%tmp.8, %tmp.10);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_167_42_172_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 174; @symbol_functiondef = [isHeadingReady,174,13,27]; @symbol_return<0> = [Lang,174,33,37]; @symbol_return<1> = [Boolean,174,38,45]; ]
+    function isHeadingReady() as Lang.Boolean {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_174_46_176_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 175 8 ]
+        symbol [ _headingReady %tmp.2 175 15 28 ];
+        %tmp.2 = getv ? :_headingReady;
+        ret %tmp.2;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_174_46_176_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 178; @symbol_functiondef = [isUnsupported,178,13,26]; @symbol_return<0> = [Lang,178,32,36]; @symbol_return<1> = [Boolean,178,37,44]; ]
+    function isUnsupported() as Lang.Boolean {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_178_45_180_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 179 8 ]
+        symbol [ _unsupported %tmp.2 179 15 27 ];
+        %tmp.2 = getv ? :_unsupported;
+        ret %tmp.2;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_178_45_180_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 182; @symbol_functiondef = [hitToggleButton,182,13,28]; @symbol_param<0> = [x,182,29,30]; @symbol_param<0>_type<0> = [Lang,182,34,38]; @symbol_param<0>_type<1> = [Number,182,39,45]; @symbol_param<1> = [y,182,47,48]; @symbol_param<1>_type<0> = [Lang,182,52,56]; @symbol_param<1>_type<1> = [Number,182,57,63]; @symbol_return<0> = [Lang,182,68,72]; @symbol_return<1> = [Boolean,182,73,80]; ]
+    function hitToggleButton(x as Lang.Number, y as Lang.Number) as Lang.Boolean {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_182_81_187_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 183 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_183_8_185_8_if_stmt:
+        symbol [ _toggleW %tmp.2 183 12 20 ];
+        %tmp.2 = getv ? :_toggleW;
+        %tmp.3 = 0;
+        %tmp.4 = lte %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_183_8_185_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_183_8_185_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_183_27_185_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 184 12 ]
+        %tmp.5 = false;
+        ret %tmp.5;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_183_27_185_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_183_8_185_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_183_8_185_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 186 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_15_186_91_begin:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_15_186_64_begin:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_15_186_47_begin:
+        %tmp.6 = lgetv %x;
+        symbol [ x %tmp.6 186 15 16 ];
+        symbol [ _toggleX %tmp.8 186 20 28 ];
+        %tmp.8 = getv ? :_toggleX;
+        %tmp.9 = gte %tmp.6 %tmp.8;
+        %tmp.10 = dup %tmp.9;
+        bf %tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_32_186_47_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_32_186_47_true:
+        %tmp.11 = lgetv %x;
+        symbol [ x %tmp.11 186 32 33 ];
+        symbol [ _toggleX %tmp.13 186 36 44 ];
+        %tmp.13 = getv ? :_toggleX;
+        symbol [ _toggleW %tmp.15 186 47 55 ];
+        %tmp.15 = getv ? :_toggleW;
+        %tmp.16 = add %tmp.13 %tmp.15;
+        %tmp.17 = lt %tmp.11 %tmp.16;
+        %tmp.18 = and %tmp.9 %tmp.17;
+        push %tmp.18;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_32_186_47_end:
+        %tmp.19 = phi [%tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_15_186_47_begin] [%tmp.18 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_32_186_47_true] [%tmp.19 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_32_186_47_end];
+        %tmp.20 = dup %tmp.19;
+        bf %tmp.20 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_59_186_64_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_59_186_64_true:
+        %tmp.21 = lgetv %y;
+        symbol [ y %tmp.21 186 59 60 ];
+        symbol [ _toggleY %tmp.23 186 64 72 ];
+        %tmp.23 = getv ? :_toggleY;
+        %tmp.24 = gte %tmp.21 %tmp.23;
+        %tmp.25 = and %tmp.19 %tmp.24;
+        push %tmp.25;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_59_186_64_end:
+        %tmp.26 = phi [%tmp.20 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_15_186_64_begin] [%tmp.25 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_59_186_64_true] [%tmp.26 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_59_186_64_end];
+        %tmp.27 = dup %tmp.26;
+        bf %tmp.27 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_76_186_91_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_76_186_91_true:
+        %tmp.28 = lgetv %y;
+        symbol [ y %tmp.28 186 76 77 ];
+        symbol [ _toggleY %tmp.30 186 80 88 ];
+        %tmp.30 = getv ? :_toggleY;
+        symbol [ _toggleH %tmp.32 186 91 99 ];
+        %tmp.32 = getv ? :_toggleH;
+        %tmp.33 = add %tmp.30 %tmp.32;
+        %tmp.34 = lt %tmp.28 %tmp.33;
+        %tmp.35 = and %tmp.26 %tmp.34;
+        push %tmp.35;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_76_186_91_end:
+        %tmp.36 = phi [%tmp.27 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_15_186_91_begin] [%tmp.35 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_76_186_91_true] [%tmp.36 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_186_76_186_91_end];
+        ret %tmp.36;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_182_81_187_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 189; @symbol_functiondef = [hitSaveButton,189,13,26]; @symbol_param<0> = [x,189,27,28]; @symbol_param<0>_type<0> = [Lang,189,32,36]; @symbol_param<0>_type<1> = [Number,189,37,43]; @symbol_param<1> = [y,189,45,46]; @symbol_param<1>_type<0> = [Lang,189,50,54]; @symbol_param<1>_type<1> = [Number,189,55,61]; @symbol_return<0> = [Lang,189,66,70]; @symbol_return<1> = [Boolean,189,71,78]; ]
+    function hitSaveButton(x as Lang.Number, y as Lang.Number) as Lang.Boolean {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_189_79_194_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 190 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_190_8_192_8_if_stmt:
+        symbol [ _saveW %tmp.2 190 12 18 ];
+        %tmp.2 = getv ? :_saveW;
+        %tmp.3 = 0;
+        %tmp.4 = lte %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_190_8_192_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_190_8_192_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_190_25_192_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 191 12 ]
+        %tmp.5 = false;
+        ret %tmp.5;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_190_25_192_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_190_8_192_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_190_8_192_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 193 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_15_193_81_begin:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_15_193_58_begin:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_15_193_43_begin:
+        %tmp.6 = lgetv %x;
+        symbol [ x %tmp.6 193 15 16 ];
+        symbol [ _saveX %tmp.8 193 20 26 ];
+        %tmp.8 = getv ? :_saveX;
+        %tmp.9 = gte %tmp.6 %tmp.8;
+        %tmp.10 = dup %tmp.9;
+        bf %tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_30_193_43_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_30_193_43_true:
+        %tmp.11 = lgetv %x;
+        symbol [ x %tmp.11 193 30 31 ];
+        symbol [ _saveX %tmp.13 193 34 40 ];
+        %tmp.13 = getv ? :_saveX;
+        symbol [ _saveW %tmp.15 193 43 49 ];
+        %tmp.15 = getv ? :_saveW;
+        %tmp.16 = add %tmp.13 %tmp.15;
+        %tmp.17 = lt %tmp.11 %tmp.16;
+        %tmp.18 = and %tmp.9 %tmp.17;
+        push %tmp.18;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_30_193_43_end:
+        %tmp.19 = phi [%tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_15_193_43_begin] [%tmp.18 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_30_193_43_true] [%tmp.19 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_30_193_43_end];
+        %tmp.20 = dup %tmp.19;
+        bf %tmp.20 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_53_193_58_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_53_193_58_true:
+        %tmp.21 = lgetv %y;
+        symbol [ y %tmp.21 193 53 54 ];
+        symbol [ _saveY %tmp.23 193 58 64 ];
+        %tmp.23 = getv ? :_saveY;
+        %tmp.24 = gte %tmp.21 %tmp.23;
+        %tmp.25 = and %tmp.19 %tmp.24;
+        push %tmp.25;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_53_193_58_end:
+        %tmp.26 = phi [%tmp.20 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_15_193_58_begin] [%tmp.25 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_53_193_58_true] [%tmp.26 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_53_193_58_end];
+        %tmp.27 = dup %tmp.26;
+        bf %tmp.27 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_68_193_81_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_68_193_81_true:
+        %tmp.28 = lgetv %y;
+        symbol [ y %tmp.28 193 68 69 ];
+        symbol [ _saveY %tmp.30 193 72 78 ];
+        %tmp.30 = getv ? :_saveY;
+        symbol [ _saveH %tmp.32 193 81 87 ];
+        %tmp.32 = getv ? :_saveH;
+        %tmp.33 = add %tmp.30 %tmp.32;
+        %tmp.34 = lt %tmp.28 %tmp.33;
+        %tmp.35 = and %tmp.26 %tmp.34;
+        push %tmp.35;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_68_193_81_end:
+        %tmp.36 = phi [%tmp.27 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_15_193_81_begin] [%tmp.35 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_68_193_81_true] [%tmp.36 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_193_68_193_81_end];
+        ret %tmp.36;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_189_79_194_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 196; @symbol_functiondef = [hitBackButton,196,13,26]; @symbol_param<0> = [x,196,27,28]; @symbol_param<0>_type<0> = [Lang,196,32,36]; @symbol_param<0>_type<1> = [Number,196,37,43]; @symbol_param<1> = [y,196,45,46]; @symbol_param<1>_type<0> = [Lang,196,50,54]; @symbol_param<1>_type<1> = [Number,196,55,61]; @symbol_return<0> = [Lang,196,66,70]; @symbol_return<1> = [Boolean,196,71,78]; ]
+    function hitBackButton(x as Lang.Number, y as Lang.Number) as Lang.Boolean {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_196_79_201_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 197 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_197_8_199_8_if_stmt:
+        symbol [ _backW %tmp.2 197 12 18 ];
+        %tmp.2 = getv ? :_backW;
+        %tmp.3 = 0;
+        %tmp.4 = lte %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_197_8_199_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_197_8_199_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_197_25_199_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 198 12 ]
+        %tmp.5 = false;
+        ret %tmp.5;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_197_25_199_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_197_8_199_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_197_8_199_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 200 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_15_200_81_begin:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_15_200_58_begin:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_15_200_43_begin:
+        %tmp.6 = lgetv %x;
+        symbol [ x %tmp.6 200 15 16 ];
+        symbol [ _backX %tmp.8 200 20 26 ];
+        %tmp.8 = getv ? :_backX;
+        %tmp.9 = gte %tmp.6 %tmp.8;
+        %tmp.10 = dup %tmp.9;
+        bf %tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_30_200_43_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_30_200_43_true:
+        %tmp.11 = lgetv %x;
+        symbol [ x %tmp.11 200 30 31 ];
+        symbol [ _backX %tmp.13 200 34 40 ];
+        %tmp.13 = getv ? :_backX;
+        symbol [ _backW %tmp.15 200 43 49 ];
+        %tmp.15 = getv ? :_backW;
+        %tmp.16 = add %tmp.13 %tmp.15;
+        %tmp.17 = lt %tmp.11 %tmp.16;
+        %tmp.18 = and %tmp.9 %tmp.17;
+        push %tmp.18;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_30_200_43_end:
+        %tmp.19 = phi [%tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_15_200_43_begin] [%tmp.18 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_30_200_43_true] [%tmp.19 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_30_200_43_end];
+        %tmp.20 = dup %tmp.19;
+        bf %tmp.20 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_53_200_58_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_53_200_58_true:
+        %tmp.21 = lgetv %y;
+        symbol [ y %tmp.21 200 53 54 ];
+        symbol [ _backY %tmp.23 200 58 64 ];
+        %tmp.23 = getv ? :_backY;
+        %tmp.24 = gte %tmp.21 %tmp.23;
+        %tmp.25 = and %tmp.19 %tmp.24;
+        push %tmp.25;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_53_200_58_end:
+        %tmp.26 = phi [%tmp.20 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_15_200_58_begin] [%tmp.25 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_53_200_58_true] [%tmp.26 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_53_200_58_end];
+        %tmp.27 = dup %tmp.26;
+        bf %tmp.27 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_68_200_81_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_68_200_81_true:
+        %tmp.28 = lgetv %y;
+        symbol [ y %tmp.28 200 68 69 ];
+        symbol [ _backY %tmp.30 200 72 78 ];
+        %tmp.30 = getv ? :_backY;
+        symbol [ _backH %tmp.32 200 81 87 ];
+        %tmp.32 = getv ? :_backH;
+        %tmp.33 = add %tmp.30 %tmp.32;
+        %tmp.34 = lt %tmp.28 %tmp.33;
+        %tmp.35 = and %tmp.26 %tmp.34;
+        push %tmp.35;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_68_200_81_end:
+        %tmp.36 = phi [%tmp.27 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_15_200_81_begin] [%tmp.35 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_68_200_81_true] [%tmp.36 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_200_68_200_81_end];
+        ret %tmp.36;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_196_79_201_4_stop:
+    }
+    //! Compact pill: [width, height, radius, font]. Single row, small padding, capped height.
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 204; @symbol_functiondef = [measureCompactPill,204,13,31]; @symbol_param<0> = [dc,205,8,10]; @symbol_param<0>_type<0> = [Graphics,205,14,22]; @symbol_param<0>_type<1> = [Dc,205,23,25]; @symbol_param<1> = [label,206,8,13]; @symbol_param<1>_type<0> = [Lang,206,17,21]; @symbol_param<1>_type<1> = [String,206,22,28]; @symbol_param<2> = [padX,207,8,12]; @symbol_param<2>_type<0> = [Lang,207,16,20]; @symbol_param<2>_type<1> = [Number,207,21,27]; @symbol_param<3> = [padY,208,8,12]; @symbol_param<3>_type<0> = [Lang,208,16,20]; @symbol_param<3>_type<1> = [Number,208,21,27]; @symbol_param<4> = [maxH,209,8,12]; @symbol_param<4>_type<0> = [Lang,209,16,20]; @symbol_param<4>_type<1> = [Number,209,21,27]; @symbol_return<0> = [Lang,210,9,13]; @symbol_return<1> = [Array,210,14,19]; ]
+    function measureCompactPill(dc as Graphics.Dc, label as Lang.String, padX as Lang.Number, padY as Lang.Number, maxH as Lang.Number) as Lang.Array {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 211 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_stop" ]
+        %bfont.1 = local;
+        symbol [ bfont %bfont.1 211 12 17 ];
+        symbol [ Graphics %tmp.1 211 20 28 ];
+        %tmp.1 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.2 211 29 39 ];
+        %tmp.2 = getv %tmp.1 :FONT_XTINY;
+        lputv %bfont.1 %tmp.2;
+        symbol [ bfont %bfont.1 211 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 212 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_stop" ]
+        %bdims.2 = local;
+        symbol [ bdims %bdims.2 212 12 17 ];
+        %tmp.3 = lgetv %dc;
+        symbol [ dc %tmp.3 212 20 22 ];
+        symbol [ getTextDimensions %tmp.4 212 23 40 ];
+        %tmp.4 = getv function %tmp.3 :getTextDimensions;
+        %tmp.5 = lgetv %label;
+        symbol [ label %tmp.5 212 41 46 ];
+        %tmp.6 = lgetv %bfont.1;
+        symbol [ bfont %tmp.6 212 48 53 ];
+        %tmp.7 = invoke %tmp.3 %tmp.4(%tmp.5, %tmp.6);
+        lputv %bdims.2 %tmp.7;
+        symbol [ bdims %bdims.2 212 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 213 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_8_215_8_if_stmt:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_12_213_44_begin:
+        %tmp.8 = lgetv %bdims.2;
+        symbol [ bdims %tmp.8 213 12 17 ];
+        %tmp.9 = null;
+        %tmp.10 = eq %tmp.8 %tmp.9;
+        bt %tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_8_215_8_if_true;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_29_213_44_false:
+        %tmp.11 = lgetv %bdims.2;
+        symbol [ bdims %tmp.11 213 29 34 ];
+        %tmp.12 = as %tmp.11 { (!Null) };
+        symbol [ size %tmp.13 213 35 39 ];
+        %tmp.13 = getv function %tmp.12 :size;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = 2;
+        %tmp.16 = lt %tmp.14 %tmp.15;
+        push %tmp.16;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_29_213_44_end:
+        %tmp.17 = phi [%tmp.10 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_12_213_44_begin] [%tmp.16 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_29_213_44_false] [%tmp.17 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_29_213_44_end];
+        bf %tmp.17 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_8_215_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_8_215_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_47_215_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 214 12 ]
+        %tmp.18 = newa 4 Lang.Array;
+        symbol [ Lang %tmp.18 214 39 43 ];
+        symbol [ Array %tmp.18 214 44 49 ];
+        %tmp.19 = 0;
+        %tmp.20 = dup %tmp.18;
+        %tmp.21 = aputv %tmp.20 0 %tmp.19;
+        %tmp.22 = 0;
+        %tmp.23 = dup %tmp.21;
+        %tmp.24 = aputv %tmp.23 1 %tmp.22;
+        %tmp.25 = 0;
+        %tmp.26 = dup %tmp.24;
+        %tmp.27 = aputv %tmp.26 2 %tmp.25;
+        %tmp.28 = lgetv %bfont.1;
+        symbol [ bfont %tmp.28 214 29 34 ];
+        %tmp.29 = dup %tmp.27;
+        %tmp.30 = aputv %tmp.29 3 %tmp.28;
+        ret %tmp.30;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_47_215_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_8_215_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_213_8_215_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 216 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_stop" ]
+        %bdw.3 = local;
+        symbol [ bdw %bdw.3 216 12 15 ];
+        %tmp.31 = lgetv %bdims.2;
+        symbol [ bdims %tmp.31 216 18 23 ];
+        %tmp.32 = 0;
+        %tmp.33 = agetv %tmp.31 %tmp.32;
+        %tmp.34 = as %tmp.33 Lang.Number;
+        symbol [ Lang %tmp.34 216 30 34 ];
+        symbol [ Number %tmp.34 216 35 41 ];
+        lputv %bdw.3 %tmp.34;
+        symbol [ bdw %bdw.3 216 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 217 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_stop" ]
+        %bwp.4 = local;
+        symbol [ bwp %bwp.4 217 12 15 ];
+        %tmp.35 = lgetv %dc;
+        symbol [ dc %tmp.35 217 18 20 ];
+        symbol [ getTextWidthInPixels %tmp.36 217 21 41 ];
+        %tmp.36 = getv function %tmp.35 :getTextWidthInPixels;
+        %tmp.37 = lgetv %label;
+        symbol [ label %tmp.37 217 42 47 ];
+        %tmp.38 = lgetv %bfont.1;
+        symbol [ bfont %tmp.38 217 49 54 ];
+        %tmp.39 = invoke %tmp.35 %tmp.36(%tmp.37, %tmp.38);
+        lputv %bwp.4 %tmp.39;
+        symbol [ bwp %bwp.4 217 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 218 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_stop" ]
+        %tw.5 = local;
+        symbol [ tw %tw.5 218 12 14 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_218_17_218_35_begin:
+        %tmp.40 = lgetv %bdw.3;
+        symbol [ bdw %tmp.40 218 17 20 ];
+        %tmp.41 = lgetv %bwp.4;
+        symbol [ bwp %tmp.41 218 23 26 ];
+        %tmp.42 = gt %tmp.40 %tmp.41;
+        bf %tmp.42 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_218_17_218_35_else_false;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_218_17_218_35_true:
+        %tmp.43 = lgetv %bdw.3;
+        symbol [ bdw %tmp.43 218 29 32 ];
+        push %tmp.43;
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_218_17_218_35_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_218_17_218_35_else_false:
+        %tmp.44 = lgetv %bwp.4;
+        symbol [ bwp %tmp.44 218 35 38 ];
+        push %tmp.44;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_218_17_218_35_end:
+        %tmp.45 = phi [%tmp.42 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_218_17_218_35_begin] [%tmp.43 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_218_17_218_35_true] [%tmp.44 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_218_17_218_35_else_false] [%tmp.45 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_218_17_218_35_end];
+        lputv %tw.5 %tmp.45;
+        symbol [ tw %tw.5 218 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 219 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_stop" ]
+        %fh.6 = local;
+        symbol [ fh %fh.6 219 12 14 ];
+        %tmp.46 = lgetv %dc;
+        symbol [ dc %tmp.46 219 17 19 ];
+        symbol [ getFontHeight %tmp.47 219 20 33 ];
+        %tmp.47 = getv function %tmp.46 :getFontHeight;
+        %tmp.48 = lgetv %bfont.1;
+        symbol [ bfont %tmp.48 219 34 39 ];
+        %tmp.49 = invoke %tmp.46 %tmp.47(%tmp.48);
+        lputv %fh.6 %tmp.49;
+        symbol [ fh %fh.6 219 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 220 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_stop" ]
+        %pillW.7 = local;
+        symbol [ pillW %pillW.7 220 12 17 ];
+        %tmp.50 = lgetv %tw.5;
+        symbol [ tw %tmp.50 220 20 22 ];
+        %tmp.51 = 2;
+        %tmp.52 = lgetv %padX;
+        symbol [ padX %tmp.52 220 29 33 ];
+        %tmp.53 = mul %tmp.51 %tmp.52;
+        %tmp.54 = add %tmp.50 %tmp.53;
+        lputv %pillW.7 %tmp.54;
+        symbol [ pillW %pillW.7 220 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 221 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_stop" ]
+        %pillH.8 = local;
+        symbol [ pillH %pillH.8 221 12 17 ];
+        %tmp.55 = lgetv %fh.6;
+        symbol [ fh %tmp.55 221 20 22 ];
+        %tmp.56 = 2;
+        %tmp.57 = lgetv %padY;
+        symbol [ padY %tmp.57 221 29 33 ];
+        %tmp.58 = mul %tmp.56 %tmp.57;
+        %tmp.59 = add %tmp.55 %tmp.58;
+        lputv %pillH.8 %tmp.59;
+        symbol [ pillH %pillH.8 221 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 222 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_222_8_224_8_if_stmt:
+        %tmp.60 = lgetv %pillH.8;
+        symbol [ pillH %tmp.60 222 12 17 ];
+        %tmp.61 = lgetv %maxH;
+        symbol [ maxH %tmp.61 222 20 24 ];
+        %tmp.62 = gt %tmp.60 %tmp.61;
+        bf %tmp.62 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_222_8_224_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_222_8_224_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_222_26_224_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 223 12 ]
+        %tmp.63 = lgetv %maxH;
+        symbol [ maxH %tmp.63 223 20 24 ];
+        lputv %pillH.8 %tmp.63;
+        symbol [ pillH %pillH.8 223 12 17 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_222_26_224_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_222_8_224_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_222_8_224_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 225 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_stop" ]
+        %pr.9 = local;
+        symbol [ pr %pr.9 225 12 14 ];
+        %tmp.64 = lgetv %pillH.8;
+        symbol [ pillH %tmp.64 225 17 22 ];
+        %tmp.65 = 2;
+        %tmp.66 = div %tmp.64 %tmp.65;
+        lputv %pr.9 %tmp.66;
+        symbol [ pr %pr.9 225 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 226 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_226_8_228_8_if_stmt:
+        %tmp.67 = lgetv %pr.9;
+        symbol [ pr %tmp.67 226 12 14 ];
+        %tmp.68 = lgetv %pillW.7;
+        symbol [ pillW %tmp.68 226 17 22 ];
+        %tmp.69 = 2;
+        %tmp.70 = div %tmp.68 %tmp.69;
+        %tmp.71 = gt %tmp.67 %tmp.70;
+        bf %tmp.71 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_226_8_228_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_226_8_228_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_226_28_228_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 227 12 ]
+        %tmp.72 = lgetv %pillW.7;
+        symbol [ pillW %tmp.72 227 17 22 ];
+        %tmp.73 = 2;
+        %tmp.74 = div %tmp.72 %tmp.73;
+        lputv %pr.9 %tmp.74;
+        symbol [ pr %pr.9 227 12 14 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_226_28_228_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_226_8_228_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_226_8_228_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 229 8 ]
+        %tmp.75 = newa 4 Lang.Array;
+        symbol [ Lang %tmp.75 229 44 48 ];
+        symbol [ Array %tmp.75 229 49 54 ];
+        %tmp.76 = lgetv %pillW.7;
+        symbol [ pillW %tmp.76 229 16 21 ];
+        %tmp.77 = dup %tmp.75;
+        %tmp.78 = aputv %tmp.77 0 %tmp.76;
+        %tmp.79 = lgetv %pillH.8;
+        symbol [ pillH %tmp.79 229 23 28 ];
+        %tmp.80 = dup %tmp.78;
+        %tmp.81 = aputv %tmp.80 1 %tmp.79;
+        %tmp.82 = lgetv %pr.9;
+        symbol [ pr %tmp.82 229 30 32 ];
+        %tmp.83 = dup %tmp.81;
+        %tmp.84 = aputv %tmp.83 2 %tmp.82;
+        %tmp.85 = lgetv %bfont.1;
+        symbol [ bfont %tmp.85 229 34 39 ];
+        %tmp.86 = dup %tmp.84;
+        %tmp.87 = aputv %tmp.86 3 %tmp.85;
+        ret %tmp.87;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_210_20_230_4_stop:
+    }
+    //! Places toggle | save | back in one horizontal row at the bottom. Returns y coordinate above the row (for compass text).
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 233; @symbol_functiondef = [layoutBottomPillRow,233,13,32]; @symbol_param<0> = [dc,233,33,35]; @symbol_param<0>_type<0> = [Graphics,233,39,47]; @symbol_param<0>_type<1> = [Dc,233,48,50]; @symbol_param<1> = [width,233,52,57]; @symbol_param<1>_type<0> = [Lang,233,61,65]; @symbol_param<1>_type<1> = [Number,233,66,72]; @symbol_param<2> = [height,233,74,80]; @symbol_param<2>_type<0> = [Lang,233,84,88]; @symbol_param<2>_type<1> = [Number,233,89,95]; @symbol_return<0> = [Lang,233,100,104]; @symbol_return<1> = [Number,233,105,111]; ]
+    function layoutBottomPillRow(dc as Graphics.Dc, width as Lang.Number, height as Lang.Number) as Lang.Number {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 234 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %bottomInset.1 = local;
+        symbol [ bottomInset %bottomInset.1 234 12 23 ];
+        %tmp.1 = 10;
+        lputv %bottomInset.1 %tmp.1;
+        symbol [ bottomInset %bottomInset.1 234 12 23 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 235 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %sidePad.2 = local;
+        symbol [ sidePad %sidePad.2 235 12 19 ];
+        %tmp.2 = 4;
+        lputv %sidePad.2 %tmp.2;
+        symbol [ sidePad %sidePad.2 235 12 19 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 236 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %gap.3 = local;
+        symbol [ gap %gap.3 236 12 15 ];
+        %tmp.3 = 3;
+        lputv %gap.3 %tmp.3;
+        symbol [ gap %gap.3 236 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 237 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %padX.4 = local;
+        symbol [ padX %padX.4 237 12 16 ];
+        %tmp.4 = 6;
+        lputv %padX.4 %tmp.4;
+        symbol [ padX %padX.4 237 12 16 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 238 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %padY.5 = local;
+        symbol [ padY %padY.5 238 12 16 ];
+        %tmp.5 = 3;
+        lputv %padY.5 %tmp.5;
+        symbol [ padY %padY.5 238 12 16 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 239 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %maxPillH.6 = local;
+        symbol [ maxPillH %maxPillH.6 239 12 20 ];
+        %tmp.6 = 28;
+        lputv %maxPillH.6 %tmp.6;
+        symbol [ maxPillH %maxPillH.6 239 12 20 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 241 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %tData.7 = local;
+        symbol [ tData %tData.7 241 12 17 ];
+        %tmp.7 = self;
+        symbol [ measureCompactPill %tmp.8 241 20 38 ];
+        %tmp.8 = getv function %tmp.7 :measureCompactPill;
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 241 39 41 ];
+        symbol [ _toggleLabel %tmp.11 241 43 55 ];
+        %tmp.11 = getv ? :_toggleLabel;
+        %tmp.12 = lgetv %padX.4;
+        symbol [ padX %tmp.12 241 57 61 ];
+        %tmp.13 = lgetv %padY.5;
+        symbol [ padY %tmp.13 241 63 67 ];
+        %tmp.14 = lgetv %maxPillH.6;
+        symbol [ maxPillH %tmp.14 241 69 77 ];
+        %tmp.15 = invoke %tmp.7 %tmp.8(%tmp.9, %tmp.11, %tmp.12, %tmp.13, %tmp.14);
+        lputv %tData.7 %tmp.15;
+        symbol [ tData %tData.7 241 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 242 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %sData.8 = local;
+        symbol [ sData %sData.8 242 12 17 ];
+        %tmp.16 = self;
+        symbol [ measureCompactPill %tmp.17 242 20 38 ];
+        %tmp.17 = getv function %tmp.16 :measureCompactPill;
+        %tmp.18 = lgetv %dc;
+        symbol [ dc %tmp.18 242 39 41 ];
+        symbol [ _saveLabel %tmp.20 242 43 53 ];
+        %tmp.20 = getv ? :_saveLabel;
+        %tmp.21 = lgetv %padX.4;
+        symbol [ padX %tmp.21 242 55 59 ];
+        %tmp.22 = lgetv %padY.5;
+        symbol [ padY %tmp.22 242 61 65 ];
+        %tmp.23 = lgetv %maxPillH.6;
+        symbol [ maxPillH %tmp.23 242 67 75 ];
+        %tmp.24 = invoke %tmp.16 %tmp.17(%tmp.18, %tmp.20, %tmp.21, %tmp.22, %tmp.23);
+        lputv %sData.8 %tmp.24;
+        symbol [ sData %sData.8 242 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 243 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %bData.9 = local;
+        symbol [ bData %bData.9 243 12 17 ];
+        %tmp.25 = self;
+        symbol [ measureCompactPill %tmp.26 243 20 38 ];
+        %tmp.26 = getv function %tmp.25 :measureCompactPill;
+        %tmp.27 = lgetv %dc;
+        symbol [ dc %tmp.27 243 39 41 ];
+        symbol [ _backLabel %tmp.29 243 43 53 ];
+        %tmp.29 = getv ? :_backLabel;
+        %tmp.30 = lgetv %padX.4;
+        symbol [ padX %tmp.30 243 55 59 ];
+        %tmp.31 = lgetv %padY.5;
+        symbol [ padY %tmp.31 243 61 65 ];
+        %tmp.32 = lgetv %maxPillH.6;
+        symbol [ maxPillH %tmp.32 243 67 75 ];
+        %tmp.33 = invoke %tmp.25 %tmp.26(%tmp.27, %tmp.29, %tmp.30, %tmp.31, %tmp.32);
+        lputv %bData.9 %tmp.33;
+        symbol [ bData %bData.9 243 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 244 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %tw.10 = local;
+        symbol [ tw %tw.10 244 12 14 ];
+        %tmp.34 = lgetv %tData.7;
+        symbol [ tData %tmp.34 244 17 22 ];
+        %tmp.35 = 0;
+        %tmp.36 = agetv %tmp.34 %tmp.35;
+        %tmp.37 = as %tmp.36 Lang.Number;
+        symbol [ Lang %tmp.37 244 29 33 ];
+        symbol [ Number %tmp.37 244 34 40 ];
+        lputv %tw.10 %tmp.37;
+        symbol [ tw %tw.10 244 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 245 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %th.11 = local;
+        symbol [ th %th.11 245 12 14 ];
+        %tmp.38 = lgetv %tData.7;
+        symbol [ tData %tmp.38 245 17 22 ];
+        %tmp.39 = 1;
+        %tmp.40 = agetv %tmp.38 %tmp.39;
+        %tmp.41 = as %tmp.40 Lang.Number;
+        symbol [ Lang %tmp.41 245 29 33 ];
+        symbol [ Number %tmp.41 245 34 40 ];
+        lputv %th.11 %tmp.41;
+        symbol [ th %th.11 245 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 246 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %sw.12 = local;
+        symbol [ sw %sw.12 246 12 14 ];
+        %tmp.42 = lgetv %sData.8;
+        symbol [ sData %tmp.42 246 17 22 ];
+        %tmp.43 = 0;
+        %tmp.44 = agetv %tmp.42 %tmp.43;
+        %tmp.45 = as %tmp.44 Lang.Number;
+        symbol [ Lang %tmp.45 246 29 33 ];
+        symbol [ Number %tmp.45 246 34 40 ];
+        lputv %sw.12 %tmp.45;
+        symbol [ sw %sw.12 246 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 247 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %sh.13 = local;
+        symbol [ sh %sh.13 247 12 14 ];
+        %tmp.46 = lgetv %sData.8;
+        symbol [ sData %tmp.46 247 17 22 ];
+        %tmp.47 = 1;
+        %tmp.48 = agetv %tmp.46 %tmp.47;
+        %tmp.49 = as %tmp.48 Lang.Number;
+        symbol [ Lang %tmp.49 247 29 33 ];
+        symbol [ Number %tmp.49 247 34 40 ];
+        lputv %sh.13 %tmp.49;
+        symbol [ sh %sh.13 247 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 248 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %bw.14 = local;
+        symbol [ bw %bw.14 248 12 14 ];
+        %tmp.50 = lgetv %bData.9;
+        symbol [ bData %tmp.50 248 17 22 ];
+        %tmp.51 = 0;
+        %tmp.52 = agetv %tmp.50 %tmp.51;
+        %tmp.53 = as %tmp.52 Lang.Number;
+        symbol [ Lang %tmp.53 248 29 33 ];
+        symbol [ Number %tmp.53 248 34 40 ];
+        lputv %bw.14 %tmp.53;
+        symbol [ bw %bw.14 248 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 249 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %bh.15 = local;
+        symbol [ bh %bh.15 249 12 14 ];
+        %tmp.54 = lgetv %bData.9;
+        symbol [ bData %tmp.54 249 17 22 ];
+        %tmp.55 = 1;
+        %tmp.56 = agetv %tmp.54 %tmp.55;
+        %tmp.57 = as %tmp.56 Lang.Number;
+        symbol [ Lang %tmp.57 249 29 33 ];
+        symbol [ Number %tmp.57 249 34 40 ];
+        lputv %bh.15 %tmp.57;
+        symbol [ bh %bh.15 249 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 250 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_8_255_8_if_stmt:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_12_250_40_begin:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_12_250_29_begin:
+        %tmp.58 = lgetv %tw.10;
+        symbol [ tw %tmp.58 250 12 14 ];
+        %tmp.59 = 0;
+        %tmp.60 = lte %tmp.58 %tmp.59;
+        bt %tmp.60 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_8_255_8_if_true;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_23_250_29_false:
+        %tmp.61 = lgetv %sw.12;
+        symbol [ sw %tmp.61 250 23 25 ];
+        %tmp.62 = 0;
+        %tmp.63 = lte %tmp.61 %tmp.62;
+        push %tmp.63;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_23_250_29_end:
+        %tmp.64 = phi [%tmp.60 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_12_250_29_begin] [%tmp.63 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_23_250_29_false] [%tmp.64 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_23_250_29_end];
+        bt %tmp.64 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_8_255_8_if_true;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_34_250_40_false:
+        %tmp.65 = lgetv %bw.14;
+        symbol [ bw %tmp.65 250 34 36 ];
+        %tmp.66 = 0;
+        %tmp.67 = lte %tmp.65 %tmp.66;
+        push %tmp.67;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_34_250_40_end:
+        %tmp.68 = phi [%tmp.64 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_12_250_40_begin] [%tmp.67 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_34_250_40_false] [%tmp.68 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_34_250_40_end];
+        bf %tmp.68 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_8_255_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_8_255_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_43_255_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 251 12 ]
+        %tmp.69 = 0;
+        symbol [ _toggleW ? 251 12 20 ];
+        putv self :_toggleW %tmp.69;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 252 12 ]
+        %tmp.70 = 0;
+        symbol [ _saveW ? 252 12 18 ];
+        putv self :_saveW %tmp.70;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 253 12 ]
+        %tmp.71 = 0;
+        symbol [ _backW ? 253 12 18 ];
+        putv self :_backW %tmp.71;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 254 12 ]
+        %tmp.72 = lgetv %height;
+        symbol [ height %tmp.72 254 19 25 ];
+        %tmp.73 = lgetv %bottomInset.1;
+        symbol [ bottomInset %tmp.73 254 28 39 ];
+        %tmp.74 = sub %tmp.72 %tmp.73;
+        %tmp.75 = 8;
+        %tmp.76 = sub %tmp.74 %tmp.75;
+        ret %tmp.76;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_43_255_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_8_255_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_250_8_255_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 257 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %rowH.16 = local;
+        symbol [ rowH %rowH.16 257 12 16 ];
+        %tmp.77 = lgetv %th.11;
+        symbol [ th %tmp.77 257 19 21 ];
+        lputv %rowH.16 %tmp.77;
+        symbol [ rowH %rowH.16 257 12 16 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 258 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_258_8_260_8_if_stmt:
+        %tmp.78 = lgetv %sh.13;
+        symbol [ sh %tmp.78 258 12 14 ];
+        %tmp.79 = lgetv %rowH.16;
+        symbol [ rowH %tmp.79 258 17 21 ];
+        %tmp.80 = gt %tmp.78 %tmp.79;
+        bf %tmp.80 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_258_8_260_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_258_8_260_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_258_23_260_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 259 12 ]
+        %tmp.81 = lgetv %sh.13;
+        symbol [ sh %tmp.81 259 19 21 ];
+        lputv %rowH.16 %tmp.81;
+        symbol [ rowH %rowH.16 259 12 16 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_258_23_260_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_258_8_260_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_258_8_260_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 261 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_261_8_263_8_if_stmt:
+        %tmp.82 = lgetv %bh.15;
+        symbol [ bh %tmp.82 261 12 14 ];
+        %tmp.83 = lgetv %rowH.16;
+        symbol [ rowH %tmp.83 261 17 21 ];
+        %tmp.84 = gt %tmp.82 %tmp.83;
+        bf %tmp.84 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_261_8_263_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_261_8_263_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_261_23_263_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 262 12 ]
+        %tmp.85 = lgetv %bh.15;
+        symbol [ bh %tmp.85 262 19 21 ];
+        lputv %rowH.16 %tmp.85;
+        symbol [ rowH %rowH.16 262 12 16 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_261_23_263_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_261_8_263_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_261_8_263_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 265 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %totalPillW.17 = local;
+        symbol [ totalPillW %totalPillW.17 265 12 22 ];
+        %tmp.86 = lgetv %tw.10;
+        symbol [ tw %tmp.86 265 25 27 ];
+        %tmp.87 = lgetv %sw.12;
+        symbol [ sw %tmp.87 265 30 32 ];
+        %tmp.88 = add %tmp.86 %tmp.87;
+        %tmp.89 = lgetv %bw.14;
+        symbol [ bw %tmp.89 265 35 37 ];
+        %tmp.90 = add %tmp.88 %tmp.89;
+        %tmp.91 = 2;
+        %tmp.92 = lgetv %gap.3;
+        symbol [ gap %tmp.92 265 44 47 ];
+        %tmp.93 = mul %tmp.91 %tmp.92;
+        %tmp.94 = add %tmp.90 %tmp.93;
+        lputv %totalPillW.17 %tmp.94;
+        symbol [ totalPillW %totalPillW.17 265 12 22 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 266 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %avail.18 = local;
+        symbol [ avail %avail.18 266 12 17 ];
+        %tmp.95 = lgetv %width;
+        symbol [ width %tmp.95 266 20 25 ];
+        %tmp.96 = 2;
+        %tmp.97 = lgetv %sidePad.2;
+        symbol [ sidePad %tmp.97 266 32 39 ];
+        %tmp.98 = mul %tmp.96 %tmp.97;
+        %tmp.99 = sub %tmp.95 %tmp.98;
+        lputv %avail.18 %tmp.99;
+        symbol [ avail %avail.18 266 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 267 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_267_8_290_8_if_stmt:
+        %tmp.100 = lgetv %totalPillW.17;
+        symbol [ totalPillW %tmp.100 267 12 22 ];
+        %tmp.101 = lgetv %avail.18;
+        symbol [ avail %tmp.101 267 25 30 ];
+        %tmp.102 = gt %tmp.100 %tmp.101;
+        bf %tmp.102 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_267_8_290_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_267_8_290_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_267_32_290_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 268 12 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_267_32_290_8_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_267_32_290_8_stop" ]
+        %deficit.19 = local;
+        symbol [ deficit %deficit.19 268 16 23 ];
+        %tmp.103 = lgetv %totalPillW.17;
+        symbol [ totalPillW %tmp.103 268 26 36 ];
+        %tmp.104 = lgetv %avail.18;
+        symbol [ avail %tmp.104 268 39 44 ];
+        %tmp.105 = sub %tmp.103 %tmp.104;
+        lputv %deficit.19 %tmp.105;
+        symbol [ deficit %deficit.19 268 16 23 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 269 12 ]
+        %tmp.106 = lgetv %padX.4;
+        symbol [ padX %tmp.106 269 19 23 ];
+        %tmp.107 = lgetv %deficit.19;
+        symbol [ deficit %tmp.107 269 26 33 ];
+        %tmp.108 = 6;
+        %tmp.109 = div %tmp.107 %tmp.108;
+        %tmp.110 = sub %tmp.106 %tmp.109;
+        lputv %padX.4 %tmp.110;
+        symbol [ padX %padX.4 269 12 16 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 270 12 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_270_12_272_12_if_stmt:
+        %tmp.111 = lgetv %padX.4;
+        symbol [ padX %tmp.111 270 16 20 ];
+        %tmp.112 = 2;
+        %tmp.113 = lt %tmp.111 %tmp.112;
+        bf %tmp.113 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_270_12_272_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_270_12_272_12_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_270_26_272_12_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 271 16 ]
+        %tmp.114 = 2;
+        lputv %padX.4 %tmp.114;
+        symbol [ padX %padX.4 271 16 20 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_270_26_272_12_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_270_12_272_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_270_12_272_12_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 273 12 ]
+        %tmp.115 = self;
+        symbol [ measureCompactPill %tmp.116 273 20 38 ];
+        %tmp.116 = getv function %tmp.115 :measureCompactPill;
+        %tmp.117 = lgetv %dc;
+        symbol [ dc %tmp.117 273 39 41 ];
+        symbol [ _toggleLabel %tmp.119 273 43 55 ];
+        %tmp.119 = getv ? :_toggleLabel;
+        %tmp.120 = lgetv %padX.4;
+        symbol [ padX %tmp.120 273 57 61 ];
+        %tmp.121 = lgetv %padY.5;
+        symbol [ padY %tmp.121 273 63 67 ];
+        %tmp.122 = lgetv %maxPillH.6;
+        symbol [ maxPillH %tmp.122 273 69 77 ];
+        %tmp.123 = invoke %tmp.115 %tmp.116(%tmp.117, %tmp.119, %tmp.120, %tmp.121, %tmp.122);
+        lputv %tData.7 %tmp.123;
+        symbol [ tData %tData.7 273 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 274 12 ]
+        %tmp.124 = self;
+        symbol [ measureCompactPill %tmp.125 274 20 38 ];
+        %tmp.125 = getv function %tmp.124 :measureCompactPill;
+        %tmp.126 = lgetv %dc;
+        symbol [ dc %tmp.126 274 39 41 ];
+        symbol [ _saveLabel %tmp.128 274 43 53 ];
+        %tmp.128 = getv ? :_saveLabel;
+        %tmp.129 = lgetv %padX.4;
+        symbol [ padX %tmp.129 274 55 59 ];
+        %tmp.130 = lgetv %padY.5;
+        symbol [ padY %tmp.130 274 61 65 ];
+        %tmp.131 = lgetv %maxPillH.6;
+        symbol [ maxPillH %tmp.131 274 67 75 ];
+        %tmp.132 = invoke %tmp.124 %tmp.125(%tmp.126, %tmp.128, %tmp.129, %tmp.130, %tmp.131);
+        lputv %sData.8 %tmp.132;
+        symbol [ sData %sData.8 274 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 275 12 ]
+        %tmp.133 = self;
+        symbol [ measureCompactPill %tmp.134 275 20 38 ];
+        %tmp.134 = getv function %tmp.133 :measureCompactPill;
+        %tmp.135 = lgetv %dc;
+        symbol [ dc %tmp.135 275 39 41 ];
+        symbol [ _backLabel %tmp.137 275 43 53 ];
+        %tmp.137 = getv ? :_backLabel;
+        %tmp.138 = lgetv %padX.4;
+        symbol [ padX %tmp.138 275 55 59 ];
+        %tmp.139 = lgetv %padY.5;
+        symbol [ padY %tmp.139 275 61 65 ];
+        %tmp.140 = lgetv %maxPillH.6;
+        symbol [ maxPillH %tmp.140 275 67 75 ];
+        %tmp.141 = invoke %tmp.133 %tmp.134(%tmp.135, %tmp.137, %tmp.138, %tmp.139, %tmp.140);
+        lputv %bData.9 %tmp.141;
+        symbol [ bData %bData.9 275 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 276 12 ]
+        %tmp.142 = lgetv %tData.7;
+        symbol [ tData %tmp.142 276 17 22 ];
+        %tmp.143 = 0;
+        %tmp.144 = agetv %tmp.142 %tmp.143;
+        %tmp.145 = as %tmp.144 Lang.Number;
+        symbol [ Lang %tmp.145 276 29 33 ];
+        symbol [ Number %tmp.145 276 34 40 ];
+        lputv %tw.10 %tmp.145;
+        symbol [ tw %tw.10 276 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 277 12 ]
+        %tmp.146 = lgetv %tData.7;
+        symbol [ tData %tmp.146 277 17 22 ];
+        %tmp.147 = 1;
+        %tmp.148 = agetv %tmp.146 %tmp.147;
+        %tmp.149 = as %tmp.148 Lang.Number;
+        symbol [ Lang %tmp.149 277 29 33 ];
+        symbol [ Number %tmp.149 277 34 40 ];
+        lputv %th.11 %tmp.149;
+        symbol [ th %th.11 277 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 278 12 ]
+        %tmp.150 = lgetv %sData.8;
+        symbol [ sData %tmp.150 278 17 22 ];
+        %tmp.151 = 0;
+        %tmp.152 = agetv %tmp.150 %tmp.151;
+        %tmp.153 = as %tmp.152 Lang.Number;
+        symbol [ Lang %tmp.153 278 29 33 ];
+        symbol [ Number %tmp.153 278 34 40 ];
+        lputv %sw.12 %tmp.153;
+        symbol [ sw %sw.12 278 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 279 12 ]
+        %tmp.154 = lgetv %sData.8;
+        symbol [ sData %tmp.154 279 17 22 ];
+        %tmp.155 = 1;
+        %tmp.156 = agetv %tmp.154 %tmp.155;
+        %tmp.157 = as %tmp.156 Lang.Number;
+        symbol [ Lang %tmp.157 279 29 33 ];
+        symbol [ Number %tmp.157 279 34 40 ];
+        lputv %sh.13 %tmp.157;
+        symbol [ sh %sh.13 279 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 280 12 ]
+        %tmp.158 = lgetv %bData.9;
+        symbol [ bData %tmp.158 280 17 22 ];
+        %tmp.159 = 0;
+        %tmp.160 = agetv %tmp.158 %tmp.159;
+        %tmp.161 = as %tmp.160 Lang.Number;
+        symbol [ Lang %tmp.161 280 29 33 ];
+        symbol [ Number %tmp.161 280 34 40 ];
+        lputv %bw.14 %tmp.161;
+        symbol [ bw %bw.14 280 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 281 12 ]
+        %tmp.162 = lgetv %bData.9;
+        symbol [ bData %tmp.162 281 17 22 ];
+        %tmp.163 = 1;
+        %tmp.164 = agetv %tmp.162 %tmp.163;
+        %tmp.165 = as %tmp.164 Lang.Number;
+        symbol [ Lang %tmp.165 281 29 33 ];
+        symbol [ Number %tmp.165 281 34 40 ];
+        lputv %bh.15 %tmp.165;
+        symbol [ bh %bh.15 281 12 14 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 282 12 ]
+        %tmp.166 = lgetv %th.11;
+        symbol [ th %tmp.166 282 19 21 ];
+        lputv %rowH.16 %tmp.166;
+        symbol [ rowH %rowH.16 282 12 16 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 283 12 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_283_12_285_12_if_stmt:
+        %tmp.167 = lgetv %sh.13;
+        symbol [ sh %tmp.167 283 16 18 ];
+        %tmp.168 = lgetv %rowH.16;
+        symbol [ rowH %tmp.168 283 21 25 ];
+        %tmp.169 = gt %tmp.167 %tmp.168;
+        bf %tmp.169 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_283_12_285_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_283_12_285_12_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_283_27_285_12_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 284 16 ]
+        %tmp.170 = lgetv %sh.13;
+        symbol [ sh %tmp.170 284 23 25 ];
+        lputv %rowH.16 %tmp.170;
+        symbol [ rowH %rowH.16 284 16 20 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_283_27_285_12_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_283_12_285_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_283_12_285_12_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 286 12 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_286_12_288_12_if_stmt:
+        %tmp.171 = lgetv %bh.15;
+        symbol [ bh %tmp.171 286 16 18 ];
+        %tmp.172 = lgetv %rowH.16;
+        symbol [ rowH %tmp.172 286 21 25 ];
+        %tmp.173 = gt %tmp.171 %tmp.172;
+        bf %tmp.173 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_286_12_288_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_286_12_288_12_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_286_27_288_12_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 287 16 ]
+        %tmp.174 = lgetv %bh.15;
+        symbol [ bh %tmp.174 287 23 25 ];
+        lputv %rowH.16 %tmp.174;
+        symbol [ rowH %rowH.16 287 16 20 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_286_27_288_12_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_286_12_288_12_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_286_12_288_12_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 289 12 ]
+        %tmp.175 = lgetv %tw.10;
+        symbol [ tw %tmp.175 289 25 27 ];
+        %tmp.176 = lgetv %sw.12;
+        symbol [ sw %tmp.176 289 30 32 ];
+        %tmp.177 = add %tmp.175 %tmp.176;
+        %tmp.178 = lgetv %bw.14;
+        symbol [ bw %tmp.178 289 35 37 ];
+        %tmp.179 = add %tmp.177 %tmp.178;
+        %tmp.180 = 2;
+        %tmp.181 = lgetv %gap.3;
+        symbol [ gap %tmp.181 289 44 47 ];
+        %tmp.182 = mul %tmp.180 %tmp.181;
+        %tmp.183 = add %tmp.179 %tmp.182;
+        lputv %totalPillW.17 %tmp.183;
+        symbol [ totalPillW %totalPillW.17 289 12 22 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_267_32_290_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_267_8_290_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_267_8_290_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 292 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %rowY.20 = local;
+        symbol [ rowY %rowY.20 292 12 16 ];
+        %tmp.184 = lgetv %height;
+        symbol [ height %tmp.184 292 19 25 ];
+        %tmp.185 = lgetv %bottomInset.1;
+        symbol [ bottomInset %tmp.185 292 28 39 ];
+        %tmp.186 = sub %tmp.184 %tmp.185;
+        %tmp.187 = lgetv %rowH.16;
+        symbol [ rowH %tmp.187 292 42 46 ];
+        %tmp.188 = sub %tmp.186 %tmp.187;
+        lputv %rowY.20 %tmp.188;
+        symbol [ rowY %rowY.20 292 12 16 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 293 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_293_8_295_8_if_stmt:
+        %tmp.189 = lgetv %rowY.20;
+        symbol [ rowY %tmp.189 293 12 16 ];
+        %tmp.190 = 0;
+        %tmp.191 = lt %tmp.189 %tmp.190;
+        bf %tmp.191 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_293_8_295_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_293_8_295_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_293_22_295_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 294 12 ]
+        %tmp.192 = 0;
+        lputv %rowY.20 %tmp.192;
+        symbol [ rowY %rowY.20 294 12 16 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_293_22_295_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_293_8_295_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_293_8_295_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 297 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %extra.21 = local;
+        symbol [ extra %extra.21 297 12 17 ];
+        %tmp.193 = lgetv %avail.18;
+        symbol [ avail %tmp.193 297 20 25 ];
+        %tmp.194 = lgetv %totalPillW.17;
+        symbol [ totalPillW %tmp.194 297 28 38 ];
+        %tmp.195 = sub %tmp.193 %tmp.194;
+        lputv %extra.21 %tmp.195;
+        symbol [ extra %extra.21 297 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 298 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_298_8_300_8_if_stmt:
+        %tmp.196 = lgetv %extra.21;
+        symbol [ extra %tmp.196 298 12 17 ];
+        %tmp.197 = 0;
+        %tmp.198 = lt %tmp.196 %tmp.197;
+        bf %tmp.198 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_298_8_300_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_298_8_300_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_298_23_300_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 299 12 ]
+        %tmp.199 = 0;
+        lputv %extra.21 %tmp.199;
+        symbol [ extra %extra.21 299 12 17 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_298_23_300_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_298_8_300_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_298_8_300_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 301 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %startX.22 = local;
+        symbol [ startX %startX.22 301 12 18 ];
+        %tmp.200 = lgetv %sidePad.2;
+        symbol [ sidePad %tmp.200 301 21 28 ];
+        %tmp.201 = lgetv %extra.21;
+        symbol [ extra %tmp.201 301 31 36 ];
+        %tmp.202 = 2;
+        %tmp.203 = div %tmp.201 %tmp.202;
+        %tmp.204 = add %tmp.200 %tmp.203;
+        lputv %startX.22 %tmp.204;
+        symbol [ startX %startX.22 301 12 18 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 303 8 ]
+        %tmp.205 = lgetv %startX.22;
+        symbol [ startX %tmp.205 303 19 25 ];
+        symbol [ _toggleX ? 303 8 16 ];
+        putv self :_toggleX %tmp.205;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 304 8 ]
+        %tmp.206 = lgetv %rowY.20;
+        symbol [ rowY %tmp.206 304 19 23 ];
+        %tmp.207 = lgetv %rowH.16;
+        symbol [ rowH %tmp.207 304 27 31 ];
+        %tmp.208 = lgetv %th.11;
+        symbol [ th %tmp.208 304 34 36 ];
+        %tmp.209 = sub %tmp.207 %tmp.208;
+        %tmp.210 = 2;
+        %tmp.211 = div %tmp.209 %tmp.210;
+        %tmp.212 = add %tmp.206 %tmp.211;
+        symbol [ _toggleY ? 304 8 16 ];
+        putv self :_toggleY %tmp.212;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 305 8 ]
+        %tmp.213 = lgetv %tw.10;
+        symbol [ tw %tmp.213 305 19 21 ];
+        symbol [ _toggleW ? 305 8 16 ];
+        putv self :_toggleW %tmp.213;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 306 8 ]
+        %tmp.214 = lgetv %th.11;
+        symbol [ th %tmp.214 306 19 21 ];
+        symbol [ _toggleH ? 306 8 16 ];
+        putv self :_toggleH %tmp.214;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 307 8 ]
+        %tmp.215 = lgetv %tData.7;
+        symbol [ tData %tmp.215 307 19 24 ];
+        %tmp.216 = 2;
+        %tmp.217 = agetv %tmp.215 %tmp.216;
+        %tmp.218 = as %tmp.217 Lang.Number;
+        symbol [ Lang %tmp.218 307 31 35 ];
+        symbol [ Number %tmp.218 307 36 42 ];
+        symbol [ _toggleR ? 307 8 16 ];
+        putv self :_toggleR %tmp.218;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 308 8 ]
+        %tmp.219 = lgetv %tData.7;
+        symbol [ tData %tmp.219 308 22 27 ];
+        %tmp.220 = 3;
+        %tmp.221 = agetv %tmp.219 %tmp.220;
+        %tmp.222 = as %tmp.221 Graphics.FontDefinition;
+        symbol [ Graphics %tmp.222 308 34 42 ];
+        symbol [ FontDefinition %tmp.222 308 43 57 ];
+        symbol [ _toggleFont ? 308 8 19 ];
+        putv self :_toggleFont %tmp.222;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 310 8 ]
+        %tmp.223 = lgetv %startX.22;
+        symbol [ startX %tmp.223 310 17 23 ];
+        %tmp.224 = lgetv %tw.10;
+        symbol [ tw %tmp.224 310 26 28 ];
+        %tmp.225 = add %tmp.223 %tmp.224;
+        %tmp.226 = lgetv %gap.3;
+        symbol [ gap %tmp.226 310 31 34 ];
+        %tmp.227 = add %tmp.225 %tmp.226;
+        symbol [ _saveX ? 310 8 14 ];
+        putv self :_saveX %tmp.227;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 311 8 ]
+        %tmp.228 = lgetv %rowY.20;
+        symbol [ rowY %tmp.228 311 17 21 ];
+        %tmp.229 = lgetv %rowH.16;
+        symbol [ rowH %tmp.229 311 25 29 ];
+        %tmp.230 = lgetv %sh.13;
+        symbol [ sh %tmp.230 311 32 34 ];
+        %tmp.231 = sub %tmp.229 %tmp.230;
+        %tmp.232 = 2;
+        %tmp.233 = div %tmp.231 %tmp.232;
+        %tmp.234 = add %tmp.228 %tmp.233;
+        symbol [ _saveY ? 311 8 14 ];
+        putv self :_saveY %tmp.234;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 312 8 ]
+        %tmp.235 = lgetv %sw.12;
+        symbol [ sw %tmp.235 312 17 19 ];
+        symbol [ _saveW ? 312 8 14 ];
+        putv self :_saveW %tmp.235;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 313 8 ]
+        %tmp.236 = lgetv %sh.13;
+        symbol [ sh %tmp.236 313 17 19 ];
+        symbol [ _saveH ? 313 8 14 ];
+        putv self :_saveH %tmp.236;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 314 8 ]
+        %tmp.237 = lgetv %sData.8;
+        symbol [ sData %tmp.237 314 17 22 ];
+        %tmp.238 = 2;
+        %tmp.239 = agetv %tmp.237 %tmp.238;
+        %tmp.240 = as %tmp.239 Lang.Number;
+        symbol [ Lang %tmp.240 314 29 33 ];
+        symbol [ Number %tmp.240 314 34 40 ];
+        symbol [ _saveR ? 314 8 14 ];
+        putv self :_saveR %tmp.240;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 315 8 ]
+        %tmp.241 = lgetv %sData.8;
+        symbol [ sData %tmp.241 315 20 25 ];
+        %tmp.242 = 3;
+        %tmp.243 = agetv %tmp.241 %tmp.242;
+        %tmp.244 = as %tmp.243 Graphics.FontDefinition;
+        symbol [ Graphics %tmp.244 315 32 40 ];
+        symbol [ FontDefinition %tmp.244 315 41 55 ];
+        symbol [ _saveFont ? 315 8 17 ];
+        putv self :_saveFont %tmp.244;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 317 8 ]
+        %tmp.245 = lgetv %startX.22;
+        symbol [ startX %tmp.245 317 17 23 ];
+        %tmp.246 = lgetv %tw.10;
+        symbol [ tw %tmp.246 317 26 28 ];
+        %tmp.247 = add %tmp.245 %tmp.246;
+        %tmp.248 = lgetv %gap.3;
+        symbol [ gap %tmp.248 317 31 34 ];
+        %tmp.249 = add %tmp.247 %tmp.248;
+        %tmp.250 = lgetv %sw.12;
+        symbol [ sw %tmp.250 317 37 39 ];
+        %tmp.251 = add %tmp.249 %tmp.250;
+        %tmp.252 = lgetv %gap.3;
+        symbol [ gap %tmp.252 317 42 45 ];
+        %tmp.253 = add %tmp.251 %tmp.252;
+        symbol [ _backX ? 317 8 14 ];
+        putv self :_backX %tmp.253;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 318 8 ]
+        %tmp.254 = lgetv %rowY.20;
+        symbol [ rowY %tmp.254 318 17 21 ];
+        %tmp.255 = lgetv %rowH.16;
+        symbol [ rowH %tmp.255 318 25 29 ];
+        %tmp.256 = lgetv %bh.15;
+        symbol [ bh %tmp.256 318 32 34 ];
+        %tmp.257 = sub %tmp.255 %tmp.256;
+        %tmp.258 = 2;
+        %tmp.259 = div %tmp.257 %tmp.258;
+        %tmp.260 = add %tmp.254 %tmp.259;
+        symbol [ _backY ? 318 8 14 ];
+        putv self :_backY %tmp.260;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 319 8 ]
+        %tmp.261 = lgetv %bw.14;
+        symbol [ bw %tmp.261 319 17 19 ];
+        symbol [ _backW ? 319 8 14 ];
+        putv self :_backW %tmp.261;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 320 8 ]
+        %tmp.262 = lgetv %bh.15;
+        symbol [ bh %tmp.262 320 17 19 ];
+        symbol [ _backH ? 320 8 14 ];
+        putv self :_backH %tmp.262;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 321 8 ]
+        %tmp.263 = lgetv %bData.9;
+        symbol [ bData %tmp.263 321 17 22 ];
+        %tmp.264 = 2;
+        %tmp.265 = agetv %tmp.263 %tmp.264;
+        %tmp.266 = as %tmp.265 Lang.Number;
+        symbol [ Lang %tmp.266 321 29 33 ];
+        symbol [ Number %tmp.266 321 34 40 ];
+        symbol [ _backR ? 321 8 14 ];
+        putv self :_backR %tmp.266;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 322 8 ]
+        %tmp.267 = lgetv %bData.9;
+        symbol [ bData %tmp.267 322 20 25 ];
+        %tmp.268 = 3;
+        %tmp.269 = agetv %tmp.267 %tmp.268;
+        %tmp.270 = as %tmp.269 Graphics.FontDefinition;
+        symbol [ Graphics %tmp.270 322 32 40 ];
+        symbol [ FontDefinition %tmp.270 322 41 55 ];
+        symbol [ _backFont ? 322 8 17 ];
+        putv self :_backFont %tmp.270;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 324 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %marginAboveRow.23 = local;
+        symbol [ marginAboveRow %marginAboveRow.23 324 12 26 ];
+        %tmp.271 = 8;
+        lputv %marginAboveRow.23 %tmp.271;
+        symbol [ marginAboveRow %marginAboveRow.23 324 12 26 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 325 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop" ]
+        %contentBottom.24 = local;
+        symbol [ contentBottom %contentBottom.24 325 12 25 ];
+        %tmp.272 = lgetv %rowY.20;
+        symbol [ rowY %tmp.272 325 28 32 ];
+        %tmp.273 = lgetv %marginAboveRow.23;
+        symbol [ marginAboveRow %tmp.273 325 35 49 ];
+        %tmp.274 = sub %tmp.272 %tmp.273;
+        lputv %contentBottom.24 %tmp.274;
+        symbol [ contentBottom %contentBottom.24 325 12 25 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 326 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_326_8_328_8_if_stmt:
+        %tmp.275 = lgetv %contentBottom.24;
+        symbol [ contentBottom %tmp.275 326 12 25 ];
+        %tmp.276 = 4;
+        %tmp.277 = lt %tmp.275 %tmp.276;
+        bf %tmp.277 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_326_8_328_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_326_8_328_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_326_31_328_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 327 12 ]
+        %tmp.278 = 4;
+        lputv %contentBottom.24 %tmp.278;
+        symbol [ contentBottom %contentBottom.24 327 12 25 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_326_31_328_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_326_8_328_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_326_8_328_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 329 8 ]
+        %tmp.279 = lgetv %contentBottom.24;
+        symbol [ contentBottom %tmp.279 329 15 28 ];
+        ret %tmp.279;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_233_112_330_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 332; @symbol_functiondef = [onLayout,332,13,21]; @symbol_param<0> = [dc,332,22,24]; @symbol_param<0>_type<0> = [Graphics,332,28,36]; @symbol_param<0>_type<1> = [Dc,332,37,39]; ]
+    function onLayout(dc as Graphics.Dc) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 333 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 333 12 17 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 333 20 22 ];
+        symbol [ getWidth %tmp.2 333 23 31 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 333 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 334 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 334 12 18 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 334 21 23 ];
+        symbol [ getHeight %tmp.5 334 24 33 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+        symbol [ height %height.2 334 12 18 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 336 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop" ]
+        %contentBottom.3 = local;
+        symbol [ contentBottom %contentBottom.3 336 12 25 ];
+        %tmp.7 = self;
+        symbol [ layoutBottomPillRow %tmp.8 336 28 47 ];
+        %tmp.8 = getv function %tmp.7 :layoutBottomPillRow;
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 336 48 50 ];
+        %tmp.10 = lgetv %width.1;
+        symbol [ width %tmp.10 336 52 57 ];
+        %tmp.11 = lgetv %height.2;
+        symbol [ height %tmp.11 336 59 65 ];
+        %tmp.12 = invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.11);
+        lputv %contentBottom.3 %tmp.12;
+        symbol [ contentBottom %contentBottom.3 336 12 25 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 338 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop" ]
+        %lineGap.4 = local;
+        symbol [ lineGap %lineGap.4 338 12 19 ];
+        %tmp.13 = 6;
+        lputv %lineGap.4 %tmp.13;
+        symbol [ lineGap %lineGap.4 338 12 19 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 339 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop" ]
+        %fhTitle.5 = local;
+        symbol [ fhTitle %fhTitle.5 339 12 19 ];
+        %tmp.14 = lgetv %dc;
+        symbol [ dc %tmp.14 339 22 24 ];
+        symbol [ getFontHeight %tmp.15 339 25 38 ];
+        %tmp.15 = getv function %tmp.14 :getFontHeight;
+        symbol [ _titleFont %tmp.17 339 39 49 ];
+        %tmp.17 = getv ? :_titleFont;
+        %tmp.18 = invoke %tmp.14 %tmp.15(%tmp.17);
+        lputv %fhTitle.5 %tmp.18;
+        symbol [ fhTitle %fhTitle.5 339 12 19 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 340 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop" ]
+        %fhStatus.6 = local;
+        symbol [ fhStatus %fhStatus.6 340 12 20 ];
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 340 23 25 ];
+        symbol [ getFontHeight %tmp.20 340 26 39 ];
+        %tmp.20 = getv function %tmp.19 :getFontHeight;
+        symbol [ _statusFont %tmp.22 340 40 51 ];
+        %tmp.22 = getv ? :_statusFont;
+        %tmp.23 = invoke %tmp.19 %tmp.20(%tmp.22);
+        lputv %fhStatus.6 %tmp.23;
+        symbol [ fhStatus %fhStatus.6 340 12 20 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 341 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop" ]
+        %fhMain.7 = local;
+        symbol [ fhMain %fhMain.7 341 12 18 ];
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 341 21 23 ];
+        symbol [ getFontHeight %tmp.25 341 24 37 ];
+        %tmp.25 = getv function %tmp.24 :getFontHeight;
+        symbol [ _mainFont %tmp.27 341 38 47 ];
+        %tmp.27 = getv ? :_mainFont;
+        %tmp.28 = invoke %tmp.24 %tmp.25(%tmp.27);
+        lputv %fhMain.7 %tmp.28;
+        symbol [ fhMain %fhMain.7 341 12 18 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 342 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop" ]
+        %fhSub.8 = local;
+        symbol [ fhSub %fhSub.8 342 12 17 ];
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 342 20 22 ];
+        symbol [ getFontHeight %tmp.30 342 23 36 ];
+        %tmp.30 = getv function %tmp.29 :getFontHeight;
+        symbol [ _subFont %tmp.32 342 37 45 ];
+        %tmp.32 = getv ? :_subFont;
+        %tmp.33 = invoke %tmp.29 %tmp.30(%tmp.32);
+        lputv %fhSub.8 %tmp.33;
+        symbol [ fhSub %fhSub.8 342 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 345 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop" ]
+        %mainRegionH.9 = local;
+        symbol [ mainRegionH %mainRegionH.9 345 12 23 ];
+        %tmp.34 = lgetv %fhMain.7;
+        symbol [ fhMain %tmp.34 345 26 32 ];
+        %tmp.35 = lgetv %lineGap.4;
+        symbol [ lineGap %tmp.35 345 35 42 ];
+        %tmp.36 = add %tmp.34 %tmp.35;
+        %tmp.37 = lgetv %fhSub.8;
+        symbol [ fhSub %tmp.37 345 45 50 ];
+        %tmp.38 = add %tmp.36 %tmp.37;
+        lputv %mainRegionH.9 %tmp.38;
+        symbol [ mainRegionH %mainRegionH.9 345 12 23 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 346 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop" ]
+        %blockH.10 = local;
+        symbol [ blockH %blockH.10 346 12 18 ];
+        %tmp.39 = lgetv %fhTitle.5;
+        symbol [ fhTitle %tmp.39 346 21 28 ];
+        %tmp.40 = lgetv %lineGap.4;
+        symbol [ lineGap %tmp.40 346 31 38 ];
+        %tmp.41 = add %tmp.39 %tmp.40;
+        %tmp.42 = lgetv %mainRegionH.9;
+        symbol [ mainRegionH %tmp.42 346 41 52 ];
+        %tmp.43 = add %tmp.41 %tmp.42;
+        lputv %blockH.10 %tmp.43;
+        symbol [ blockH %blockH.10 346 12 18 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 348 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop" ]
+        %contentTop.11 = local;
+        symbol [ contentTop %contentTop.11 348 12 22 ];
+        %tmp.44 = lgetv %contentBottom.3;
+        symbol [ contentBottom %tmp.44 348 26 39 ];
+        %tmp.45 = lgetv %blockH.10;
+        symbol [ blockH %tmp.45 348 42 48 ];
+        %tmp.46 = sub %tmp.44 %tmp.45;
+        %tmp.47 = 2;
+        %tmp.48 = div %tmp.46 %tmp.47;
+        lputv %contentTop.11 %tmp.48;
+        symbol [ contentTop %contentTop.11 348 12 22 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 349 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_349_8_351_8_if_stmt:
+        %tmp.49 = lgetv %contentTop.11;
+        symbol [ contentTop %tmp.49 349 12 22 ];
+        %tmp.50 = 4;
+        %tmp.51 = lt %tmp.49 %tmp.50;
+        bf %tmp.51 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_349_8_351_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_349_8_351_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_349_28_351_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 350 12 ]
+        %tmp.52 = 4;
+        lputv %contentTop.11 %tmp.52;
+        symbol [ contentTop %contentTop.11 350 12 22 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_349_28_351_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_349_8_351_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_349_8_351_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 353 8 ]
+        %tmp.53 = lgetv %contentTop.11;
+        symbol [ contentTop %tmp.53 353 26 36 ];
+        symbol [ Graphics %tmp.54 353 39 47 ];
+        %tmp.54 = getm $.Toybox.Graphics;
+        symbol [ getFontAscent %tmp.55 353 48 61 ];
+        %tmp.55 = getv function %tmp.54 :getFontAscent;
+        symbol [ _titleFont %tmp.57 353 62 72 ];
+        %tmp.57 = getv ? :_titleFont;
+        %tmp.58 = invoke %tmp.54 %tmp.55(%tmp.57);
+        %tmp.59 = add %tmp.53 %tmp.58;
+        symbol [ _titleBaselineY ? 353 8 23 ];
+        putv self :_titleBaselineY %tmp.59;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 354 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop" ]
+        %mainRegionTop.12 = local;
+        symbol [ mainRegionTop %mainRegionTop.12 354 12 25 ];
+        %tmp.60 = lgetv %contentTop.11;
+        symbol [ contentTop %tmp.60 354 28 38 ];
+        %tmp.61 = lgetv %fhTitle.5;
+        symbol [ fhTitle %tmp.61 354 41 48 ];
+        %tmp.62 = add %tmp.60 %tmp.61;
+        %tmp.63 = lgetv %lineGap.4;
+        symbol [ lineGap %tmp.63 354 51 58 ];
+        %tmp.64 = add %tmp.62 %tmp.63;
+        lputv %mainRegionTop.12 %tmp.64;
+        symbol [ mainRegionTop %mainRegionTop.12 354 12 25 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 355 8 ]
+        %tmp.65 = lgetv %mainRegionTop.12;
+        symbol [ mainRegionTop %tmp.65 355 25 38 ];
+        symbol [ Graphics %tmp.66 355 41 49 ];
+        %tmp.66 = getm $.Toybox.Graphics;
+        symbol [ getFontAscent %tmp.67 355 50 63 ];
+        %tmp.67 = getv function %tmp.66 :getFontAscent;
+        symbol [ _mainFont %tmp.69 355 64 73 ];
+        %tmp.69 = getv ? :_mainFont;
+        %tmp.70 = invoke %tmp.66 %tmp.67(%tmp.69);
+        %tmp.71 = add %tmp.65 %tmp.70;
+        symbol [ _mainBaselineY ? 355 8 22 ];
+        putv self :_mainBaselineY %tmp.71;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 356 8 ]
+        %tmp.72 = lgetv %mainRegionTop.12;
+        symbol [ mainRegionTop %tmp.72 356 24 37 ];
+        %tmp.73 = lgetv %fhMain.7;
+        symbol [ fhMain %tmp.73 356 40 46 ];
+        %tmp.74 = add %tmp.72 %tmp.73;
+        %tmp.75 = lgetv %lineGap.4;
+        symbol [ lineGap %tmp.75 356 49 56 ];
+        %tmp.76 = add %tmp.74 %tmp.75;
+        symbol [ Graphics %tmp.77 356 59 67 ];
+        %tmp.77 = getm $.Toybox.Graphics;
+        symbol [ getFontAscent %tmp.78 356 68 81 ];
+        %tmp.78 = getv function %tmp.77 :getFontAscent;
+        symbol [ _subFont %tmp.80 356 82 90 ];
+        %tmp.80 = getv ? :_subFont;
+        %tmp.81 = invoke %tmp.77 %tmp.78(%tmp.80);
+        %tmp.82 = add %tmp.76 %tmp.81;
+        symbol [ _subBaselineY ? 356 8 21 ];
+        putv self :_subBaselineY %tmp.82;
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 358 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop" ]
+        %statusOffset.13 = local;
+        symbol [ statusOffset %statusOffset.13 358 12 24 ];
+        %tmp.83 = lgetv %mainRegionH.9;
+        symbol [ mainRegionH %tmp.83 358 28 39 ];
+        %tmp.84 = lgetv %fhStatus.6;
+        symbol [ fhStatus %tmp.84 358 42 50 ];
+        %tmp.85 = sub %tmp.83 %tmp.84;
+        %tmp.86 = 2;
+        %tmp.87 = div %tmp.85 %tmp.86;
+        lputv %statusOffset.13 %tmp.87;
+        symbol [ statusOffset %statusOffset.13 358 12 24 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 359 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_359_8_361_8_if_stmt:
+        %tmp.88 = lgetv %statusOffset.13;
+        symbol [ statusOffset %tmp.88 359 12 24 ];
+        %tmp.89 = 0;
+        %tmp.90 = lt %tmp.88 %tmp.89;
+        bf %tmp.90 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_359_8_361_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_359_8_361_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_359_30_361_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 360 12 ]
+        %tmp.91 = 0;
+        lputv %statusOffset.13 %tmp.91;
+        symbol [ statusOffset %statusOffset.13 360 12 24 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_359_30_361_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_359_8_361_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_359_8_361_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 362 8 ]
+        %tmp.92 = lgetv %mainRegionTop.12;
+        symbol [ mainRegionTop %tmp.92 362 27 40 ];
+        %tmp.93 = lgetv %statusOffset.13;
+        symbol [ statusOffset %tmp.93 362 43 55 ];
+        %tmp.94 = add %tmp.92 %tmp.93;
+        symbol [ Graphics %tmp.95 362 58 66 ];
+        %tmp.95 = getm $.Toybox.Graphics;
+        symbol [ getFontAscent %tmp.96 362 67 80 ];
+        %tmp.96 = getv function %tmp.95 :getFontAscent;
+        symbol [ _statusFont %tmp.98 362 81 92 ];
+        %tmp.98 = getv ? :_statusFont;
+        %tmp.99 = invoke %tmp.95 %tmp.96(%tmp.98);
+        %tmp.100 = add %tmp.94 %tmp.99;
+        symbol [ _statusBaselineY ? 362 8 24 ];
+        putv self :_statusBaselineY %tmp.100;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_332_49_363_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 365; @symbol_functiondef = [onUpdate,365,13,21]; @symbol_param<0> = [dc,365,22,24]; @symbol_param<0>_type<0> = [Graphics,365,28,36]; @symbol_param<0>_type<1> = [Dc,365,37,39]; ]
+    function onUpdate(dc as Graphics.Dc) as Void {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_365_49_458_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 366 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_365_49_458_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_365_49_458_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 366 12 17 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 366 20 22 ];
+        symbol [ getWidth %tmp.2 366 23 31 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 366 12 17 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 368 8 ]
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 368 8 10 ];
+        symbol [ setColor %tmp.5 368 11 19 ];
+        %tmp.5 = getv function %tmp.4 :setColor;
+        symbol [ Graphics %tmp.6 368 20 28 ];
+        %tmp.6 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.7 368 29 40 ];
+        %tmp.7 = getv %tmp.6 :COLOR_WHITE;
+        symbol [ Graphics %tmp.8 368 42 50 ];
+        %tmp.8 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.9 368 51 62 ];
+        %tmp.9 = getv %tmp.8 :COLOR_BLACK;
+        invoke %tmp.4 %tmp.5(%tmp.7, %tmp.9);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 369 8 ]
+        %tmp.10 = lgetv %dc;
+        symbol [ dc %tmp.10 369 8 10 ];
+        symbol [ clear %tmp.11 369 11 16 ];
+        %tmp.11 = getv function %tmp.10 :clear;
+        invoke %tmp.10 %tmp.11();
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 371 8 ]
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 371 8 10 ];
+        symbol [ setColor %tmp.13 371 11 19 ];
+        %tmp.13 = getv function %tmp.12 :setColor;
+        symbol [ Graphics %tmp.14 371 20 28 ];
+        %tmp.14 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.15 371 29 40 ];
+        %tmp.15 = getv %tmp.14 :COLOR_WHITE;
+        symbol [ Graphics %tmp.16 371 42 50 ];
+        %tmp.16 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.17 371 51 62 ];
+        %tmp.17 = getv %tmp.16 :COLOR_BLACK;
+        invoke %tmp.12 %tmp.13(%tmp.15, %tmp.17);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 372 8 ]
+        %tmp.18 = lgetv %dc;
+        symbol [ dc %tmp.18 372 8 10 ];
+        symbol [ drawText %tmp.19 372 11 19 ];
+        %tmp.19 = getv function %tmp.18 :drawText;
+        %tmp.20 = lgetv %width.1;
+        symbol [ width %tmp.20 373 12 17 ];
+        %tmp.21 = 2;
+        %tmp.22 = div %tmp.20 %tmp.21;
+        symbol [ _titleBaselineY %tmp.24 374 12 27 ];
+        %tmp.24 = getv ? :_titleBaselineY;
+        symbol [ _titleFont %tmp.26 375 12 22 ];
+        %tmp.26 = getv ? :_titleFont;
+        symbol [ _titleStr %tmp.28 376 12 21 ];
+        %tmp.28 = getv ? :_titleStr;
+        symbol [ Graphics %tmp.29 377 12 20 ];
+        %tmp.29 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.30 377 21 40 ];
+        %tmp.30 = getv %tmp.29 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.18 %tmp.19(%tmp.22, %tmp.24, %tmp.26, %tmp.28, %tmp.30);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 380 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_380_8_411_8_if_stmt:
+        symbol [ _unsupported %tmp.32 380 12 24 ];
+        %tmp.32 = getv ? :_unsupported;
+        bf %tmp.32 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_380_8_411_8_if_false;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_380_8_411_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_380_26_388_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 381 12 ]
+        %tmp.33 = lgetv %dc;
+        symbol [ dc %tmp.33 381 12 14 ];
+        symbol [ drawText %tmp.34 381 15 23 ];
+        %tmp.34 = getv function %tmp.33 :drawText;
+        %tmp.35 = lgetv %width.1;
+        symbol [ width %tmp.35 382 16 21 ];
+        %tmp.36 = 2;
+        %tmp.37 = div %tmp.35 %tmp.36;
+        symbol [ _statusBaselineY %tmp.39 383 16 32 ];
+        %tmp.39 = getv ? :_statusBaselineY;
+        symbol [ _statusFont %tmp.41 384 16 27 ];
+        %tmp.41 = getv ? :_statusFont;
+        symbol [ _unavailableStr %tmp.43 385 16 31 ];
+        %tmp.43 = getv ? :_unavailableStr;
+        symbol [ Graphics %tmp.44 386 16 24 ];
+        %tmp.44 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.45 386 25 44 ];
+        %tmp.45 = getv %tmp.44 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.33 %tmp.34(%tmp.37, %tmp.39, %tmp.41, %tmp.43, %tmp.45);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_380_26_388_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_380_8_411_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_380_8_411_8_if_false:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 388 15 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_388_15_411_8_if_stmt:
+        symbol [ _headingReady %tmp.47 388 20 33 ];
+        %tmp.47 = getv ? :_headingReady;
+        %tmp.48 = not %tmp.47;
+        bf %tmp.48 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_388_15_411_8_if_else_false;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_388_15_411_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_388_35_396_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 389 12 ]
+        %tmp.49 = lgetv %dc;
+        symbol [ dc %tmp.49 389 12 14 ];
+        symbol [ drawText %tmp.50 389 15 23 ];
+        %tmp.50 = getv function %tmp.49 :drawText;
+        %tmp.51 = lgetv %width.1;
+        symbol [ width %tmp.51 390 16 21 ];
+        %tmp.52 = 2;
+        %tmp.53 = div %tmp.51 %tmp.52;
+        symbol [ _statusBaselineY %tmp.55 391 16 32 ];
+        %tmp.55 = getv ? :_statusBaselineY;
+        symbol [ _statusFont %tmp.57 392 16 27 ];
+        %tmp.57 = getv ? :_statusFont;
+        symbol [ _waitingStr %tmp.59 393 16 27 ];
+        %tmp.59 = getv ? :_waitingStr;
+        symbol [ Graphics %tmp.60 394 16 24 ];
+        %tmp.60 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.61 394 25 44 ];
+        %tmp.61 = getv %tmp.60 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.49 %tmp.50(%tmp.53, %tmp.55, %tmp.57, %tmp.59, %tmp.61);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_388_35_396_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_388_15_411_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_388_15_411_8_if_else_false:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_396_15_411_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 397 12 ]
+        %tmp.62 = lgetv %dc;
+        symbol [ dc %tmp.62 397 12 14 ];
+        symbol [ drawText %tmp.63 397 15 23 ];
+        %tmp.63 = getv function %tmp.62 :drawText;
+        %tmp.64 = lgetv %width.1;
+        symbol [ width %tmp.64 398 16 21 ];
+        %tmp.65 = 2;
+        %tmp.66 = div %tmp.64 %tmp.65;
+        symbol [ _mainBaselineY %tmp.68 399 16 30 ];
+        %tmp.68 = getv ? :_mainBaselineY;
+        symbol [ _mainFont %tmp.70 400 16 25 ];
+        %tmp.70 = getv ? :_mainFont;
+        symbol [ _mainText %tmp.72 401 16 25 ];
+        %tmp.72 = getv ? :_mainText;
+        symbol [ Graphics %tmp.73 402 16 24 ];
+        %tmp.73 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.74 402 25 44 ];
+        %tmp.74 = getv %tmp.73 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.62 %tmp.63(%tmp.66, %tmp.68, %tmp.70, %tmp.72, %tmp.74);
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 404 12 ]
+        %tmp.75 = lgetv %dc;
+        symbol [ dc %tmp.75 404 12 14 ];
+        symbol [ drawText %tmp.76 404 15 23 ];
+        %tmp.76 = getv function %tmp.75 :drawText;
+        %tmp.77 = lgetv %width.1;
+        symbol [ width %tmp.77 405 16 21 ];
+        %tmp.78 = 2;
+        %tmp.79 = div %tmp.77 %tmp.78;
+        symbol [ _subBaselineY %tmp.81 406 16 29 ];
+        %tmp.81 = getv ? :_subBaselineY;
+        symbol [ _subFont %tmp.83 407 16 24 ];
+        %tmp.83 = getv ? :_subFont;
+        symbol [ _subText %tmp.85 408 16 24 ];
+        %tmp.85 = getv ? :_subText;
+        symbol [ Graphics %tmp.86 409 16 24 ];
+        %tmp.86 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.87 409 25 44 ];
+        %tmp.87 = getv %tmp.86 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.75 %tmp.76(%tmp.79, %tmp.81, %tmp.83, %tmp.85, %tmp.87);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_396_15_411_8_stop:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_388_15_411_8_if_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_380_8_411_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 413 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_413_8_427_8_if_stmt:
+        symbol [ _toggleW %tmp.89 413 12 20 ];
+        %tmp.89 = getv ? :_toggleW;
+        %tmp.90 = 0;
+        %tmp.91 = gt %tmp.89 %tmp.90;
+        bf %tmp.91 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_413_8_427_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_413_8_427_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_413_26_427_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 414 12 ]
+        symbol [ PillUi %tmp.93 414 12 18 ];
+        %tmp.93 = getv ? :PillUi;
+        symbol [ drawPillColored %tmp.94 414 19 34 ];
+        %tmp.94 = getv function %tmp.93 :drawPillColored;
+        %tmp.95 = lgetv %dc;
+        symbol [ dc %tmp.95 415 16 18 ];
+        symbol [ _toggleX %tmp.97 416 16 24 ];
+        %tmp.97 = getv ? :_toggleX;
+        symbol [ _toggleY %tmp.99 417 16 24 ];
+        %tmp.99 = getv ? :_toggleY;
+        symbol [ _toggleW %tmp.101 418 16 24 ];
+        %tmp.101 = getv ? :_toggleW;
+        symbol [ _toggleH %tmp.103 419 16 24 ];
+        %tmp.103 = getv ? :_toggleH;
+        symbol [ _toggleR %tmp.105 420 16 24 ];
+        %tmp.105 = getv ? :_toggleR;
+        symbol [ _toggleLabel %tmp.107 421 16 28 ];
+        %tmp.107 = getv ? :_toggleLabel;
+        symbol [ _toggleFont %tmp.109 422 16 27 ];
+        %tmp.109 = getv ? :_toggleFont;
+        symbol [ Graphics %tmp.110 423 16 24 ];
+        %tmp.110 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.111 423 25 38 ];
+        %tmp.111 = getv %tmp.110 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.112 424 16 24 ];
+        %tmp.112 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.113 424 25 36 ];
+        %tmp.113 = getv %tmp.112 :COLOR_WHITE;
+        symbol [ Graphics %tmp.114 425 16 24 ];
+        %tmp.114 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.115 425 25 36 ];
+        %tmp.115 = getv %tmp.114 :COLOR_WHITE;
+        invoke %tmp.93 %tmp.94(%tmp.95, %tmp.97, %tmp.99, %tmp.101, %tmp.103, %tmp.105, %tmp.107, %tmp.109, %tmp.111, %tmp.113, %tmp.115);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_413_26_427_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_413_8_427_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_413_8_427_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 428 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_428_8_442_8_if_stmt:
+        symbol [ _saveW %tmp.117 428 12 18 ];
+        %tmp.117 = getv ? :_saveW;
+        %tmp.118 = 0;
+        %tmp.119 = gt %tmp.117 %tmp.118;
+        bf %tmp.119 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_428_8_442_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_428_8_442_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_428_24_442_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 429 12 ]
+        symbol [ PillUi %tmp.121 429 12 18 ];
+        %tmp.121 = getv ? :PillUi;
+        symbol [ drawPillColored %tmp.122 429 19 34 ];
+        %tmp.122 = getv function %tmp.121 :drawPillColored;
+        %tmp.123 = lgetv %dc;
+        symbol [ dc %tmp.123 430 16 18 ];
+        symbol [ _saveX %tmp.125 431 16 22 ];
+        %tmp.125 = getv ? :_saveX;
+        symbol [ _saveY %tmp.127 432 16 22 ];
+        %tmp.127 = getv ? :_saveY;
+        symbol [ _saveW %tmp.129 433 16 22 ];
+        %tmp.129 = getv ? :_saveW;
+        symbol [ _saveH %tmp.131 434 16 22 ];
+        %tmp.131 = getv ? :_saveH;
+        symbol [ _saveR %tmp.133 435 16 22 ];
+        %tmp.133 = getv ? :_saveR;
+        symbol [ _saveLabel %tmp.135 436 16 26 ];
+        %tmp.135 = getv ? :_saveLabel;
+        symbol [ _saveFont %tmp.137 437 16 25 ];
+        %tmp.137 = getv ? :_saveFont;
+        symbol [ Graphics %tmp.138 438 16 24 ];
+        %tmp.138 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.139 438 25 38 ];
+        %tmp.139 = getv %tmp.138 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.140 439 16 24 ];
+        %tmp.140 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.141 439 25 36 ];
+        %tmp.141 = getv %tmp.140 :COLOR_WHITE;
+        symbol [ Graphics %tmp.142 440 16 24 ];
+        %tmp.142 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.143 440 25 36 ];
+        %tmp.143 = getv %tmp.142 :COLOR_WHITE;
+        invoke %tmp.121 %tmp.122(%tmp.123, %tmp.125, %tmp.127, %tmp.129, %tmp.131, %tmp.133, %tmp.135, %tmp.137, %tmp.139, %tmp.141, %tmp.143);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_428_24_442_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_428_8_442_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_428_8_442_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 443 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_443_8_457_8_if_stmt:
+        symbol [ _backW %tmp.145 443 12 18 ];
+        %tmp.145 = getv ? :_backW;
+        %tmp.146 = 0;
+        %tmp.147 = gt %tmp.145 %tmp.146;
+        bf %tmp.147 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_443_8_457_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_443_8_457_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_443_24_457_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc" 444 12 ]
+        symbol [ PillUi %tmp.149 444 12 18 ];
+        %tmp.149 = getv ? :PillUi;
+        symbol [ drawPillColored %tmp.150 444 19 34 ];
+        %tmp.150 = getv function %tmp.149 :drawPillColored;
+        %tmp.151 = lgetv %dc;
+        symbol [ dc %tmp.151 445 16 18 ];
+        symbol [ _backX %tmp.153 446 16 22 ];
+        %tmp.153 = getv ? :_backX;
+        symbol [ _backY %tmp.155 447 16 22 ];
+        %tmp.155 = getv ? :_backY;
+        symbol [ _backW %tmp.157 448 16 22 ];
+        %tmp.157 = getv ? :_backW;
+        symbol [ _backH %tmp.159 449 16 22 ];
+        %tmp.159 = getv ? :_backH;
+        symbol [ _backR %tmp.161 450 16 22 ];
+        %tmp.161 = getv ? :_backR;
+        symbol [ _backLabel %tmp.163 451 16 26 ];
+        %tmp.163 = getv ? :_backLabel;
+        symbol [ _backFont %tmp.165 452 16 25 ];
+        %tmp.165 = getv ? :_backFont;
+        symbol [ Graphics %tmp.166 453 16 24 ];
+        %tmp.166 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.167 453 25 38 ];
+        %tmp.167 = getv %tmp.166 :COLOR_DK_GRAY;
+        symbol [ Graphics %tmp.168 454 16 24 ];
+        %tmp.168 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.169 454 25 36 ];
+        %tmp.169 = getv %tmp.168 :COLOR_WHITE;
+        symbol [ Graphics %tmp.170 455 16 24 ];
+        %tmp.170 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.171 455 25 36 ];
+        %tmp.171 = getv %tmp.170 :COLOR_WHITE;
+        invoke %tmp.149 %tmp.150(%tmp.151, %tmp.153, %tmp.155, %tmp.157, %tmp.159, %tmp.161, %tmp.163, %tmp.165, %tmp.167, %tmp.169, %tmp.171);
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_443_24_457_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_443_8_457_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_443_8_457_8_if_end:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassView_mc_365_49_458_4_stop:
+    }
+}
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassView.mc"; @line = 1; ]
+<init> {
+}

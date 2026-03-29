@@ -5,4 +5,22 @@
     <string id="PositionLabel">Position</string>
     <string id="SavedLabel">Saved</string>
     <string id="BackLabel">back</string>
+    <string id="CompassTitle">Compass</string>
+    <string id="CompassWaiting">Waiting for heading…</string>
+    <string id="CompassUnavailable">Compass not available</string>
+    <string id="CompassSave">Save</string>
+    <string id="CompassToggleToDeg">deg</string>
+    <string id="CompassToggleToMil">mil</string>
+    <string id="CompassMilSuffix"> mil</string>
+    <string id="CompassDegSuffix">°</string>
+    <string id="PositionScreenTitle">Position</string>
+    <string id="PositionWaitingGps">Waiting for GPS…</string>
+    <string id="PositionUnavailable">Position not available</string>
+    <string id="PositionMgrsUnavailable">MGRS not available yet</string>
+    <string id="PositionUtmUnavailable">UTM not available yet</string>
+    <string id="PositionNextFormat">Next Format</string>
+    <string id="PositionSave">Save</string>
+    <string id="PositionAltPrefix">Alt: </string>
+    <string id="PositionAltMeters"> m</string>
+    <string id="PositionAltNone">—</string>
 </resources>

@@ -1,0 +1,152 @@
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Lang,1,13,17]; ]
+using Toybox.Lang;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Math,2,13,17]; ]
+using Toybox.Math;
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc"; @line = 4; @symbol_moduledef = [CompassMath,4,7,18]; ]
+module CompassMath {
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc"; @line = 6; @symbol_functiondef = [radiansToDegreesInt,6,13,32]; @symbol_param<0> = [rad,6,33,36]; @symbol_param<0>_type<0> = [Lang,6,40,44]; @symbol_param<0>_type<1> = [Float,6,45,50]; @symbol_return<0> = [Lang,6,55,59]; @symbol_return<1> = [Number,6,60,66]; ]
+    function radiansToDegreesInt(rad as Lang.Float) as Lang.Number {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_6_67_22_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 7 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_6_67_22_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_6_67_22_4_stop" ]
+        %deg.1 = local;
+        symbol [ deg %deg.1 7 12 15 ];
+        %tmp.1 = lgetv %rad;
+        symbol [ rad %tmp.1 7 18 21 ];
+        %tmp.2 = 180.0;
+        %tmp.3 = mul %tmp.1 %tmp.2;
+        symbol [ Math %tmp.4 7 32 36 ];
+        %tmp.4 = getm $.Toybox.Math;
+        symbol [ PI %tmp.5 7 37 39 ];
+        %tmp.5 = getv %tmp.4 :PI;
+        %tmp.6 = div %tmp.3 %tmp.5;
+        lputv %deg.1 %tmp.6;
+        symbol [ deg %deg.1 7 12 15 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 8 8 ]
+        while @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_8_8_10_8_while_test @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_8_8_10_8_while_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_8_8_10_8_while_test:
+        %tmp.7 = lgetv %deg.1;
+        symbol [ deg %tmp.7 8 15 18 ];
+        %tmp.8 = 0.0;
+        %tmp.9 = lt %tmp.7 %tmp.8;
+        bf %tmp.9 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_8_8_10_8_while_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_8_8_10_8_while_begin:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_8_26_10_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 9 12 ]
+        %tmp.10 = lgetv %deg.1;
+        symbol [ deg %tmp.10 9 12 15 ];
+        %tmp.11 = 360.0;
+        %tmp.12 = add %tmp.10 %tmp.11;
+        lputv %deg.1 %tmp.12;
+        symbol [ deg %deg.1 9 12 15 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_8_26_10_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_8_8_10_8_while_test;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_8_8_10_8_while_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 11 8 ]
+        while @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_11_8_13_8_while_test @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_11_8_13_8_while_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_11_8_13_8_while_test:
+        %tmp.13 = lgetv %deg.1;
+        symbol [ deg %tmp.13 11 15 18 ];
+        %tmp.14 = 360.0;
+        %tmp.15 = gte %tmp.13 %tmp.14;
+        bf %tmp.15 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_11_8_13_8_while_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_11_8_13_8_while_begin:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_11_29_13_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 12 12 ]
+        %tmp.16 = lgetv %deg.1;
+        symbol [ deg %tmp.16 12 12 15 ];
+        %tmp.17 = 360.0;
+        %tmp.18 = sub %tmp.16 %tmp.17;
+        lputv %deg.1 %tmp.18;
+        symbol [ deg %deg.1 12 12 15 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_11_29_13_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_11_8_13_8_while_test;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_11_8_13_8_while_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 14 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_6_67_22_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_6_67_22_4_stop" ]
+        %n.2 = local;
+        symbol [ n %n.2 14 12 13 ];
+        %tmp.19 = lgetv %deg.1;
+        symbol [ deg %tmp.19 14 16 19 ];
+        symbol [ toNumber %tmp.20 14 20 28 ];
+        %tmp.20 = getv function %tmp.19 :toNumber;
+        %tmp.21 = invoke %tmp.19 %tmp.20();
+        lputv %n.2 %tmp.21;
+        symbol [ n %n.2 14 12 13 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 15 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_15_8_17_8_if_stmt:
+        %tmp.22 = lgetv %n.2;
+        symbol [ n %tmp.22 15 12 13 ];
+        %tmp.23 = 360;
+        %tmp.24 = gte %tmp.22 %tmp.23;
+        bf %tmp.24 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_15_8_17_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_15_8_17_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_15_22_17_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 16 12 ]
+        %tmp.25 = 0;
+        lputv %n.2 %tmp.25;
+        symbol [ n %n.2 16 12 13 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_15_22_17_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_15_8_17_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_15_8_17_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 18 8 ]
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_18_8_20_8_if_stmt:
+        %tmp.26 = lgetv %n.2;
+        symbol [ n %tmp.26 18 12 13 ];
+        %tmp.27 = 0;
+        %tmp.28 = lt %tmp.26 %tmp.27;
+        bf %tmp.28 @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_18_8_20_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_18_8_20_8_if_true:
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_18_19_20_8_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 19 12 ]
+        %tmp.29 = 0;
+        lputv %n.2 %tmp.29;
+        symbol [ n %n.2 19 12 13 ];
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_18_19_20_8_stop:
+        goto @_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_18_8_20_8_if_end;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_18_8_20_8_if_end:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 21 8 ]
+        %tmp.30 = lgetv %n.2;
+        symbol [ n %tmp.30 21 15 16 ];
+        ret %tmp.30;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_6_67_22_4_stop:
+    }
+    [ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc"; @line = 24; @symbol_functiondef = [degreesToMils6400,24,13,30]; @symbol_param<0> = [degInt,24,31,37]; @symbol_param<0>_type<0> = [Lang,24,41,45]; @symbol_param<0>_type<1> = [Number,24,46,52]; @symbol_return<0> = [Lang,24,57,61]; @symbol_return<1> = [Number,24,62,68]; ]
+    function degreesToMils6400(degInt as Lang.Number) as Lang.Number {
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_24_69_28_4_start:
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 25 8 ]
+        [ "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_24_69_28_4_start" "_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_24_69_28_4_stop" ]
+        %mils.1 = local;
+        symbol [ mils %mils.1 25 12 16 ];
+        %tmp.1 = lgetv %degInt;
+        symbol [ degInt %tmp.1 25 20 26 ];
+        %tmp.2 = 6400;
+        %tmp.3 = mul %tmp.1 %tmp.2;
+        %tmp.4 = 360;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        lputv %mils.1 %tmp.5;
+        symbol [ mils %mils.1 25 12 16 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 26 8 ]
+        %tmp.6 = lgetv %mils.1;
+        symbol [ mils %tmp.6 26 16 20 ];
+        %tmp.7 = 6400;
+        %tmp.8 = mod %tmp.6 %tmp.7;
+        %tmp.9 = 6400;
+        %tmp.10 = add %tmp.8 %tmp.9;
+        %tmp.11 = 6400;
+        %tmp.12 = mod %tmp.10 %tmp.11;
+        lputv %mils.1 %tmp.12;
+        symbol [ mils %mils.1 26 8 12 ];
+[ "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc" 27 8 ]
+        %tmp.13 = lgetv %mils.1;
+        symbol [ mils %tmp.13 27 15 19 ];
+        ret %tmp.13;
+_Users_itayeylath_Desktop_dev_FirePoint_FirePointWatchApp_source_CompassMath_mc_24_69_28_4_stop:
+    }
+}
+[ @file = "/Users/itayeylath/Desktop/dev/FirePoint/FirePointWatchApp/source/CompassMath.mc"; @line = 1; ]
+<init> {
+}
